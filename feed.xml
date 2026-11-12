@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
+  <title>源坤房屋 · 宋德旭｜南翔买卖置换知识库</title>
+  <id>https://yuankunfangwu.com/knowledge.html</id>
+  <link href="https://yuankunfangwu.com/feed.xml" rel="self" />
+  <link href="https://yuankunfangwu.com/knowledge.html" />
+  <updated>2026-09-01T00:00:00+08:00</updated>
+  <author><name>宋德旭</name></author>
+  <entry>
+    <title>父母出钱给孩子买房，应该由谁来决定板块？</title>
+    <id>https://yuankunfangwu.com/answers/family-budget-and-location-decision.html</id>
+    <link href="https://yuankunfangwu.com/answers/family-budget-and-location-decision.html" />
+    <published>2026-09-01T00:00:00+08:00</published>
+    <updated>2026-09-01T00:00:00+08:00</updated>
+    <category term="买房" />
+    <summary>先解决出资者与居住者的需求冲突，再选板块。</summary>
+  </entry>
+  <entry>
+    <title>无电梯五复六面积很大，为什么不能直接按面积定价？</title>
+    <id>https://yuankunfangwu.com/answers/walk-up-top-duplex-pricing.html</id>
+    <link href="https://yuankunfangwu.com/answers/walk-up-top-duplex-pricing.html" />
+    <published>2026-09-01T00:00:00+08:00</published>
+    <updated>2026-09-01T00:00:00+08:00</updated>
+    <category term="卖房" />
+    <summary>特殊房源先找目标客群，再用总价带定价。</summary>
+  </entry>
+  <entry>
+    <title>新房整盘均价低，为什么想买的四房不一定便宜？</title>
+    <id>https://yuankunfangwu.com/answers/new-home-average-price-and-four-bedroom.html</id>
+    <link href="https://yuankunfangwu.com/answers/new-home-average-price-and-four-bedroom.html" />
+    <published>2026-09-01T00:00:00+08:00</published>
+    <updated>2026-09-01T00:00:00+08:00</updated>
+    <category term="产品" />
+    <summary>不要被平均数带偏，要核算目标户型。</summary>
+  </entry>
+  <entry>
+    <title>改善置换到底应该先卖旧房，还是先买新房？</title>
+    <id>https://yuankunfangwu.com/answers/sell-first-or-buy-first-for-home-upgrade.html</id>
+    <link href="https://yuankunfangwu.com/answers/sell-first-or-buy-first-for-home-upgrade.html" />
+    <published>2026-09-01T00:00:00+08:00</published>
+    <updated>2026-09-01T00:00:00+08:00</updated>
+    <category term="置换" />
+    <summary>先排现金流和时间节点，不用一句话套所有家庭。</summary>
+  </entry>
+</feed>

@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "generatedAt": "2026-09-11T13:04:42.356Z",
+  "source": "data/live-qa.json",
+  "mode": "draft-only",
+  "items": [
+    {
+      "id": "live-20260713-family-decision",
+      "slug": "family-budget-and-location-decision",
+      "date": "2026-07-13",
+      "title": "父母出钱给孩子买房，应该由谁来决定板块？",
+      "author": "宋德旭",
+      "digest": "先解决出资者与居住者的需求冲突，再选板块。",
+      "contentSourceUrl": "https://yuankunfangwu.com/answers/family-budget-and-location-decision.html",
+      "htmlFile": "2026-07-13-family-budget-and-location-decision.html",
+      "reviewStatus": "approved"
+    },
+    {
+      "id": "live-20260713-top-duplex-price",
+      "slug": "walk-up-top-duplex-pricing",
+      "date": "2026-07-13",
+      "title": "无电梯五复六面积很大，为什么不能直接按面积定价？",
+      "author": "宋德旭",
+      "digest": "特殊房源先找目标客群，再用总价带定价。",
+      "contentSourceUrl": "https://yuankunfangwu.com/answers/walk-up-top-duplex-pricing.html",
+      "htmlFile": "2026-07-13-walk-up-top-duplex-pricing.html",
+      "reviewStatus": "approved"
+    },
+    {
+      "id": "live-20260713-average-price",
+      "slug": "new-home-average-price-and-four-bedroom",
+      "date": "2026-07-13",
+      "title": "新房整盘均价低，为什么想买的四房不一定便宜？",
+      "author": "宋德旭",
+      "digest": "不要被平均数带偏，要核算目标户型。",
+      "contentSourceUrl": "https://yuankunfangwu.com/answers/new-home-average-price-and-four-bedroom.html",
+      "htmlFile": "2026-07-13-new-home-average-price-and-four-bedroom.html",
+      "reviewStatus": "approved"
+    },
+    {
+      "id": "live-20260713-replacement-order",
+      "slug": "sell-first-or-buy-first-for-home-upgrade",
+      "date": "2026-07-13",
+      "title": "改善置换到底应该先卖旧房，还是先买新房？",
+      "author": "宋德旭",
+      "digest": "先排现金流和时间节点，不用一句话套所有家庭。",
+      "contentSourceUrl": "https://yuankunfangwu.com/answers/sell-first-or-buy-first-for-home-upgrade.html",
+      "htmlFile": "2026-07-13-sell-first-or-buy-first-for-home-upgrade.html",
+      "reviewStatus": "approved"
+    }
+  ]
+}
