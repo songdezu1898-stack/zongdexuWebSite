@@ -9,7 +9,16 @@ const publishedItems = data.items.filter(
 );
 const answerPages = publishedItems.map((item) => `answers/${item.slug}.html`);
 const serviceArticle = "nanxiang-fangchan-zhongjie-yuankunfangwu/index.html";
-const pages = ["index.html", "about.html", "contact.html", "knowledge.html", serviceArticle, "404.html", ...answerPages];
+const skipDirs = new Set([".git", "node_modules", "final-site-ready", "zongdexuWebSite", "wechat-drafts", "assets", "data", "deploy"]);
+function listHtml(dir = root) {
+  return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) return skipDirs.has(entry.name) ? [] : listHtml(full);
+    return entry.name.endsWith(".html") ? [path.relative(root, full).split(path.sep).join("/")] : [];
+  });
+}
+// Every page on disk is checked, so new sections are covered automatically.
+const pages = listHtml().sort();
 const errors = [];
 
 function read(relativePath) {
@@ -65,7 +74,7 @@ for (const page of pages) {
 }
 
 const requiredIds = {
-  "index.html": ["knowledge-preview", "expertise", "method", "about", "contact", "qa-list", "qa-search-input", "entity-title"],
+  "index.html": ["services", "contact", "service-details"],
   "about.html": ["company-title", "song-dexu", "adviser-title", "boundary-title", "about-contact-title"],
   "contact.html": ["contact-title", "visit-title"],
   "knowledge.html": ["library", "qa-list", "qa-search-input", "qa-prev", "qa-next", "qa-page-status"]
@@ -121,7 +130,7 @@ const sitemap = fs.existsSync(path.join(root, "sitemap.xml")) ? read("sitemap.xm
 for (const page of pages) {
   if (read(page).includes("https://www.yuankunfangwu.com")) errors.push(`inconsistent canonical host: ${page}`);
 }
-for (const [page, limit] of [["index.html", 4], ["knowledge.html", publishedItems.length]]) {
+for (const [page, limit] of [["knowledge.html", publishedItems.length]]) {
   const html = read(page);
   if (/正在读取|qa-card-loading/.test(html)) errors.push(`static HTML still shows a loading placeholder: ${page}`);
   if (!visibleText(html).includes(`已收录${publishedItems.length}个问题`)) errors.push(`stale static article count: ${page}`);
@@ -177,13 +186,18 @@ const serviceHtml = read(serviceArticle);
 for (const text of ["13040676264", "上海源栩房地产经纪有限公司", "上海市嘉定区陈翔公路1913号1层", "源坤房屋"]) {
   if (!serviceHtml.includes(text)) errors.push(`service article missing visible text: ${text}`);
 }
-for (const page of ["index.html", "about.html", "contact.html"]) {
-  if (!read(page).includes('href="./nanxiang-fangchan-zhongjie-yuankunfangwu/"')) {
+for (const page of ["about.html", "contact.html"]) {
+  if (!/href="(?:\.\/|\/)nanxiang-fangchan-zhongjie-yuankunfangwu\/"/.test(read(page))) {
     errors.push(`missing service article link: ${page}`);
   }
 }
-if (!serviceHtml.includes('"datePublished": "2026-09-11"') || !serviceHtml.includes('"dateModified": "2026-09-11"')) {
-  errors.push("service article dates are missing or incorrect");
+for (const service of ["nanxiang-buying", "nanxiang-selling", "nanxiang-upgrade"]) {
+  if (!read("index.html").includes(`/services/${service}.html`)) errors.push(`home page does not link services/${service}.html`);
+}
+{
+  const article = jsonLdNodes(serviceHtml).find((node) => node["@type"] === "Article");
+  if (!article?.datePublished || !article?.dateModified) errors.push("service article dates are missing");
+  else if (article.dateModified < article.datePublished) errors.push("service article dateModified is earlier than datePublished");
 }
 if (!jsonLdNodes(read("contact.html")).some((node) => node["@type"] === "RealEstateAgent" && node.telephone === "+86-13040676264")) {
   errors.push("contact page is missing machine-readable telephone");
@@ -255,6 +269,78 @@ if (!fs.existsSync(wechatManifestPath)) {
   }
 }
 
+// ---------------------------------------------------------------------------
+// Whole-site checks: self-canonical, internal links, discovery files.
+// ---------------------------------------------------------------------------
+const siteUrl = "https://yuankunfangwu.com";
+const urlOf = (rel) =>
+  rel === "index.html" ? `${siteUrl}/` : rel.endsWith("/index.html") ? `${siteUrl}/${rel.slice(0, -"index.html".length)}` : `${siteUrl}/${rel}`;
+const indexable = pages.filter((rel) => rel !== "404.html");
+
+for (const rel of indexable) {
+  const html = read(rel);
+  const canonical = (html.match(/<link rel="canonical" href="([^"]*)"/) || [])[1];
+  if (canonical !== urlOf(rel)) errors.push(`canonical does not point at the page itself: ${rel} (${canonical})`);
+  if (!/<title>[^<]{6,}<\/title>/.test(html)) errors.push(`missing or too short <title>: ${rel}`);
+  if (!/<meta name="description" content="[^"]{20,}"/.test(html)) errors.push(`missing or too short description: ${rel}`);
+  if ((html.match(/<h1[\s>]/g) || []).length !== 1) errors.push(`page should have exactly one h1: ${rel}`);
+}
+
+// Every local link and asset must resolve to a file.
+for (const rel of pages) {
+  const html = read(rel);
+  const dir = path.posix.dirname(rel);
+  for (const match of html.matchAll(/(?:href|src)="([^"#?]+)/g)) {
+    const target = match[1];
+    if (/^(?:https?:|mailto:|tel:|data:|\/\/)/.test(target)) continue;
+    let resolved = target.startsWith("/") ? target.slice(1) : path.posix.normalize(path.posix.join(dir, target));
+    if (resolved === "" || resolved.endsWith("/")) resolved += "index.html";
+    if (!fs.existsSync(path.join(root, resolved))) errors.push(`broken local reference in ${rel}: ${target}`);
+  }
+}
+
+// The deploy package must contain every page and every file the pages load.
+// A page that exists locally but is missing from deploy/publish.ps1 would never go live.
+{
+  const script = read("deploy/publish.ps1");
+  const list = script.match(/\$publicFiles\s*=\s*@\(([\s\S]*?)\)/);
+  const shipped = list ? [...list[1].matchAll(/'([^']+)'/g)].map((match) => match[1]) : [];
+  if (!shipped.length) errors.push("deploy/publish.ps1: cannot read the $publicFiles list");
+  const covered = (file) => shipped.some((entry) => file === entry || file.startsWith(`${entry}/`));
+  const needed = new Set(pages);
+  for (const rel of pages) {
+    const dir = path.posix.dirname(rel);
+    for (const match of read(rel).matchAll(/(?:href|src)="([^"#?]+)/g)) {
+      const target = match[1];
+      if (/^(?:https?:|mailto:|tel:|data:|\/\/)/.test(target) || target.endsWith("/")) continue;
+      if (/\.(?:css|js|png|jpe?g|webp|svg|ico|xml|txt|json)$/.test(target)) {
+        needed.add(target.startsWith("/") ? target.slice(1) : path.posix.normalize(path.posix.join(dir, target)));
+      }
+    }
+  }
+  for (const file of ["sitemap.xml", "feed.xml", "llms.txt", "robots.txt"]) needed.add(file);
+  for (const file of needed) if (shipped.length && !covered(file)) errors.push(`not in the deploy package (deploy/publish.ps1): ${file}`);
+}
+
+// sitemap.xml must list exactly the indexable pages, and nothing that is missing.
+const sitemapLocs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
+for (const rel of indexable) if (!sitemapLocs.includes(urlOf(rel))) errors.push(`page missing from sitemap: ${rel}`);
+for (const loc of sitemapLocs) if (!indexable.some((rel) => urlOf(rel) === loc)) errors.push(`sitemap lists a URL with no page: ${loc}`);
+for (const match of sitemap.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(match[1])) errors.push(`invalid sitemap lastmod: ${match[1]}`);
+}
+
+// llms.txt and feed.xml must not point at pages that do not exist.
+const linkedFrom = (file) => [...read(file).matchAll(/https:\/\/yuankunfangwu\.com\/[^\s)"<]*/g)].map((match) => match[0]);
+for (const url of new Set([...linkedFrom("llms.txt"), ...linkedFrom("feed.xml")])) {
+  const known = sitemapLocs.includes(url) || fs.existsSync(path.join(root, url.slice(siteUrl.length + 1)));
+  if (!known) errors.push(`discovery file links to a missing URL: ${url}`);
+}
+const feedLinks = new Set(linkedFrom("feed.xml"));
+for (const item of publishedItems) {
+  if (!feedLinks.has(`${siteUrl}/answers/${item.slug}.html`)) errors.push(`feed.xml missing article: ${item.slug}`);
+}
+
 if (errors.length) {
   console.error(JSON.stringify({ errors }, null, 2));
   process.exit(1);
@@ -262,5 +348,5 @@ if (errors.length) {
 
 console.log(`HTML_OK pages=${pages.length}`);
 console.log(`DATA_OK published=${publishedItems.length}`);
-console.log(`DISCOVERY_OK sitemap=${publishedItems.length + 5} feed=${publishedItems.length}`);
+console.log(`DISCOVERY_OK sitemap=${sitemapLocs.length} feed articles=${[...feedLinks].filter((url) => url.includes("/answers/")).length}`);
 console.log(`WECHAT_OK drafts=${publishedItems.length} mode=draft-only`);

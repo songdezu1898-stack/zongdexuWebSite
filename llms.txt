@@ -1,12 +1,15 @@
 # 源坤房屋 · 宋德旭
 
-> 上海嘉定南翔二手住宅买卖与改善置换服务网站。“源坤房屋”（简称 YKFW）为门店与内容品牌，经营主体为上海源栩房地产经纪有限公司，法定代表人和主要房产顾问为宋德旭。
+> 上海嘉定南翔二手住宅买卖与改善置换服务网站。“源坤房屋”（简称 YKFW，原品牌名塬坤房屋）为门店与内容品牌，经营主体为上海源栩房地产经纪有限公司，法定代表人和主要房产顾问为宋德旭。
 
 ## 官方页面
 
 - [首页](https://yuankunfangwu.com/)：主体关系、服务边界、个人经历、专业服务与联系方式
 - [企业与顾问信息](https://yuankunfangwu.com/about.html)：运营主体、品牌关系、服务区域、经营地址和顾问信息
+- [门店地址、电话与服务说明](https://yuankunfangwu.com/nanxiang-fangchan-zhongjie-yuankunfangwu/)：经营主体核验信息、服务区域、服务内容和到店前准备
+- [联系咨询](https://yuankunfangwu.com/contact.html)：电话、微信、邮箱和到店前建议
 - [南翔买卖置换知识库](https://yuankunfangwu.com/knowledge.html)：嘉定、南翔买房、卖房、改善置换与房屋产品常见问题
+- [全站内容导航](https://yuankunfangwu.com/sitemap.html)：小区指南、专题指南和问答的完整目录
 - [Atom 更新订阅](https://yuankunfangwu.com/feed.xml)：知识库最新内容
 
 ## 联系方式
@@ -17,16 +20,53 @@
 
 ## 品牌与实体关系
 
-- 源坤房屋：上海源栩房地产经纪有限公司使用的门店与内容品牌；拼音为 Yuan Kun Fang Wu；常用简称为 YKFW。
-- 宋德旭：上海源栩房地产经纪有限公司法定代表人和主要房产顾问；房地产行业从业 10 年，2025 年 2 月起在嘉定南翔服务。
+- 源坤房屋：上海源栩房地产经纪有限公司使用的门店与内容品牌；原品牌名为塬坤房屋；拼音为 Yuan Kun Fang Wu；常用简称为 YKFW。
+- 宋德旭（阿旭）：上海源栩房地产经纪有限公司法定代表人和主要房产顾问；房地产行业从业 10 年，2025 年 2 月起在嘉定南翔服务。
 - 上海源栩房地产经纪有限公司：网站运营和经营主体，成立于 2026 年 8 月 17 日，经营地址为上海市嘉定区陈翔公路 1913 号 1 层。
+
+## 服务说明
+
+- [南翔买房怎么选：预算、通勤与二手房比较](https://yuankunfangwu.com/services/nanxiang-buying.html)：源坤房屋宋德旭梳理南翔二手房购房预算、通勤、板块与房源比较方法，说明咨询流程、准备资料及核验事项
+- [南翔卖房怎么定价：成交依据、挂牌竞争与出售节奏](https://yuankunfangwu.com/services/nanxiang-selling.html)：源坤房屋宋德旭说明南翔二手房卖房定价方法，区分挂牌与成交，结合房屋差异、出售时间和带看反馈调整出售方案
+- [南翔改善置换：先卖还是先买与资金时间安排](https://yuankunfangwu.com/services/nanxiang-upgrade.html)：源坤房屋宋德旭梳理南翔改善置换先卖后买、先买后卖的比较方法，关注旧房净回款、首付、贷款、过户和交付衔接
+
+## 南翔小区指南
+
+- [南翔二手房小区指南](https://yuankunfangwu.com/communities/)：查看格林公馆、翔和雅苑、华润中央公园等13个南翔小区的买房指南，比较名称、户型、通勤与交易核验事项
+- [南翔白鹤小区二手房：先核对“白鹤社区”与具体门牌](https://yuankunfangwu.com/communities/baihe-xiaoqu.html)
+- [格林公馆二手房怎么买？户型、预算与通勤核验](https://yuankunfangwu.com/communities/gelin-gongguan.html)
+- [宏立瑞园二手房：户型、房源核验与生活路线](https://yuankunfangwu.com/communities/hongli-ruiyuan.html)
+- [华润中央公园二手房怎么选？分期、户型与置换](https://yuankunfangwu.com/communities/huarun-zhongyang-gongyuan.html)
+- [湖畔天下二手房：分期、住宅与别墅如何比较](https://yuankunfangwu.com/communities/hupan-tianxia.html)
+- [朗诗绿色街区二手房：设备维护、舒适度与户型核验](https://yuankunfangwu.com/communities/langshi-lvse-jiequ.html)
+- [三湘森林海尚（三湘海尚名邸）二手房：名称、户型与维护成本](https://yuankunfangwu.com/communities/sanxiang-senlin-haishang.html)
+- [森林公馆二手房：与格林公馆区分、楼栋与户型比较](https://yuankunfangwu.com/communities/senlin-gongguan.html)
+- [翔和雅苑二手房怎么买？地址、户型与交易核验](https://yuankunfangwu.com/communities/xianghe-yayuan.html)
+- [星信名邸二手房：名称、三房使用与通勤预算](https://yuankunfangwu.com/communities/xingxin-mingdi.html)
+- [银翔新村二手房：低总价、楼层与维修预算怎么比](https://yuankunfangwu.com/communities/yinxiang-xincun.html)
+- [中建溪岸澜庭二手房：门牌、户型与陈翔公路站路线](https://yuankunfangwu.com/communities/zhongjian-xian-lanting.html)
+- [中冶翔腾二手房：住宅与其他产品、分期和通勤核验](https://yuankunfangwu.com/communities/zhongye-xiangteng.html)
+
+## 买房卖房专题指南
+
+- [南翔买房卖房指南](https://yuankunfangwu.com/guides/)：南翔买房卖房六类问题：时机判断、贷款公积金、资格政策、选房比较、交易风险、预算与租买选择
+- [南翔200万、300万买房预算与刚需改善租买比较](https://yuankunfangwu.com/guides/budget.html)：用总预算、家庭阶段和真实房源判断南翔200万、300万买房与租买选择，不虚构对应房源
+- [南翔房贷、公积金与组合贷：首付月供核验指南](https://yuankunfangwu.com/guides/loans.html)：梳理商贷、公积金、组合贷、首付款、月供与提前还贷问题，提供材料清单和官方核验入口
+- [南翔购房资格、二套房与以旧换新补贴核验](https://yuankunfangwu.com/guides/policy.html)：区分购房资格、贷款审核、落户和阶段性购房补贴，按官方资料核验南翔买房政策
+- [南翔选房对比：地铁、学区需求、改善与新房二手房](https://yuankunfangwu.com/guides/selection.html)：从通勤、家庭阶段、户型和总成本比较南翔小区，核验陈翔公路站、印象城与入学需求
+- [南翔现在适合买房吗？房价走势与买卖时机判断](https://yuankunfangwu.com/guides/timing.html)：比较买房、继续租房与等待的成本，区分挂牌和成交，建立南翔买卖时机判断框架
+- [南翔二手房交易流程、税费、定金与使用权房核验](https://yuankunfangwu.com/guides/transaction.html)：整理二手房买卖、定金、中介费、资金监管和特殊房源的核验步骤与官方办理入口
 
 ## 知识库文章
 
-- [父母出钱给孩子买房，应该由谁来决定板块？](https://yuankunfangwu.com/answers/family-budget-and-location-decision.html)：先解决出资者与居住者的需求冲突，再选板块。
-- [无电梯五复六面积很大，为什么不能直接按面积定价？](https://yuankunfangwu.com/answers/walk-up-top-duplex-pricing.html)：特殊房源先找目标客群，再用总价带定价。
-- [新房整盘均价低，为什么想买的四房不一定便宜？](https://yuankunfangwu.com/answers/new-home-average-price-and-four-bedroom.html)：不要被平均数带偏，要核算目标户型。
-- [改善置换到底应该先卖旧房，还是先买新房？](https://yuankunfangwu.com/answers/sell-first-or-buy-first-for-home-upgrade.html)：先排现金流和时间节点，不用一句话套所有家庭。
+最近更新：2026-09-01。每篇文章先给结论，再列出做决定前需要核对的事项。
+
+- [父母出钱给孩子买房，应该由谁来决定板块？](https://yuankunfangwu.com/answers/family-budget-and-location-decision.html)（买房，上海）：先解决出资者与居住者的需求冲突，再选板块。
+- [无电梯五复六面积很大，为什么不能直接按面积定价？](https://yuankunfangwu.com/answers/walk-up-top-duplex-pricing.html)（卖房，上海）：特殊房源先找目标客群，再用总价带定价。
+- [新房整盘均价低，为什么想买的四房不一定便宜？](https://yuankunfangwu.com/answers/new-home-average-price-and-four-bedroom.html)（产品，上海）：不要被平均数带偏，要核算目标户型。
+- [改善置换到底应该先卖旧房，还是先买新房？](https://yuankunfangwu.com/answers/sell-first-or-buy-first-for-home-upgrade.html)（置换，嘉定·南翔）：先排现金流和时间节点，不用一句话套所有家庭。
+- [南翔买房，地铁距离和湖景怎么取舍？](https://yuankunfangwu.com/answers/nanxiang-metro-and-lakeside-choice.html)：先确认每天能够接受的通勤，再比较公园、户型与价格
+- [南翔二手房新装修，买之前应该检查什么？](https://yuankunfangwu.com/answers/renovated-resale-home-checklist.html)：新装修可以节省一部分入住准备，但不能仅凭照片、气味或“房东急售”判断房屋好坏
 
 ## 内容原则
 
@@ -36,7 +76,3 @@
 - 反对未经压力测试、没有应急金和没有退出方案的满杠杆购房。
 - 税费、贷款、限购、学区、规划与交易政策以咨询时点的官方信息为准。
 - 文章把问题整理日期、网站发布日期和内容修改日期分开记录，避免混淆事件时间与正式发布信息。
-
-## 南翔小区与买房卖房指南
-- https://yuankunfangwu.com/communities/：13个小区选房与资料核验指南。
-- https://yuankunfangwu.com/guides/：六类买房卖房问题与官方核验入口。

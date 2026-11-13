@@ -60,7 +60,7 @@ const entityGraph = [
     "@id": orgId,
     name: "上海源栩房地产经纪有限公司",
     legalName: "上海源栩房地产经纪有限公司",
-    alternateName: ["源坤房屋", "YKFW", "Yuan Kun Fang Wu"],
+    alternateName: ["源坤房屋", "塬坤房屋", "YKFW", "Yuan Kun Fang Wu"],
     description:
       "源坤房屋是上海源栩房地产经纪有限公司使用的门店与内容品牌，主要服务嘉定南翔二手住宅买卖与改善置换；宋德旭为法定代表人和主要房产顾问。",
     url: `${siteUrl}/`,
@@ -93,7 +93,7 @@ const entityGraph = [
     "@type": "Person",
     "@id": personId,
     name: "宋德旭",
-    alternateName: "宋德旭房产顾问",
+    alternateName: ["宋德旭房产顾问", "阿旭"],
     jobTitle: "法定代表人、南翔房产顾问",
     description:
       "房地产行业从业10年，曾在昆明、贵阳和上海工作；2025年2月起在嘉定南翔服务，重点关注南翔二手住宅、改善置换、买方服务和购房预算测算。",
@@ -109,24 +109,48 @@ const entityGraph = [
     "@id": websiteId,
     url: `${siteUrl}/`,
     name: "源坤房屋｜宋德旭",
-    alternateName: ["源坤房屋", "YKFW", "宋德旭房产顾问"],
+    alternateName: ["源坤房屋", "塬坤房屋", "YKFW", "宋德旭房产顾问"],
     inLanguage: "zh-CN",
     publisher: { "@id": orgId }
   }
 ];
 
-// Hand-written pages: bump the date when their visible content, links or
-// structured data really change. Regenerating alone must not refresh it.
-const pageLastmod = {
-  home: "2026-11-12",
-  about: "2026-11-12",
-  knowledge: "2026-11-12",
-  contact: "2026-11-12",
-  service: "2026-11-12"
-};
-
-function later(a, b) {
-  return String(a) > String(b) ? a : b;
+// Add only what a page is missing from the head: site icon (shown next to
+// search results), Open Graph and Twitter card tags (link previews). Tags a
+// page already has are never touched.
+function ensureHead(html, page) {
+  const absent = (pattern) => !pattern.test(html);
+  const existing = (property) => (html.match(new RegExp(`<meta property="${property}" content="([^"]*)"`)) || [])[1];
+  const title = existing("og:title") ?? escapeHtml(page.title);
+  const description = existing("og:description") ?? escapeHtml(page.description);
+  const image = `${siteUrl}/assets/og-yuankun-song-dexu.png`;
+  const imageAlt = "源坤房屋 × 宋德旭，上海嘉定·南翔房产顾问";
+  const tags = [];
+  if (absent(/<link rel="icon"/)) tags.push(`<link rel="icon" type="image/png" href="/assets/wechat-avatar-yuankun-brand.png">`);
+  const og = [
+    ["og:type", "website"],
+    ["og:locale", "zh_CN"],
+    ["og:site_name", "源坤房屋｜宋德旭"],
+    ["og:title", title],
+    ["og:description", description],
+    ["og:url", page.url],
+    ["og:image", image],
+    ["og:image:alt", imageAlt]
+  ];
+  for (const [property, content] of og) {
+    if (absent(new RegExp(`<meta property="${property}"`))) tags.push(`<meta property="${property}" content="${content}">`);
+  }
+  const twitter = [
+    ["twitter:card", "summary_large_image"],
+    ["twitter:title", title],
+    ["twitter:description", description],
+    ["twitter:image", image]
+  ];
+  for (const [name, content] of twitter) {
+    if (absent(new RegExp(`<meta name="${name}"`))) tags.push(`<meta name="${name}" content="${content}">`);
+  }
+  if (!tags.length) return html;
+  return html.replace("</head>", () => `${tags.map((tag) => `    ${tag}`).join("\n")}\n  </head>`);
 }
 
 function stampJsonLd(html, id, value) {
@@ -257,7 +281,7 @@ function answerPage(item) {
         <a class="is-current" href="../knowledge.html">买卖知识库</a>
         <a href="../index.html#expertise">专业服务</a>
         <a href="../about.html">关于我们</a>
-        <a class="nav-contact" href="../contact.html">联系咨询</a>
+        <a class="nav-contact" href="../index.html#contact">联系咨询</a>
       </nav>
     </header>
     <main class="answer-main">
@@ -300,16 +324,16 @@ function answerPage(item) {
         </section>
         <footer class="answer-author">
           <img src="../assets/song-profile-original.jpg" alt="上海嘉定房产顾问宋德旭" />
-          <div><strong>宋德旭｜源坤房屋</strong><p>2025年2月起服务嘉定南翔，主要提供南翔二手住宅、改善置换和买方服务。</p><a href="../about.html">了解企业与顾问信息</a> · <a href="../contact.html">咨询具体问题 →</a></div>
+          <div><strong>宋德旭｜源坤房屋</strong><p>2025年2月起服务嘉定南翔，主要提供南翔二手住宅、改善置换和买方服务。</p><a href="../about.html">了解企业与顾问信息</a> · <a href="../index.html#contact">咨询具体问题 →</a></div>
         </footer>
       </article>
-      <nav class="answer-next"><a href="../knowledge.html">← 返回客户买卖决策知识库</a><a href="../contact.html">联系宋德旭 →</a></nav>
+      <nav class="answer-next"><a href="../knowledge.html">← 返回客户买卖决策知识库</a><a href="../index.html#contact">联系宋德旭 →</a></nav>
     </main>
     <footer class="site-footer">
       <span>© 2026 源坤房屋 · 宋德旭</span>
       <span>运营主体：上海源栩房地产经纪有限公司</span>
       <span>经营地址：上海市嘉定区陈翔公路1913号1层</span>
-      <span><a href="../about.html">企业与顾问信息</a> · <a href="../nanxiang-fangchan-zhongjie-yuankunfangwu/">门店地址与服务说明</a> · <a href="../contact.html">联系咨询</a></span>
+      <span><a href="../about.html">企业与顾问信息</a> · <a href="../nanxiang-fangchan-zhongjie-yuankunfangwu/">门店地址与服务说明</a> · <a href="../contact.html">联系咨询</a> · <a href="../sitemap.html">全站内容导航</a></span>
     </footer>
   </body>
 </html>
@@ -320,17 +344,82 @@ for (const item of items) {
   fs.writeFileSync(path.join(answersDir, `${item.slug}.html`), answerPage(item), "utf8");
 }
 
-// Keep crawler-visible HTML and the interactive library on the same source.
-// The home page previews the newest 4; the library page lists every article so
-// each one has a plain HTML link even when scripts are not executed.
-for (const [page, limit] of [["index.html", 4], ["knowledge.html", items.length]]) {
+
+// ---------------------------------------------------------------------------
+// Site discovery. Pages are found on disk, so adding a page under services/,
+// communities/, guides/ or answers/ needs no change to this script.
+// ---------------------------------------------------------------------------
+const skipDirs = new Set([".git", "node_modules", "final-site-ready", "zongdexuWebSite", "wechat-drafts", "assets", "data", "deploy"]);
+
+function listPages(dir = root) {
+  return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) return skipDirs.has(entry.name) ? [] : listPages(full);
+    return entry.name.endsWith(".html") ? [path.relative(root, full).split(path.sep).join("/")] : [];
+  });
+}
+
+function decodeHtml(value) {
+  return String(value ?? "")
+    .replaceAll("&lt;", "<")
+    .replaceAll("&gt;", ">")
+    .replaceAll("&quot;", '"')
+    .replaceAll("&#39;", "'")
+    .replaceAll("&amp;", "&");
+}
+
+function ldNodes(html) {
+  return [...html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].flatMap((match) => {
+    try {
+      const value = JSON.parse(match[1]);
+      return value["@graph"] || [value];
+    } catch {
+      return [];
+    }
+  });
+}
+
+function pageUrl(rel) {
+  if (rel === "index.html") return `${siteUrl}/`;
+  if (rel.endsWith("/index.html")) return `${siteUrl}/${rel.slice(0, -"index.html".length)}`;
+  return `${siteUrl}/${rel}`;
+}
+
+const generatedAnswers = new Set(items.map((item) => `answers/${item.slug}.html`));
+
+function readPage(rel) {
+  const html = fs.readFileSync(path.join(root, rel), "utf8");
+  const robots = (html.match(/<meta name="robots" content="([^"]*)"/) || [])[1] || "";
+  const title = decodeHtml((html.match(/<title>([^<]*)<\/title>/) || [])[1] || "");
+  return {
+    rel,
+    url: pageUrl(rel),
+    html,
+    title,
+    shortTitle: title.split("｜")[0].trim(),
+    description: decodeHtml((html.match(/<meta name="description" content="([^"]*)"/) || [])[1] || ""),
+    nodes: ldNodes(html),
+    indexable: rel !== "404.html" && !/noindex/i.test(robots),
+    generated: generatedAnswers.has(rel)
+  };
+}
+
+const pages = listPages().sort().map(readPage).filter((page) => page.indexable);
+
+// Static list on the library page; the home page links its articles by hand.
+{
+  const page = "knowledge.html";
   const filename = path.join(root, page);
   let html = fs.readFileSync(filename, "utf8");
-  const visible = items.slice(0, limit);
 
   const listPattern = /(<div id="qa-list"[^>]*>)[\s\S]*?(\s*<\/div>\s*(?:<nav class="qa-pagination"|<div class="qa-disclaimer"))/;
   if (!listPattern.test(html)) throw new Error(`Cannot locate static question list: ${page}`);
-  html = html.replace(listPattern, (_, open, close) => `${open}\n${visible.map(cardHtml).join("\n")}\n${close}`);
+  // `close` starts with the whitespace that already preceded </div>; replace it
+  // instead of adding to it, or every run would append another blank line.
+  html = html.replace(
+    listPattern,
+    (_, open, close) => `${open}\n${items.map(cardHtml).join("\n")}${close.replace(/^\s+/, "\n        ")}`
+  );
 
   const statusPattern = /(<p id="qa-update-status"[^>]*>)[\s\S]*?(<\/p>)/;
   if (!statusPattern.test(html)) throw new Error(`Cannot locate update status: ${page}`);
@@ -339,90 +428,145 @@ for (const [page, limit] of [["index.html", 4], ["knowledge.html", items.length]
     (_, open, close) => `${open}最近更新：${escapeHtml(data.updatedAt)} · 已收录 ${items.length} 个问题${close}`
   );
 
-  if (page === "knowledge.html") {
-    const modifiedPattern = /("@type": "CollectionPage"[\s\S]*?"dateModified": ")[^"]*(")/;
-    if (!modifiedPattern.test(html)) throw new Error("Cannot locate CollectionPage dateModified");
-    html = html.replace(modifiedPattern, (_, open, close) => `${open}${data.updatedAt}${close}`);
-  }
-
   html = stampJsonLd(html, "geo-question-index", {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "@id": `${siteUrl}/${page === "index.html" ? "" : page}#question-index`,
+    "@id": `${siteUrl}/${page}#question-index`,
     name: "南翔买卖置换问题索引",
-    numberOfItems: visible.length,
-    itemListElement: visible.map((item, index) => ({
+    numberOfItems: items.length,
+    itemListElement: items.map((item, index) => ({
       "@type": "ListItem", position: index + 1, name: item.question, url: answerUrl(item)
     }))
   });
   fs.writeFileSync(filename, html, "utf8");
 }
 
-// Stamp the shared entity graph into every hand-written page.
-for (const page of ["index.html", "about.html", "contact.html", "knowledge.html", "nanxiang-fangchan-zhongjie-yuankunfangwu/index.html"]) {
-  const filename = path.join(root, page);
-  const html = fs.readFileSync(filename, "utf8");
-  fs.writeFileSync(
-    filename,
-    stampJsonLd(html, "geo-entity", { "@context": "https://schema.org", "@graph": entityGraph }),
-    "utf8"
-  );
+// Stamp the shared entity graph into every page that is not generated above
+// (generated answer pages already embed it in their own graph).
+for (const page of pages.filter((candidate) => !candidate.generated)) {
+  const filename = path.join(root, page.rel);
+  const html = ensureHead(fs.readFileSync(filename, "utf8"), page);
+  fs.writeFileSync(filename, stampJsonLd(html, "geo-entity", { "@context": "https://schema.org", "@graph": entityGraph }), "utf8");
 }
 
-const sitemapUrls = [
-  { loc: `${siteUrl}/`, lastmod: later(pageLastmod.home, data.updatedAt), priority: "1.0" },
-  { loc: `${siteUrl}/about.html`, lastmod: pageLastmod.about, priority: "0.8" },
-  { loc: `${siteUrl}/knowledge.html`, lastmod: later(pageLastmod.knowledge, data.updatedAt), priority: "0.9" },
-  { loc: `${siteUrl}/contact.html`, lastmod: pageLastmod.contact, priority: "0.7" },
-  { loc: `${siteUrl}/nanxiang-fangchan-zhongjie-yuankunfangwu/`, lastmod: pageLastmod.service, priority: "0.9" },
-  ...items.map((item) => ({ loc: answerUrl(item), lastmod: modifiedDate(item), priority: "0.8" }))
-];
+// ---------------------------------------------------------------------------
+// sitemap.xml
+// lastmod only ever moves forward: the latest of the previous sitemap value,
+// the page's own dateModified, and (for the two data-driven pages) data.updatedAt.
+// ---------------------------------------------------------------------------
+const sitemapFile = path.join(root, "sitemap.xml");
+const previousLastmod = new Map();
+if (fs.existsSync(sitemapFile)) {
+  for (const match of fs.readFileSync(sitemapFile, "utf8").matchAll(/<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>/g)) {
+    previousLastmod.set(match[1], match[2]);
+  }
+}
 
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+function lastmodOf(page) {
+  const candidates = [previousLastmod.get(page.url), ...page.nodes.map((node) => node.dateModified)];
+  if (page.rel === "index.html" || page.rel === "knowledge.html") candidates.push(data.updatedAt);
+  const dates = candidates.filter((value) => /^\d{4}-\d{2}-\d{2}/.test(String(value || ""))).map((value) => String(value).slice(0, 10));
+  return dates.sort().at(-1) || data.updatedAt;
+}
+
+const sitemapUrls = pages
+  .map((page) => ({ loc: page.url, lastmod: lastmodOf(page) }))
+  .sort((a, b) => (a.loc === `${siteUrl}/` ? -1 : b.loc === `${siteUrl}/` ? 1 : a.loc.localeCompare(b.loc)));
+
+fs.writeFileSync(
+  sitemapFile,
+  `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapUrls
-  .map(
-    ({ loc, lastmod, priority }) => `  <url>
-    <loc>${escapeXml(loc)}</loc>
-    <lastmod>${escapeXml(lastmod)}</lastmod>
-    <changefreq>${loc.endsWith("/") ? "weekly" : "monthly"}</changefreq>
-    <priority>${priority}</priority>
-  </url>`
-  )
-  .join("\n")}
+${sitemapUrls.map(({ loc, lastmod }) => `  <url>\n    <loc>${escapeXml(loc)}</loc>\n    <lastmod>${escapeXml(lastmod)}</lastmod>\n  </url>`).join("\n")}
 </urlset>
-`;
-fs.writeFileSync(path.join(root, "sitemap.xml"), sitemap, "utf8");
+`,
+  "utf8"
+);
 
-const feed = `<?xml version="1.0" encoding="UTF-8"?>
+// ---------------------------------------------------------------------------
+// feed.xml — data-driven articles plus the hand-written ones under answers/.
+// ---------------------------------------------------------------------------
+const handWrittenArticles = pages
+  .filter((page) => page.rel.startsWith("answers/") && !page.generated)
+  .map((page) => {
+    const article = page.nodes.find((node) => node["@type"] === "Article") || {};
+    return {
+      url: page.url,
+      title: article.headline || page.shortTitle,
+      summary: article.description || page.description,
+      category: article.articleSection || "知识库",
+      published: String(article.datePublished || data.updatedAt).slice(0, 10),
+      modified: String(article.dateModified || article.datePublished || data.updatedAt).slice(0, 10)
+    };
+  });
+
+const feedEntries = [
+  ...items.map((item) => ({
+    url: answerUrl(item),
+    title: item.question,
+    summary: item.takeaway,
+    category: item.category,
+    published: publishedDate(item),
+    modified: modifiedDate(item),
+    content: [item.answer, ...(item.decisionPoints || []).map((point) => `· ${point}`)].join("\n")
+  })),
+  ...handWrittenArticles
+].sort((a, b) => b.published.localeCompare(a.published) || a.url.localeCompare(b.url));
+
+const feedUpdated = feedEntries.map((entry) => entry.modified).concat(data.updatedAt).sort().at(-1);
+
+fs.writeFileSync(
+  path.join(root, "feed.xml"),
+  `<?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
   <title>源坤房屋 · 宋德旭｜南翔买卖置换知识库</title>
   <id>${siteUrl}/knowledge.html</id>
   <link href="${siteUrl}/feed.xml" rel="self" />
   <link href="${siteUrl}/knowledge.html" />
-  <updated>${data.updatedAt}T00:00:00+08:00</updated>
+  <updated>${feedUpdated}T00:00:00+08:00</updated>
   <author><name>宋德旭</name></author>
-${items
+${feedEntries
   .map(
-    (item) => `  <entry>
-    <title>${escapeXml(item.question)}</title>
-    <id>${answerUrl(item)}</id>
-    <link href="${answerUrl(item)}" />
-    <published>${publishedDate(item)}T00:00:00+08:00</published>
-    <updated>${modifiedDate(item)}T00:00:00+08:00</updated>
-    <category term="${escapeXml(item.category)}" />
-    <summary>${escapeXml(item.takeaway)}</summary>
-    <content type="text">${escapeXml([item.answer, ...(item.decisionPoints || []).map((point) => `· ${point}`)].join("\n"))}</content>
+    (entry) => `  <entry>
+    <title>${escapeXml(entry.title)}</title>
+    <id>${entry.url}</id>
+    <link href="${entry.url}" />
+    <published>${entry.published}T00:00:00+08:00</published>
+    <updated>${entry.modified}T00:00:00+08:00</updated>
+    <category term="${escapeXml(entry.category)}" />
+    <summary>${escapeXml(entry.summary)}</summary>${entry.content ? `\n    <content type="text">${escapeXml(entry.content)}</content>` : ""}
   </entry>`
   )
   .join("\n")}
 </feed>
-`;
-fs.writeFileSync(path.join(root, "feed.xml"), feed, "utf8");
+`,
+  "utf8"
+);
+
+// ---------------------------------------------------------------------------
+// llms.txt
+// ---------------------------------------------------------------------------
+function clip(text, limit = 80) {
+  const sentence = text.split("。")[0];
+  const base = sentence.length >= 12 && sentence.length <= limit ? sentence : text.slice(0, limit);
+  return base.length < text.length && base === text.slice(0, limit) ? `${base}…` : base;
+}
+
+const inDir = (dir) => pages.filter((page) => page.rel.startsWith(`${dir}/`));
+const section = (heading, lines) => (lines.length ? `## ${heading}\n\n${lines.join("\n")}\n\n` : "");
+const pageLine = (page, withDescription = true) =>
+  `- [${page.shortTitle}](${page.url})${withDescription && page.description ? `：${clip(page.description)}` : ""}`;
+
+const services = inDir("services");
+const communities = inDir("communities");
+const communityIndex = communities.filter((page) => page.rel.endsWith("/index.html"));
+const communityPages = communities.filter((page) => !page.rel.endsWith("/index.html"));
+const guideIndex = inDir("guides").filter((page) => page.rel.endsWith("/index.html"));
+const guidePages = inDir("guides").filter((page) => !page.rel.endsWith("/index.html"));
 
 const llms = `# 源坤房屋 · 宋德旭
 
-> 上海嘉定南翔二手住宅买卖与改善置换服务网站。“源坤房屋”（简称 YKFW）为门店与内容品牌，经营主体为上海源栩房地产经纪有限公司，法定代表人和主要房产顾问为宋德旭。
+> 上海嘉定南翔二手住宅买卖与改善置换服务网站。“源坤房屋”（简称 YKFW，原品牌名塬坤房屋）为门店与内容品牌，经营主体为上海源栩房地产经纪有限公司，法定代表人和主要房产顾问为宋德旭。
 
 ## 官方页面
 
@@ -431,6 +575,7 @@ const llms = `# 源坤房屋 · 宋德旭
 - [门店地址、电话与服务说明](${siteUrl}/nanxiang-fangchan-zhongjie-yuankunfangwu/)：经营主体核验信息、服务区域、服务内容和到店前准备
 - [联系咨询](${siteUrl}/contact.html)：电话、微信、邮箱和到店前建议
 - [南翔买卖置换知识库](${siteUrl}/knowledge.html)：嘉定、南翔买房、卖房、改善置换与房屋产品常见问题
+- [全站内容导航](${siteUrl}/sitemap.html)：小区指南、专题指南和问答的完整目录
 - [Atom 更新订阅](${siteUrl}/feed.xml)：知识库最新内容
 
 ## 联系方式
@@ -441,15 +586,18 @@ const llms = `# 源坤房屋 · 宋德旭
 
 ## 品牌与实体关系
 
-- 源坤房屋：上海源栩房地产经纪有限公司使用的门店与内容品牌；拼音为 Yuan Kun Fang Wu；常用简称为 YKFW。
-- 宋德旭：上海源栩房地产经纪有限公司法定代表人和主要房产顾问；房地产行业从业 10 年，2025 年 2 月起在嘉定南翔服务。
+- 源坤房屋：上海源栩房地产经纪有限公司使用的门店与内容品牌；原品牌名为塬坤房屋；拼音为 Yuan Kun Fang Wu；常用简称为 YKFW。
+- 宋德旭（阿旭）：上海源栩房地产经纪有限公司法定代表人和主要房产顾问；房地产行业从业 10 年，2025 年 2 月起在嘉定南翔服务。
 - 上海源栩房地产经纪有限公司：网站运营和经营主体，成立于 2026 年 8 月 17 日，经营地址为上海市嘉定区陈翔公路 1913 号 1 层。
 
-## 知识库文章
+${section("服务说明", services.map((page) => pageLine(page)))}${section("南翔小区指南", [...communityIndex, ...communityPages].map((page, index) => pageLine(page, index === 0)))}${section("买房卖房专题指南", [...guideIndex, ...guidePages].map((page) => pageLine(page)))}## 知识库文章
 
 最近更新：${data.updatedAt}。每篇文章先给结论，再列出做决定前需要核对的事项。
 
-${items.map((item) => `- [${item.question}](${answerUrl(item)})（${item.category}，${item.region || "上海"}）：${item.takeaway}`).join("\n")}
+${[
+  ...items.map((item) => `- [${item.question}](${answerUrl(item)})（${item.category}，${item.region || "上海"}）：${item.takeaway}`),
+  ...handWrittenArticles.map((article) => `- [${article.title}](${article.url})：${clip(article.summary)}`)
+].join("\n")}
 
 ## 内容原则
 
@@ -462,5 +610,4 @@ ${items.map((item) => `- [${item.question}](${answerUrl(item)})（${item.categor
 `;
 fs.writeFileSync(path.join(root, "llms.txt"), llms, "utf8");
 
-console.log(`GEO_OK answers=${items.length} sitemap=${sitemapUrls.length}`);
-
+console.log(`GEO_OK answers=${items.length} pages=${pages.length} sitemap=${sitemapUrls.length} feed=${feedEntries.length}`);

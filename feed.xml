@@ -4,8 +4,26 @@
   <id>https://yuankunfangwu.com/knowledge.html</id>
   <link href="https://yuankunfangwu.com/feed.xml" rel="self" />
   <link href="https://yuankunfangwu.com/knowledge.html" />
-  <updated>2026-09-01T00:00:00+08:00</updated>
+  <updated>2026-11-02T00:00:00+08:00</updated>
   <author><name>宋德旭</name></author>
+  <entry>
+    <title>南翔买房，地铁距离和湖景怎么取舍？</title>
+    <id>https://yuankunfangwu.com/answers/nanxiang-metro-and-lakeside-choice.html</id>
+    <link href="https://yuankunfangwu.com/answers/nanxiang-metro-and-lakeside-choice.html" />
+    <published>2026-11-02T00:00:00+08:00</published>
+    <updated>2026-11-02T00:00:00+08:00</updated>
+    <category term="知识库" />
+    <summary>先确认每天能够接受的通勤，再比较公园、户型与价格。湖景可以增加居住体验，但不应替代真实出行测试，也不能直接推导出未来涨幅。</summary>
+  </entry>
+  <entry>
+    <title>南翔二手房新装修，买之前应该检查什么？</title>
+    <id>https://yuankunfangwu.com/answers/renovated-resale-home-checklist.html</id>
+    <link href="https://yuankunfangwu.com/answers/renovated-resale-home-checklist.html" />
+    <published>2026-11-02T00:00:00+08:00</published>
+    <updated>2026-11-02T00:00:00+08:00</updated>
+    <category term="知识库" />
+    <summary>新装修可以节省一部分入住准备，但不能仅凭照片、气味或“房东急售”判断房屋好坏。先核对装修范围与资料，再看渗漏、设备和交付内容；无法现场确认的项目，列为待核。</summary>
+  </entry>
   <entry>
     <title>父母出钱给孩子买房，应该由谁来决定板块？</title>
     <id>https://yuankunfangwu.com/answers/family-budget-and-location-decision.html</id>
@@ -14,15 +32,10 @@
     <updated>2026-09-01T00:00:00+08:00</updated>
     <category term="买房" />
     <summary>先解决出资者与居住者的需求冲突，再选板块。</summary>
-  </entry>
-  <entry>
-    <title>无电梯五复六面积很大，为什么不能直接按面积定价？</title>
-    <id>https://yuankunfangwu.com/answers/walk-up-top-duplex-pricing.html</id>
-    <link href="https://yuankunfangwu.com/answers/walk-up-top-duplex-pricing.html" />
-    <published>2026-09-01T00:00:00+08:00</published>
-    <updated>2026-09-01T00:00:00+08:00</updated>
-    <category term="卖房" />
-    <summary>特殊房源先找目标客群，再用总价带定价。</summary>
+    <content type="text">先让真正居住的人确认生活半径和通勤。父母更在意资产与未来，孩子更在意每天几点起床、怎么到公司。居住者没有认同之前，急着比较板块和价格，往往只会增加家庭分歧。
+· 先确认未来真正居住者的通勤和生活半径
+· 把父母的出资边界与孩子的居住需求分别写清楚
+· 在家庭达成共识后，再比较板块、房型和总价</content>
   </entry>
   <entry>
     <title>新房整盘均价低，为什么想买的四房不一定便宜？</title>
@@ -32,6 +45,10 @@
     <updated>2026-09-01T00:00:00+08:00</updated>
     <category term="产品" />
     <summary>不要被平均数带偏，要核算目标户型。</summary>
+    <content type="text">小户型可能拉低整盘均价，而稀缺四房可能位于更好的楼栋、面积段和总价带。比较时要把四房单独拿出来，看套数、楼栋、梯户比、得房、交付标准和最终总价。
+· 把目标四房从整盘所有户型中单独拿出来比较
+· 核对四房的套数、楼栋、梯户比和得房情况
+· 最终以交付标准和家庭可承受总价判断是否合适</content>
   </entry>
   <entry>
     <title>改善置换到底应该先卖旧房，还是先买新房？</title>
@@ -41,5 +58,22 @@
     <updated>2026-09-01T00:00:00+08:00</updated>
     <category term="置换" />
     <summary>先排现金流和时间节点，不用一句话套所有家庭。</summary>
+    <content type="text">先看首付是否依赖旧房回款、旧房预计成交周期、目标房源稀缺程度，以及两套房并行时的现金流。如果回款决定首付，优先把旧房出售方案做扎实；资金充足时，再评估先锁定目标房的必要性。
+· 先确认新房首付是否依赖旧房出售回款
+· 估算旧房合理成交周期和两套房并行的现金流
+· 再结合目标房源稀缺程度决定先卖还是先买</content>
+  </entry>
+  <entry>
+    <title>无电梯五复六面积很大，为什么不能直接按面积定价？</title>
+    <id>https://yuankunfangwu.com/answers/walk-up-top-duplex-pricing.html</id>
+    <link href="https://yuankunfangwu.com/answers/walk-up-top-duplex-pricing.html" />
+    <published>2026-09-01T00:00:00+08:00</published>
+    <updated>2026-09-01T00:00:00+08:00</updated>
+    <category term="卖房" />
+    <summary>特殊房源先找目标客群，再用总价带定价。</summary>
+    <content type="text">这类房子的真正买家，通常是愿意用爬楼换空间的年轻家庭，而不是需要老人同住的三代家庭。定价应先看同小区标准三房的成交总价，再为复式空间、两卫和可改造性增加有限溢价。
+· 先判断愿意用爬楼换空间的真实目标买家有多少
+· 用同小区标准户型的近期成交总价建立基准
+· 复式空间、两卫和可改造性只计算合理的有限溢价</content>
   </entry>
 </feed>
