@@ -567,16 +567,6 @@ h1 {
   line-height: 1.25;
 }
 
-.qa-card h3 a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.qa-card h3 a:hover,
-.qa-card h3 a:focus-visible {
-  text-decoration: underline;
-}
-
 .qa-card-answer {
   margin-bottom: 20px;
   color: var(--muted);
