@@ -50,9 +50,20 @@ deploy/publish.ps1 已包含上述步骤。
 
 1. 检查首页、各类页面、robots.txt、sitemap.xml 是否返回 200，确认 CDN 或服务器没有拦截搜索爬虫。
 2. 抽查线上文件与本地是否一致，确认没有停留在旧版本。
-3. 确保 www 域名与 /index.html 重复入口通过永久重定向归并到规范地址。当前项目没有完整服务器域名及 TLS 配置，不能仅凭本地文件确认重定向状态。
+3. 确认重定向仍然生效（2026-11-13 已在服务器配置）：`https://www.yuankunfangwu.com/...`、`http://...`、`/index.html`、`/xxx/index.html` 都应返回 301 到不带 www、不带 index.html 的规范地址，而正常页面返回 200。
 4. 在 Google Search Console、Bing Webmaster Tools 提交站点地图，查看抓取与索引状态。
 5. 记录品牌、服务地区及具体问题的展示、访问与咨询变化；AI 回答会变化，单次是否引用不代表稳定效果。
+
+## 服务器与访问
+
+- 服务器：阿里云 ECS（华东2 上海），网站目录 /var/www/yuankun，属主 deploy:deploy；`deploy` 账号没有 sudo，改 /etc/nginx 要用阿里云 Workbench（root）。
+- nginx 主配置 /etc/nginx/nginx.conf，安全头和缓存规则在 /etc/nginx/default.d/yuankun.conf（对应仓库的 deploy/nginx-default.conf）。www 与 index.html 的 301 写在主配置里，生成它的脚本是 deploy/apply-nginx-redirect.py（已执行，原配置备份为 /etc/nginx/nginx.conf.before-redirect-20261113）。
+- 从本机用 SSH 部署前，22 端口要在两处同时放行本机公网 IP，缺一处都会超时：
+  1. 阿里云安全组入方向 22 端口那条规则的授权对象；
+  2. 服务器 firewalld：`firewall-cmd --add-rich-rule='rule family="ipv4" source address="新IP/32" service name="ssh" accept'`，删除旧 IP 用 `--remove-rich-rule`，最后 `firewall-cmd --runtime-to-permanent`（不要用 --reload，会丢掉未保存的 Workbench 规则）。
+- 本机公网 IP 要用 `curl --noproxy '*' https://icanhazip.com` 查；开着 Clash 等代理时，普通 curl 查到的是代理节点的 IP。家庭宽带 IP 会变，变了就要重新放行。
+- 从 Windows 部署用系统自带的 PowerShell 5.1 运行 deploy/publish.ps1（脚本已带 BOM）。在 Git Bash 里运行会用到 Git 自带的 tar，打包会失败。
+- 部署前先对比线上和本地。2026-11-13 发现过线上比仓库新，直接部署会覆盖新页面。线上快照备份在本机 C:/Users/ykfw/live-snapshot-20261113/。
 
 ## 官方参考
 
