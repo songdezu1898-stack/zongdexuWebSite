@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $siteRoot = Split-Path -Parent $PSScriptRoot
 $keyPath = Join-Path $HOME '.ssh\aliyun_geo_site_ed25519_v3'
