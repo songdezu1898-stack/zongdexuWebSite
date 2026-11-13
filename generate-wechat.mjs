@@ -8,7 +8,7 @@ const outputDir = path.join(root, "wechat-drafts");
 const data = JSON.parse(fs.readFileSync(path.join(root, "data", "live-qa.json"), "utf8"));
 const items = data.items
   .filter((item) => item.published === true && item.reviewStatus === "approved")
-  .sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  .sort((a, b) => String(b.datePublished || b.date).localeCompare(String(a.datePublished || a.date)));
 
 fs.mkdirSync(outputDir, { recursive: true });
 

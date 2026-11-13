@@ -16,6 +16,26 @@ function read(relativePath) {
   return fs.readFileSync(path.join(root, relativePath), "utf8");
 }
 
+function jsonLdNodes(html) {
+  return [...html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].flatMap((match) => {
+    try {
+      const value = JSON.parse(match[1]);
+      return value["@graph"] || [value];
+    } catch {
+      return [];
+    }
+  });
+}
+
+// Text a reader or a non-rendering crawler actually sees.
+function visibleText(html) {
+  return html
+    .replace(/<script[\s\S]*?<\/script>/g, "")
+    .replace(/<[^>]+>/g, "")
+    .replace(/&amp;/g, "&")
+    .replace(/\s+/g, "");
+}
+
 for (const page of pages) {
   const absolute = path.join(root, page);
   if (!fs.existsSync(absolute)) {
@@ -101,8 +121,10 @@ const sitemap = fs.existsSync(path.join(root, "sitemap.xml")) ? read("sitemap.xm
 for (const page of pages) {
   if (read(page).includes("https://www.yuankunfangwu.com")) errors.push(`inconsistent canonical host: ${page}`);
 }
-for (const [page, limit] of [["index.html", 4], ["knowledge.html", 6]]) {
+for (const [page, limit] of [["index.html", 4], ["knowledge.html", publishedItems.length]]) {
   const html = read(page);
+  if (/正在读取|qa-card-loading/.test(html)) errors.push(`static HTML still shows a loading placeholder: ${page}`);
+  if (!visibleText(html).includes(`已收录${publishedItems.length}个问题`)) errors.push(`stale static article count: ${page}`);
   const sorted = [...publishedItems].sort((a, b) => String(b.datePublished || b.date).localeCompare(String(a.datePublished || a.date)));
   for (const item of sorted.slice(0, limit)) {
     if (!html.includes(`href="./answers/${item.slug}.html"`)) errors.push(`missing static article link: ${page} ${item.slug}`);
@@ -163,7 +185,7 @@ for (const page of ["index.html", "about.html", "contact.html"]) {
 if (!serviceHtml.includes('"datePublished": "2026-09-11"') || !serviceHtml.includes('"dateModified": "2026-09-11"')) {
   errors.push("service article dates are missing or incorrect");
 }
-if (!read("contact.html").includes('"telephone": "+86-13040676264"')) {
+if (!jsonLdNodes(read("contact.html")).some((node) => node["@type"] === "RealEstateAgent" && node.telephone === "+86-13040676264")) {
   errors.push("contact page is missing machine-readable telephone");
 }
 
@@ -173,6 +195,49 @@ for (const page of answerPages) {
     errors.push(`missing article dates: ${page}`);
   }
   if (!html.includes("继续阅读相关问题")) errors.push(`missing related questions: ${page}`);
+}
+
+// The business, adviser and website entities must be defined once per page and
+// be identical everywhere, so answer engines never see conflicting facts.
+const entityIds = [
+  "https://yuankunfangwu.com/#yuanxu-real-estate",
+  "https://yuankunfangwu.com/about.html#song-dexu",
+  "https://yuankunfangwu.com/#website"
+];
+const entityReference = {};
+for (const page of pages.filter((name) => name !== "404.html")) {
+  const html = read(page);
+  const nodes = jsonLdNodes(html);
+  for (const id of entityIds) {
+    const definitions = nodes.filter((node) => node["@id"] === id && node["@type"]);
+    if (definitions.length !== 1) {
+      errors.push(`entity ${id} is defined ${definitions.length} times: ${page}`);
+      continue;
+    }
+    const serialized = JSON.stringify(definitions[0]);
+    entityReference[id] ??= serialized;
+    if (entityReference[id] !== serialized) errors.push(`entity ${id} differs between pages: ${page}`);
+  }
+
+  // Every in-site @id reference must resolve on the same page or be a page-level id of another page.
+  const defined = new Set(nodes.filter((node) => node["@type"]).map((node) => node["@id"]));
+  const references = [...JSON.stringify(nodes).matchAll(/\{"@id":"([^"]+)"\}/g)].map((match) => match[1]);
+  for (const reference of references) {
+    if (!defined.has(reference) && reference !== "https://yuankunfangwu.com/knowledge.html#webpage") {
+      errors.push(`unresolved @id reference ${reference}: ${page}`);
+    }
+  }
+
+  // FAQ markup may only repeat questions and answers that are visible on the page.
+  const text = visibleText(html);
+  for (const faq of nodes.filter((node) => node["@type"] === "FAQPage")) {
+    for (const question of faq.mainEntity || []) {
+      const answer = question.acceptedAnswer?.text || "";
+      if (!text.includes(question.name.replace(/\s+/g, "")) || !text.includes(answer.replace(/\s+/g, ""))) {
+        errors.push(`FAQ markup does not match visible text: ${page} "${question.name}"`);
+      }
+    }
+  }
 }
 
 const wechatManifestPath = path.join(root, "wechat-drafts", "manifest.json");

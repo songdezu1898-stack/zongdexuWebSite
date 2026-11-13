@@ -6,6 +6,8 @@
 
 - [首页](https://yuankunfangwu.com/)：主体关系、服务边界、个人经历、专业服务与联系方式
 - [企业与顾问信息](https://yuankunfangwu.com/about.html)：运营主体、品牌关系、服务区域、经营地址和顾问信息
+- [门店地址、电话与服务说明](https://yuankunfangwu.com/nanxiang-fangchan-zhongjie-yuankunfangwu/)：经营主体核验信息、服务区域、服务内容和到店前准备
+- [联系咨询](https://yuankunfangwu.com/contact.html)：电话、微信、邮箱和到店前建议
 - [南翔买卖置换知识库](https://yuankunfangwu.com/knowledge.html)：嘉定、南翔买房、卖房、改善置换与房屋产品常见问题
 - [Atom 更新订阅](https://yuankunfangwu.com/feed.xml)：知识库最新内容
 
@@ -23,10 +25,12 @@
 
 ## 知识库文章
 
-- [父母出钱给孩子买房，应该由谁来决定板块？](https://yuankunfangwu.com/answers/family-budget-and-location-decision.html)：先解决出资者与居住者的需求冲突，再选板块。
-- [无电梯五复六面积很大，为什么不能直接按面积定价？](https://yuankunfangwu.com/answers/walk-up-top-duplex-pricing.html)：特殊房源先找目标客群，再用总价带定价。
-- [新房整盘均价低，为什么想买的四房不一定便宜？](https://yuankunfangwu.com/answers/new-home-average-price-and-four-bedroom.html)：不要被平均数带偏，要核算目标户型。
-- [改善置换到底应该先卖旧房，还是先买新房？](https://yuankunfangwu.com/answers/sell-first-or-buy-first-for-home-upgrade.html)：先排现金流和时间节点，不用一句话套所有家庭。
+最近更新：2026-09-01。每篇文章先给结论，再列出做决定前需要核对的事项。
+
+- [父母出钱给孩子买房，应该由谁来决定板块？](https://yuankunfangwu.com/answers/family-budget-and-location-decision.html)（买房，上海）：先解决出资者与居住者的需求冲突，再选板块。
+- [无电梯五复六面积很大，为什么不能直接按面积定价？](https://yuankunfangwu.com/answers/walk-up-top-duplex-pricing.html)（卖房，上海）：特殊房源先找目标客群，再用总价带定价。
+- [新房整盘均价低，为什么想买的四房不一定便宜？](https://yuankunfangwu.com/answers/new-home-average-price-and-four-bedroom.html)（产品，上海）：不要被平均数带偏，要核算目标户型。
+- [改善置换到底应该先卖旧房，还是先买新房？](https://yuankunfangwu.com/answers/sell-first-or-buy-first-for-home-upgrade.html)（置换，嘉定·南翔）：先排现金流和时间节点，不用一句话套所有家庭。
 
 ## 内容原则
 
