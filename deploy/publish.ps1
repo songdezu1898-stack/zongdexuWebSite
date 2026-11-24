@@ -19,6 +19,9 @@ if (-not (Test-Path -LiteralPath $nodePath)) {
   throw "未找到用于生成网站页面的 Node.js：$nodePath"
 }
 
+& $nodePath (Join-Path $siteRoot 'generate-keywords.mjs')
+if ($LASTEXITCODE -ne 0) { throw '问题索引页生成失败' }
+
 & $nodePath (Join-Path $siteRoot 'generate-geo.mjs')
 if ($LASTEXITCODE -ne 0) { throw 'GEO页面生成失败' }
 
@@ -55,7 +58,11 @@ $publicFiles = @(
   'data/live-qa.schema.json'
 )
 
-tar -czf $archive -C $siteRoot @publicFiles
+# Use Windows' own bsdtar. When Git for Windows is first on PATH its tar treats
+# "C:..." as a remote host and fails, so pick the copy under System32.
+$tarExe = (Get-Command tar.exe -All -ErrorAction SilentlyContinue | Where-Object { $_.Source -like '*\System32\*' } | Select-Object -First 1).Source
+if (-not $tarExe) { throw '未找到 Windows 自带的 tar.exe（System32）' }
+& $tarExe -czf $archive -C $siteRoot @publicFiles
 if ($LASTEXITCODE -ne 0) { throw '网站压缩失败' }
 
 scp -i $keyPath -o BatchMode=yes $archive "${server}:/home/deploy/yuankun-site.tar.gz"

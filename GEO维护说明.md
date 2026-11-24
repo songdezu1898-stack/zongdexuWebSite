@@ -62,7 +62,7 @@ deploy/publish.ps1 已包含上述步骤。
   1. 阿里云安全组入方向 22 端口那条规则的授权对象；
   2. 服务器 firewalld：`firewall-cmd --add-rich-rule='rule family="ipv4" source address="新IP/32" service name="ssh" accept'`，删除旧 IP 用 `--remove-rich-rule`，最后 `firewall-cmd --runtime-to-permanent`（不要用 --reload，会丢掉未保存的 Workbench 规则）。
 - 本机公网 IP 要用 `curl --noproxy '*' https://icanhazip.com` 查；开着 Clash 等代理时，普通 curl 查到的是代理节点的 IP。家庭宽带 IP 会变，变了就要重新放行。
-- 从 Windows 部署用系统自带的 PowerShell 5.1 运行 deploy/publish.ps1（脚本已带 BOM）。在 Git Bash 里运行会用到 Git 自带的 tar，打包会失败。
+- 从 Windows 部署用系统自带的 PowerShell 5.1 运行 deploy/publish.ps1（脚本已带 BOM）。脚本现在固定使用 System32 里的 tar.exe，在 Git Bash 里启动也能打包；流程为 generate-keywords、generate-geo、generate-wechat、validate-site，再打包上传。
 - 部署前先对比线上和本地。2026-11-13 发现过线上比仓库新，直接部署会覆盖新页面。线上快照备份在本机 C:/Users/ykfw/live-snapshot-20261113/。
 
 ## 官方参考
