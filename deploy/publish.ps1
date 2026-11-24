@@ -51,6 +51,7 @@ $publicFiles = @(
   'robots.txt',
   'llms.txt',
   'sitemap.xml',
+  '199864da2cfe47ad866ac58c5257bf4a.txt',
   'feed.xml',
   'assets',
   'answers',
@@ -73,3 +74,13 @@ ssh -i $keyPath -o BatchMode=yes $server `
 if ($LASTEXITCODE -ne 0) { throw '服务器解压失败' }
 
 Write-Host '网站已发布。'
+
+# IndexNow: tell Bing and other participating engines about new, changed and removed
+# pages. This runs only after a successful publish and can never fail it: indexnow.mjs
+# always exits 0 and the call below is wrapped as well. Log: deploy/indexnow.log.
+try {
+  & $nodePath (Join-Path $siteRoot 'indexnow.mjs')
+  if ($LASTEXITCODE -ne 0) { Write-Warning 'IndexNow 推送未成功，网站发布不受影响。' }
+} catch {
+  Write-Warning "IndexNow 推送出错（网站发布不受影响）：$($_.Exception.Message)"
+}

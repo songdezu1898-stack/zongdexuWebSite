@@ -71,3 +71,13 @@ deploy/publish.ps1 已包含上述步骤。
 - Google canonical：https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls
 
 Google 说明 AI 搜索功能沿用基础 SEO 要求，无需特殊的 AI 文件或专用结构化标记。llms.txt 可作为补充说明，但不能替代可索引页面、真实内容和清晰内链。
+
+## IndexNow 自动推送
+
+- 密钥文件 199864da2cfe47ad866ac58c5257bf4a.txt 在网站根目录（内容即密钥），已在部署清单中；线上必须返回 200，否则推送脚本会跳过。
+- `indexnow.mjs` 在 deploy/publish.ps1 发布成功之后自动运行，向 https://api.indexnow.org/indexnow 批量提交新增、实质修改和已删除的页面。它永远以退出码 0 结束，推送失败不影响发布。
+- 变化判断：对比 data/indexnow-state.json 里记录的页面内容指纹（忽略脚本、结构化数据、?v= 版本号和空白）。没有变化的页面不会重复提交；未审核或未公开的问答、noindex 页面不提交。
+- 失败处理：429 和 5xx 最多重试 4 次（2、4、8 秒递增）；400、403、422 不重试。只有接口返回 200 或 202 的批次才会更新状态文件。
+- 日志在 deploy/indexnow.log（不进 Git）。预览用 `node indexnow.mjs --dry-run`，强制全量重推用 `--force`。
+- 每次部署后，data/indexnow-state.json 会变化，记得随下一次提交一起入库，否则换电脑部署会被当成首次推送。
+- IndexNow 只通知 Bing 等参与的搜索引擎，Google 不参与，不要因此改用 Google Indexing API（它只适用于招聘和直播页面）。
