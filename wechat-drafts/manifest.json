@@ -1,9 +1,130 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-24T09:34:53.015Z",
+  "generatedAt": "2026-11-24T09:38:38.321Z",
   "source": "data/live-qa.json",
   "mode": "draft-only",
   "items": [
+    {
+      "id": "editorial-20261120-cheap-home-bargain-or-tradeoff",
+      "slug": "cheap-home-bargain-or-tradeoff",
+      "date": "2026-11-20",
+      "title": "房子比周边便宜，就算捡漏吗？先分清这三种低价",
+      "author": "宋德旭",
+      "digest": "先找可比房，再分清临时让价、可修复问题和长期缺点，才知道便宜有没有意义。",
+      "contentSourceUrl": "https://yuankunfangwu.com/answers/cheap-home-bargain-or-tradeoff.html",
+      "htmlFile": "2026-11-20-cheap-home-bargain-or-tradeoff.html",
+      "reviewStatus": "approved"
+    },
+    {
+      "id": "editorial-20261120-large-home-resale-buyer-fit",
+      "slug": "large-home-resale-buyer-fit",
+      "date": "2026-11-20",
+      "title": "同小区大户型反而卖得快？卖房不能只看面积大小",
+      "author": "宋德旭",
+      "digest": "判断大户型好不好卖，要比较同类产品的供给、总价与买家需求，而不是数卖掉几套。",
+      "contentSourceUrl": "https://yuankunfangwu.com/answers/large-home-resale-buyer-fit.html",
+      "htmlFile": "2026-11-20-large-home-resale-buyer-fit.html",
+      "reviewStatus": "approved"
+    },
+    {
+      "id": "editorial-20261120-nearby-new-project-and-resale-price",
+      "slug": "nearby-new-project-and-resale-price",
+      "date": "2026-11-20",
+      "title": "附近新盘卖得贵，我的旧房也能涨价吗？先看买家会不会转过来",
+      "author": "宋德旭",
+      "digest": "新盘报价只是比较起点；旧房能否卖得更好，要看同预算买家是否真正转向并形成成交。",
+      "contentSourceUrl": "https://yuankunfangwu.com/answers/nearby-new-project-and-resale-price.html",
+      "htmlFile": "2026-11-20-nearby-new-project-and-resale-price.html",
+      "reviewStatus": "approved"
+    },
+    {
+      "id": "editorial-20261120-moving-home-after-child-starts-school",
+      "slug": "moving-home-after-child-starts-school",
+      "date": "2026-11-20",
+      "title": "孩子已经上小学，想换房到另一个区：先问清这六件事",
+      "author": "宋德旭",
+      "digest": "先确认转学资格、年级、接收安排和办理窗口，再让购房与搬家时间配合教育安排。",
+      "contentSourceUrl": "https://yuankunfangwu.com/answers/moving-home-after-child-starts-school.html",
+      "htmlFile": "2026-11-20-moving-home-after-child-starts-school.html",
+      "reviewStatus": "approved"
+    },
+    {
+      "id": "editorial-20261117-nanxiang-gucun-home-comparison",
+      "slug": "nanxiang-gucun-home-comparison",
+      "date": "2026-11-17",
+      "title": "南翔和顾村怎么选？先比较同预算的实际房源",
+      "author": "宋德旭",
+      "digest": "先把家庭需求与具体房源放到同一张比较表，再决定板块。",
+      "contentSourceUrl": "https://yuankunfangwu.com/answers/nanxiang-gucun-home-comparison.html",
+      "htmlFile": "2026-11-17-nanxiang-gucun-home-comparison.html",
+      "reviewStatus": "approved"
+    },
+    {
+      "id": "editorial-20261117-home-comfort-and-resale",
+      "slug": "home-comfort-and-resale",
+      "date": "2026-11-17",
+      "title": "新房住得舒服，以后就好卖吗？买前、卖前分别看什么",
+      "author": "宋德旭",
+      "digest": "买家看同预算还有什么选择，卖家看自己的优势值多少钱。",
+      "contentSourceUrl": "https://yuankunfangwu.com/answers/home-comfort-and-resale.html",
+      "htmlFile": "2026-11-17-home-comfort-and-resale.html",
+      "reviewStatus": "approved"
+    },
+    {
+      "id": "editorial-20261117-nanxiang-driving-versus-metro",
+      "slug": "nanxiang-driving-versus-metro",
+      "date": "2026-11-17",
+      "title": "在南翔看房，自驾和地铁通勤家庭如何分别筛选？",
+      "author": "宋德旭",
+      "digest": "按真实作息测试完整通勤链路，不只看地图距离。",
+      "contentSourceUrl": "https://yuankunfangwu.com/answers/nanxiang-driving-versus-metro.html",
+      "htmlFile": "2026-11-17-nanxiang-driving-versus-metro.html",
+      "reviewStatus": "approved"
+    },
+    {
+      "id": "editorial-20261117-renovated-resale-home-checks",
+      "slug": "renovated-resale-home-checks",
+      "date": "2026-11-17",
+      "title": "装修很新的二手房，买之前先查这五件事",
+      "author": "宋德旭",
+      "digest": "先查装修资料、结构、水和室内环境，再计算买入后的真实支出。",
+      "contentSourceUrl": "https://yuankunfangwu.com/answers/renovated-resale-home-checks.html",
+      "htmlFile": "2026-11-17-renovated-resale-home-checks.html",
+      "reviewStatus": "approved"
+    },
+    {
+      "id": "editorial-20261117-home-noise-viewing-checks",
+      "slug": "home-noise-viewing-checks",
+      "date": "2026-11-17",
+      "title": "靠近地铁和主干道的房子，噪声到底该怎么看？",
+      "author": "宋德旭",
+      "digest": "按家人的作息复看目标房源，开窗、关窗分别体验。",
+      "contentSourceUrl": "https://yuankunfangwu.com/answers/home-noise-viewing-checks.html",
+      "htmlFile": "2026-11-17-home-noise-viewing-checks.html",
+      "reviewStatus": "approved"
+    },
+    {
+      "id": "editorial-20261117-new-home-offer",
+      "slug": "new-home-offer-real-cost",
+      "date": "2026-11-17",
+      "title": "买新房送装修、送车位，怎么判断自己到底省了多少钱？",
+      "author": "宋德旭",
+      "digest": "看具体房号的最终支出与书面交付条件，不按宣传面值累加优惠。",
+      "contentSourceUrl": "https://yuankunfangwu.com/answers/new-home-offer-real-cost.html",
+      "htmlFile": "2026-11-17-new-home-offer-real-cost.html",
+      "reviewStatus": "approved"
+    },
+    {
+      "id": "editorial-20261117-replacement-home-payment-timeline",
+      "slug": "replacement-home-payment-timeline",
+      "date": "2026-11-17",
+      "title": "旧房还没卖，新房什么时候付款？先把这四个时间排清楚",
+      "author": "宋德旭",
+      "digest": "先排清旧房回款、新房付款、贷款放款和两边交付日期，再决定买卖顺序。",
+      "contentSourceUrl": "https://yuankunfangwu.com/answers/replacement-home-payment-timeline.html",
+      "htmlFile": "2026-11-17-replacement-home-payment-timeline.html",
+      "reviewStatus": "approved"
+    },
     {
       "id": "live-20260713-family-decision",
       "slug": "family-budget-and-location-decision",

@@ -60,8 +60,19 @@
 
 ## 知识库文章
 
-最近更新：2026-09-01。每篇文章先给结论，再列出做决定前需要核对的事项。
+最近更新：2026-11-20。每篇文章先给结论，再列出做决定前需要核对的事项。
 
+- [房子比周边便宜，就算捡漏吗？先分清这三种低价](https://yuankunfangwu.com/answers/cheap-home-bargain-or-tradeoff.html)（买房，上海）：先找可比房，再分清临时让价、可修复问题和长期缺点，才知道便宜有没有意义。
+- [同小区大户型反而卖得快？卖房不能只看面积大小](https://yuankunfangwu.com/answers/large-home-resale-buyer-fit.html)（卖房，上海）：判断大户型好不好卖，要比较同类产品的供给、总价与买家需求，而不是数卖掉几套。
+- [附近新盘卖得贵，我的旧房也能涨价吗？先看买家会不会转过来](https://yuankunfangwu.com/answers/nearby-new-project-and-resale-price.html)（卖房，上海）：新盘报价只是比较起点；旧房能否卖得更好，要看同预算买家是否真正转向并形成成交。
+- [孩子已经上小学，想换房到另一个区：先问清这六件事](https://yuankunfangwu.com/answers/moving-home-after-child-starts-school.html)（置换，上海）：先确认转学资格、年级、接收安排和办理窗口，再让购房与搬家时间配合教育安排。
+- [南翔和顾村怎么选？先比较同预算的实际房源](https://yuankunfangwu.com/answers/nanxiang-gucun-home-comparison.html)（买房，南翔、顾村）：先把家庭需求与具体房源放到同一张比较表，再决定板块。
+- [新房住得舒服，以后就好卖吗？买前、卖前分别看什么](https://yuankunfangwu.com/answers/home-comfort-and-resale.html)（置换，上海、南翔）：买家看同预算还有什么选择，卖家看自己的优势值多少钱。
+- [在南翔看房，自驾和地铁通勤家庭如何分别筛选？](https://yuankunfangwu.com/answers/nanxiang-driving-versus-metro.html)（买房，南翔）：按真实作息测试完整通勤链路，不只看地图距离。
+- [装修很新的二手房，买之前先查这五件事](https://yuankunfangwu.com/answers/renovated-resale-home-checks.html)（买房，上海、南翔）：先查装修资料、结构、水和室内环境，再计算买入后的真实支出。
+- [靠近地铁和主干道的房子，噪声到底该怎么看？](https://yuankunfangwu.com/answers/home-noise-viewing-checks.html)（买房，上海、南翔）：按家人的作息复看目标房源，开窗、关窗分别体验。
+- [买新房送装修、送车位，怎么判断自己到底省了多少钱？](https://yuankunfangwu.com/answers/new-home-offer-real-cost.html)（买房，上海、南翔）：看具体房号的最终支出与书面交付条件，不按宣传面值累加优惠。
+- [旧房还没卖，新房什么时候付款？先把这四个时间排清楚](https://yuankunfangwu.com/answers/replacement-home-payment-timeline.html)（置换，上海、南翔）：先排清旧房回款、新房付款、贷款放款和两边交付日期，再决定买卖顺序。
 - [父母出钱给孩子买房，应该由谁来决定板块？](https://yuankunfangwu.com/answers/family-budget-and-location-decision.html)（买房，上海）：先解决出资者与居住者的需求冲突，再选板块。
 - [无电梯五复六面积很大，为什么不能直接按面积定价？](https://yuankunfangwu.com/answers/walk-up-top-duplex-pricing.html)（卖房，上海）：特殊房源先找目标客群，再用总价带定价。
 - [新房整盘均价低，为什么想买的四房不一定便宜？](https://yuankunfangwu.com/answers/new-home-average-price-and-four-bedroom.html)（产品，上海）：不要被平均数带偏，要核算目标户型。
