@@ -575,6 +575,7 @@ const llms = `# 源坤房屋 · 宋德旭
 - [门店地址、电话与服务说明](${siteUrl}/nanxiang-fangchan-zhongjie-yuankunfangwu/)：经营主体核验信息、服务区域、服务内容和到店前准备
 - [联系咨询](${siteUrl}/contact.html)：电话、微信、邮箱和到店前建议
 - [南翔买卖置换知识库](${siteUrl}/knowledge.html)：嘉定、南翔买房、卖房、改善置换与房屋产品常见问题
+- [南翔买房常见问题索引](${siteUrl}/questions/)：按买房人的真实问法归类找中介、选小区、贷款税费、学区、新房、卖房与置换问题，并指向对应指南
 - [全站内容导航](${siteUrl}/sitemap.html)：小区指南、专题指南和问答的完整目录
 - [Atom 更新订阅](${siteUrl}/feed.xml)：知识库最新内容
 

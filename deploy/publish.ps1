@@ -37,6 +37,7 @@ $publicFiles = @(
   'services',
   'communities',
   'guides',
+  'questions',
   'sitemap.html',
   '404.html',
   'live-qa.js',
