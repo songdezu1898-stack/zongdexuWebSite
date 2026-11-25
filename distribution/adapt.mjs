@@ -32,6 +32,25 @@ const brand = `${facts.brand.value}｜${facts.person.name}，上海嘉定南翔�
 const contact = "咨询电话/微信：13040676264　地址：上海市嘉定区陈翔公路1913号1层";
 const disclaimer = "本文为决策方法整理，不含具体成交数据；价格、税费、贷款与政策以咨询时点的官方口径为准。";
 
+// Per-platform voice: title shaping, body length cap and how much brand text to show.
+const profile = {
+  weixin:      { title: (i) => i.question, max: 4000, brand: "full" },
+  zhihu:       { title: (i) => (/[？?]$/.test(i.question) ? i.question : i.question + "？"), max: 3500, brand: "short" },
+  sohu:        { title: (i) => i.question, max: 3000, brand: "full" },
+  baijiahao:   { title: (i) => i.question.length > 30 ? i.question : `${i.question}｜南翔买房卖房判断`, max: 3000, brand: "full" },
+  toutiao:     { title: (i) => i.question.length > 28 ? i.question : `${i.question}（${i.category}决策要点）`, max: 2500, brand: "short" },
+  weibo:       { title: (i) => i.takeaway, max: 1200, brand: "short" },
+  xiaohongshu: { title: (i) => i.takeaway.slice(0, 20), max: 900, brand: "short" },
+  douyin:      { title: (i) => i.takeaway.slice(0, 30), max: 900, brand: "short" },
+  netease:     { title: (i) => i.question, max: 3000, brand: "full" }
+};
+function clipBody(text, max) {
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max);
+  const at = Math.max(cut.lastIndexOf("。"), cut.lastIndexOf("\n"));
+  return cut.slice(0, at > max * 0.6 ? at + 1 : max);
+}
+
 function render(item, style) {
   const url = `${site}/answers/${item.slug}.html`;
   const points = (item.decisionPoints || []).map((p, n) => `${n + 1}. ${p}`).join("\n");
@@ -62,7 +81,19 @@ for (const item of qa.filter((i) => !only || i.slug === only)) {
   for (const [pid, p] of Object.entries(platforms)) {
     const file = path.join("distribution", "out", id, `${pid}.md`);
     fs.mkdirSync(path.join(root, "distribution/out", id), { recursive: true });
-    fs.writeFileSync(path.join(root, file), render(item, p.style), "utf8");
+    const pr = profile[pid] || { title: (i) => i.question, max: 3000, brand: "full" };
+    let body = render(item, p.style);
+    // Brand: full block on long-form platforms; one line on short-form ones. Both come from brand-facts.json.
+    const NL = "\n";
+    if (pr.brand === "short") {
+      const cutAt = body.indexOf(`${NL}---${NL}`);
+      if (cutAt > 0) body = `${body.slice(0, cutAt)}${NL}${NL}—— ${brand}${NL}原文：${entry.sourceUrl}${NL}`;
+    }
+    body = clipBody(body, pr.max);
+    if (!body.includes(entry.sourceUrl)) body += `${NL}${NL}原文：${entry.sourceUrl}`;
+    fs.writeFileSync(path.join(root, file), body, "utf8");
+    entry.platforms[pid] ||= { status: "pending", attempts: 0 };
+    entry.platforms[pid].title = pr.title(item);
     const s = entry.platforms[pid] ||= { status: "pending", attempts: 0 };
     if (!(routing[item.category] || []).includes(pid)) { if (s.status === "pending") s.status = "skipped"; s.note = "按主题不分发到该平台"; continue; }
     if (s.status === "skipped") s.status = "pending";

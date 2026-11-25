@@ -13,7 +13,8 @@
           "contentHash": "14d72372f8705546",
           "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
           "updatedAt": "2026-11-25T10:17:58.296Z",
-          "note": "✓ weixin (草稿) | https://mp.weixin.qq.com/cgi-bin/appmsg?t=media/appmsg_edit&action=edit&type=77&appmsgid=100001583&token=494208958&lang=zh_CN | 同步完成: 1 成功, 0 失败"
+          "note": "✓ weixin (草稿) | https://mp.weixin.qq.com/cgi-bin/appmsg?t=media/appmsg_edit&action=edit&type=77&appmsgid=100001583&token=494208958&lang=zh_CN | 同步完成: 1 成功, 0 失败",
+          "title": "新房住得舒服，以后就好卖吗？买前、卖前分别看什么"
         },
         "zhihu": {
           "status": "synced_draft",
@@ -22,7 +23,8 @@
           "contentHash": "14d72372f8705546",
           "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
           "updatedAt": "2026-11-25T10:00:00.682Z",
-          "note": "✓ zhihu (草稿) | https://zhuanlan.zhihu.com/p/2108983336047858426/edit | 同步完成: 1 成功, 0 失败"
+          "note": "✓ zhihu (草稿) | https://zhuanlan.zhihu.com/p/2108983336047858426/edit | 同步完成: 1 成功, 0 失败",
+          "title": "新房住得舒服，以后就好卖吗？买前、卖前分别看什么？"
         },
         "sohu": {
           "status": "synced_draft",
@@ -31,7 +33,8 @@
           "contentHash": "14d72372f8705546",
           "aiLabelReminder": "发布页按平台要求声明",
           "updatedAt": "2026-11-25T10:00:09.029Z",
-          "note": "✓ sohu (草稿) | https://mp.sohu.com/mpfe/v4/contentManagement/news/addarticle?spm=smmp.articlelist.0.0&contentStatus=2&id=1106303167 | 同步完成: 1 成功, 0 失败"
+          "note": "✓ sohu (草稿) | https://mp.sohu.com/mpfe/v4/contentManagement/news/addarticle?spm=smmp.articlelist.0.0&contentStatus=2&id=1106303167 | 同步完成: 1 成功, 0 失败",
+          "title": "新房住得舒服，以后就好卖吗？买前、卖前分别看什么"
         },
         "baijiahao": {
           "status": "synced_draft",
@@ -40,7 +43,8 @@
           "contentHash": "14d72372f8705546",
           "aiLabelReminder": "发布页勾选“AI创作声明”",
           "updatedAt": "2026-11-25T10:00:11.895Z",
-          "note": "✓ baijiahao (草稿) | https://baijiahao.baidu.com/builder/rc/edit?type=news&article_id=1882823926969958477 | 同步完成: 1 成功, 0 失败"
+          "note": "✓ baijiahao (草稿) | https://baijiahao.baidu.com/builder/rc/edit?type=news&article_id=1882823926969958477 | 同步完成: 1 成功, 0 失败",
+          "title": "新房住得舒服，以后就好卖吗？买前、卖前分别看什么｜南翔买房卖房判断"
         },
         "weibo": {
           "status": "synced_draft",
@@ -49,7 +53,8 @@
           "contentHash": "14d72372f8705546",
           "aiLabelReminder": "按平台要求声明",
           "updatedAt": "2026-11-25T10:00:13.314Z",
-          "note": "✓ weibo (草稿) | https://card.weibo.com/article/v5/editor#/draft/4002342 | 同步完成: 1 成功, 0 失败"
+          "note": "✓ weibo (草稿) | https://card.weibo.com/article/v5/editor#/draft/4002342 | 同步完成: 1 成功, 0 失败",
+          "title": "买家看同预算还有什么选择，卖家看自己的优势值多少钱。"
         },
         "toutiao": {
           "status": "synced_draft",
@@ -58,34 +63,38 @@
           "contentHash": "14d72372f8705546",
           "aiLabelReminder": "发布页勾选“引用AI”",
           "updatedAt": "2026-11-25T10:18:02.754Z",
-          "note": "✓ toutiao (草稿) | https://mp.toutiao.com/profile_v4/graphic/publish?pgc_id=7712051332114432527 | 同步完成: 1 成功, 0 失败"
+          "note": "✓ toutiao (草稿) | https://mp.toutiao.com/profile_v4/graphic/publish?pgc_id=7712051332114432527 | 同步完成: 1 成功, 0 失败",
+          "title": "新房住得舒服，以后就好卖吗？买前、卖前分别看什么（置换决策要点）"
         },
         "xiaohongshu": {
-          "status": "failed",
-          "attempts": 1,
+          "status": "paused",
+          "attempts": 3,
           "file": "distribution/out/yk-home-comfort-and-resale/xiaohongshu.md",
           "contentHash": "14d72372f8705546",
           "aiLabelReminder": "发布页勾选“笔记含AI合成内容”",
-          "updatedAt": "2026-11-25T10:30:19.798Z",
-          "note": ""
+          "updatedAt": "2026-11-25T11:10:55.523Z",
+          "note": "两次同步各挂起约12分钟无响应，已暂停；疑似需要在前台完成平台安全验证或页面操作，需要本人在场处理后再恢复",
+          "title": "买家看同预算还有什么选择，卖家看自己的优"
         },
         "douyin": {
-          "status": "needs_login",
-          "attempts": 0,
+          "status": "paused",
+          "attempts": 3,
           "file": "distribution/out/yk-home-comfort-and-resale/douyin.md",
           "contentHash": "14d72372f8705546",
           "aiLabelReminder": "发布页勾选“内容由AI生成”",
-          "updatedAt": "2026-11-25T10:30:55.911Z",
-          "note": "需要在浏览器登录该平台，或扩展未连接"
+          "updatedAt": "2026-11-25T11:22:55.898Z",
+          "note": "两次同步各挂起约12分钟无响应，已暂停；疑似需要在前台完成平台安全验证或页面操作，需要本人在场处理后再恢复",
+          "title": "买家看同预算还有什么选择，卖家看自己的优势值多少钱。"
         },
         "netease": {
-          "status": "needs_login",
+          "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-home-comfort-and-resale/netease.md",
           "contentHash": "14d72372f8705546",
           "aiLabelReminder": "按平台要求声明",
-          "note": "需要在浏览器登录该平台，或扩展未连接",
-          "updatedAt": "2026-11-25T10:31:26.381Z"
+          "note": "",
+          "updatedAt": "2026-11-25T10:56:31.218Z",
+          "title": "新房住得舒服，以后就好卖吗？买前、卖前分别看什么"
         }
       },
       "hash": "14d72372f8705546",
@@ -101,63 +110,80 @@
           "attempts": 0,
           "file": "distribution/out/yk-family-budget-and-location-decision/weixin.md",
           "contentHash": "80149975456d71f8",
-          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
+          "updatedAt": "2026-11-25T11:30:25.425Z",
+          "note": "",
+          "title": "父母出钱给孩子买房，应该由谁来决定板块？"
         },
         "zhihu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-family-budget-and-location-decision/zhihu.md",
           "contentHash": "80149975456d71f8",
-          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
+          "updatedAt": "2026-11-25T11:36:25.760Z",
+          "note": "",
+          "title": "父母出钱给孩子买房，应该由谁来决定板块？"
         },
         "sohu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-family-budget-and-location-decision/sohu.md",
           "contentHash": "80149975456d71f8",
-          "aiLabelReminder": "发布页按平台要求声明"
+          "aiLabelReminder": "发布页按平台要求声明",
+          "updatedAt": "2026-11-25T11:42:26.119Z",
+          "note": "",
+          "title": "父母出钱给孩子买房，应该由谁来决定板块？"
         },
         "baijiahao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-family-budget-and-location-decision/baijiahao.md",
           "contentHash": "80149975456d71f8",
-          "aiLabelReminder": "发布页勾选“AI创作声明”"
+          "aiLabelReminder": "发布页勾选“AI创作声明”",
+          "updatedAt": "2026-11-25T11:48:26.783Z",
+          "note": "",
+          "title": "父母出钱给孩子买房，应该由谁来决定板块？｜南翔买房卖房判断"
         },
         "weibo": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-family-budget-and-location-decision/weibo.md",
           "contentHash": "80149975456d71f8",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "先解决出资者与居住者的需求冲突，再选板块。"
         },
         "toutiao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-family-budget-and-location-decision/toutiao.md",
           "contentHash": "80149975456d71f8",
-          "aiLabelReminder": "发布页勾选“引用AI”"
+          "aiLabelReminder": "发布页勾选“引用AI”",
+          "title": "父母出钱给孩子买房，应该由谁来决定板块？（买房决策要点）"
         },
         "xiaohongshu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-family-budget-and-location-decision/xiaohongshu.md",
           "contentHash": "80149975456d71f8",
-          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”",
+          "title": "先解决出资者与居住者的需求冲突，再选板块"
         },
         "douyin": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-family-budget-and-location-decision/douyin.md",
           "contentHash": "80149975456d71f8",
-          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+          "aiLabelReminder": "发布页勾选“内容由AI生成”",
+          "title": "先解决出资者与居住者的需求冲突，再选板块。"
         },
         "netease": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-family-budget-and-location-decision/netease.md",
           "contentHash": "80149975456d71f8",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "父母出钱给孩子买房，应该由谁来决定板块？"
         }
       },
       "hash": "80149975456d71f8",
@@ -173,49 +199,56 @@
           "attempts": 0,
           "file": "distribution/out/yk-walk-up-top-duplex-pricing/weixin.md",
           "contentHash": "8e1cca1f91dfb7c4",
-          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
+          "title": "无电梯五复六面积很大，为什么不能直接按面积定价？"
         },
         "zhihu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-walk-up-top-duplex-pricing/zhihu.md",
           "contentHash": "8e1cca1f91dfb7c4",
-          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
+          "title": "无电梯五复六面积很大，为什么不能直接按面积定价？"
         },
         "sohu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-walk-up-top-duplex-pricing/sohu.md",
           "contentHash": "8e1cca1f91dfb7c4",
-          "aiLabelReminder": "发布页按平台要求声明"
+          "aiLabelReminder": "发布页按平台要求声明",
+          "title": "无电梯五复六面积很大，为什么不能直接按面积定价？"
         },
         "baijiahao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-walk-up-top-duplex-pricing/baijiahao.md",
           "contentHash": "8e1cca1f91dfb7c4",
-          "aiLabelReminder": "发布页勾选“AI创作声明”"
+          "aiLabelReminder": "发布页勾选“AI创作声明”",
+          "title": "无电梯五复六面积很大，为什么不能直接按面积定价？｜南翔买房卖房判断"
         },
         "weibo": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-walk-up-top-duplex-pricing/weibo.md",
           "contentHash": "8e1cca1f91dfb7c4",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "特殊房源先找目标客群，再用总价带定价。"
         },
         "toutiao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-walk-up-top-duplex-pricing/toutiao.md",
           "contentHash": "8e1cca1f91dfb7c4",
-          "aiLabelReminder": "发布页勾选“引用AI”"
+          "aiLabelReminder": "发布页勾选“引用AI”",
+          "title": "无电梯五复六面积很大，为什么不能直接按面积定价？（卖房决策要点）"
         },
         "xiaohongshu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-walk-up-top-duplex-pricing/xiaohongshu.md",
           "contentHash": "8e1cca1f91dfb7c4",
-          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”",
+          "title": "特殊房源先找目标客群，再用总价带定价。"
         },
         "douyin": {
           "status": "skipped",
@@ -223,14 +256,16 @@
           "file": "distribution/out/yk-walk-up-top-duplex-pricing/douyin.md",
           "contentHash": "8e1cca1f91dfb7c4",
           "aiLabelReminder": "发布页勾选“内容由AI生成”",
-          "note": "按主题不分发到该平台"
+          "note": "按主题不分发到该平台",
+          "title": "特殊房源先找目标客群，再用总价带定价。"
         },
         "netease": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-walk-up-top-duplex-pricing/netease.md",
           "contentHash": "8e1cca1f91dfb7c4",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "无电梯五复六面积很大，为什么不能直接按面积定价？"
         }
       },
       "hash": "8e1cca1f91dfb7c4",
@@ -246,14 +281,16 @@
           "attempts": 0,
           "file": "distribution/out/yk-new-home-average-price-and-four-bedroom/weixin.md",
           "contentHash": "2315df9c18635279",
-          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
+          "title": "新房整盘均价低，为什么想买的四房不一定便宜？"
         },
         "zhihu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-new-home-average-price-and-four-bedroom/zhihu.md",
           "contentHash": "2315df9c18635279",
-          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
+          "title": "新房整盘均价低，为什么想买的四房不一定便宜？"
         },
         "sohu": {
           "status": "skipped",
@@ -261,7 +298,8 @@
           "file": "distribution/out/yk-new-home-average-price-and-four-bedroom/sohu.md",
           "contentHash": "2315df9c18635279",
           "aiLabelReminder": "发布页按平台要求声明",
-          "note": "按主题不分发到该平台"
+          "note": "按主题不分发到该平台",
+          "title": "新房整盘均价低，为什么想买的四房不一定便宜？"
         },
         "baijiahao": {
           "status": "skipped",
@@ -269,7 +307,8 @@
           "file": "distribution/out/yk-new-home-average-price-and-four-bedroom/baijiahao.md",
           "contentHash": "2315df9c18635279",
           "aiLabelReminder": "发布页勾选“AI创作声明”",
-          "note": "按主题不分发到该平台"
+          "note": "按主题不分发到该平台",
+          "title": "新房整盘均价低，为什么想买的四房不一定便宜？｜南翔买房卖房判断"
         },
         "weibo": {
           "status": "skipped",
@@ -277,7 +316,8 @@
           "file": "distribution/out/yk-new-home-average-price-and-four-bedroom/weibo.md",
           "contentHash": "2315df9c18635279",
           "aiLabelReminder": "按平台要求声明",
-          "note": "按主题不分发到该平台"
+          "note": "按主题不分发到该平台",
+          "title": "不要被平均数带偏，要核算目标户型。"
         },
         "toutiao": {
           "status": "skipped",
@@ -285,14 +325,16 @@
           "file": "distribution/out/yk-new-home-average-price-and-four-bedroom/toutiao.md",
           "contentHash": "2315df9c18635279",
           "aiLabelReminder": "发布页勾选“引用AI”",
-          "note": "按主题不分发到该平台"
+          "note": "按主题不分发到该平台",
+          "title": "新房整盘均价低，为什么想买的四房不一定便宜？（产品决策要点）"
         },
         "xiaohongshu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-new-home-average-price-and-four-bedroom/xiaohongshu.md",
           "contentHash": "2315df9c18635279",
-          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”",
+          "title": "不要被平均数带偏，要核算目标户型。"
         },
         "douyin": {
           "status": "skipped",
@@ -300,7 +342,8 @@
           "file": "distribution/out/yk-new-home-average-price-and-four-bedroom/douyin.md",
           "contentHash": "2315df9c18635279",
           "aiLabelReminder": "发布页勾选“内容由AI生成”",
-          "note": "按主题不分发到该平台"
+          "note": "按主题不分发到该平台",
+          "title": "不要被平均数带偏，要核算目标户型。"
         },
         "netease": {
           "status": "skipped",
@@ -308,7 +351,8 @@
           "file": "distribution/out/yk-new-home-average-price-and-four-bedroom/netease.md",
           "contentHash": "2315df9c18635279",
           "aiLabelReminder": "按平台要求声明",
-          "note": "按主题不分发到该平台"
+          "note": "按主题不分发到该平台",
+          "title": "新房整盘均价低，为什么想买的四房不一定便宜？"
         }
       },
       "hash": "2315df9c18635279",
@@ -324,63 +368,72 @@
           "attempts": 0,
           "file": "distribution/out/yk-sell-first-or-buy-first-for-home-upgrade/weixin.md",
           "contentHash": "70561661f23dcde8",
-          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
+          "title": "改善置换到底应该先卖旧房，还是先买新房？"
         },
         "zhihu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-sell-first-or-buy-first-for-home-upgrade/zhihu.md",
           "contentHash": "70561661f23dcde8",
-          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
+          "title": "改善置换到底应该先卖旧房，还是先买新房？"
         },
         "sohu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-sell-first-or-buy-first-for-home-upgrade/sohu.md",
           "contentHash": "70561661f23dcde8",
-          "aiLabelReminder": "发布页按平台要求声明"
+          "aiLabelReminder": "发布页按平台要求声明",
+          "title": "改善置换到底应该先卖旧房，还是先买新房？"
         },
         "baijiahao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-sell-first-or-buy-first-for-home-upgrade/baijiahao.md",
           "contentHash": "70561661f23dcde8",
-          "aiLabelReminder": "发布页勾选“AI创作声明”"
+          "aiLabelReminder": "发布页勾选“AI创作声明”",
+          "title": "改善置换到底应该先卖旧房，还是先买新房？｜南翔买房卖房判断"
         },
         "weibo": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-sell-first-or-buy-first-for-home-upgrade/weibo.md",
           "contentHash": "70561661f23dcde8",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "先排现金流和时间节点，不用一句话套所有家庭。"
         },
         "toutiao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-sell-first-or-buy-first-for-home-upgrade/toutiao.md",
           "contentHash": "70561661f23dcde8",
-          "aiLabelReminder": "发布页勾选“引用AI”"
+          "aiLabelReminder": "发布页勾选“引用AI”",
+          "title": "改善置换到底应该先卖旧房，还是先买新房？（置换决策要点）"
         },
         "xiaohongshu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-sell-first-or-buy-first-for-home-upgrade/xiaohongshu.md",
           "contentHash": "70561661f23dcde8",
-          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”",
+          "title": "先排现金流和时间节点，不用一句话套所有家"
         },
         "douyin": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-sell-first-or-buy-first-for-home-upgrade/douyin.md",
           "contentHash": "70561661f23dcde8",
-          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+          "aiLabelReminder": "发布页勾选“内容由AI生成”",
+          "title": "先排现金流和时间节点，不用一句话套所有家庭。"
         },
         "netease": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-sell-first-or-buy-first-for-home-upgrade/netease.md",
           "contentHash": "70561661f23dcde8",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "改善置换到底应该先卖旧房，还是先买新房？"
         }
       },
       "hash": "70561661f23dcde8",
@@ -396,63 +449,72 @@
           "attempts": 0,
           "file": "distribution/out/yk-nanxiang-gucun-home-comparison/weixin.md",
           "contentHash": "fe42ec9136b836ec",
-          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
+          "title": "南翔和顾村怎么选？先比较同预算的实际房源"
         },
         "zhihu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-nanxiang-gucun-home-comparison/zhihu.md",
           "contentHash": "fe42ec9136b836ec",
-          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
+          "title": "南翔和顾村怎么选？先比较同预算的实际房源？"
         },
         "sohu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-nanxiang-gucun-home-comparison/sohu.md",
           "contentHash": "fe42ec9136b836ec",
-          "aiLabelReminder": "发布页按平台要求声明"
+          "aiLabelReminder": "发布页按平台要求声明",
+          "title": "南翔和顾村怎么选？先比较同预算的实际房源"
         },
         "baijiahao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-nanxiang-gucun-home-comparison/baijiahao.md",
           "contentHash": "fe42ec9136b836ec",
-          "aiLabelReminder": "发布页勾选“AI创作声明”"
+          "aiLabelReminder": "发布页勾选“AI创作声明”",
+          "title": "南翔和顾村怎么选？先比较同预算的实际房源｜南翔买房卖房判断"
         },
         "weibo": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-nanxiang-gucun-home-comparison/weibo.md",
           "contentHash": "fe42ec9136b836ec",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "先把家庭需求与具体房源放到同一张比较表，再决定板块。"
         },
         "toutiao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-nanxiang-gucun-home-comparison/toutiao.md",
           "contentHash": "fe42ec9136b836ec",
-          "aiLabelReminder": "发布页勾选“引用AI”"
+          "aiLabelReminder": "发布页勾选“引用AI”",
+          "title": "南翔和顾村怎么选？先比较同预算的实际房源（买房决策要点）"
         },
         "xiaohongshu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-nanxiang-gucun-home-comparison/xiaohongshu.md",
           "contentHash": "fe42ec9136b836ec",
-          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”",
+          "title": "先把家庭需求与具体房源放到同一张比较表，"
         },
         "douyin": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-nanxiang-gucun-home-comparison/douyin.md",
           "contentHash": "fe42ec9136b836ec",
-          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+          "aiLabelReminder": "发布页勾选“内容由AI生成”",
+          "title": "先把家庭需求与具体房源放到同一张比较表，再决定板块。"
         },
         "netease": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-nanxiang-gucun-home-comparison/netease.md",
           "contentHash": "fe42ec9136b836ec",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "南翔和顾村怎么选？先比较同预算的实际房源"
         }
       },
       "hash": "fe42ec9136b836ec",
@@ -468,63 +530,72 @@
           "attempts": 0,
           "file": "distribution/out/yk-nanxiang-driving-versus-metro/weixin.md",
           "contentHash": "e9fa898b8ba01919",
-          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
+          "title": "在南翔看房，自驾和地铁通勤家庭如何分别筛选？"
         },
         "zhihu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-nanxiang-driving-versus-metro/zhihu.md",
           "contentHash": "e9fa898b8ba01919",
-          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
+          "title": "在南翔看房，自驾和地铁通勤家庭如何分别筛选？"
         },
         "sohu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-nanxiang-driving-versus-metro/sohu.md",
           "contentHash": "e9fa898b8ba01919",
-          "aiLabelReminder": "发布页按平台要求声明"
+          "aiLabelReminder": "发布页按平台要求声明",
+          "title": "在南翔看房，自驾和地铁通勤家庭如何分别筛选？"
         },
         "baijiahao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-nanxiang-driving-versus-metro/baijiahao.md",
           "contentHash": "e9fa898b8ba01919",
-          "aiLabelReminder": "发布页勾选“AI创作声明”"
+          "aiLabelReminder": "发布页勾选“AI创作声明”",
+          "title": "在南翔看房，自驾和地铁通勤家庭如何分别筛选？｜南翔买房卖房判断"
         },
         "weibo": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-nanxiang-driving-versus-metro/weibo.md",
           "contentHash": "e9fa898b8ba01919",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "按真实作息测试完整通勤链路，不只看地图距离。"
         },
         "toutiao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-nanxiang-driving-versus-metro/toutiao.md",
           "contentHash": "e9fa898b8ba01919",
-          "aiLabelReminder": "发布页勾选“引用AI”"
+          "aiLabelReminder": "发布页勾选“引用AI”",
+          "title": "在南翔看房，自驾和地铁通勤家庭如何分别筛选？（买房决策要点）"
         },
         "xiaohongshu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-nanxiang-driving-versus-metro/xiaohongshu.md",
           "contentHash": "e9fa898b8ba01919",
-          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”",
+          "title": "按真实作息测试完整通勤链路，不只看地图距"
         },
         "douyin": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-nanxiang-driving-versus-metro/douyin.md",
           "contentHash": "e9fa898b8ba01919",
-          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+          "aiLabelReminder": "发布页勾选“内容由AI生成”",
+          "title": "按真实作息测试完整通勤链路，不只看地图距离。"
         },
         "netease": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-nanxiang-driving-versus-metro/netease.md",
           "contentHash": "e9fa898b8ba01919",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "在南翔看房，自驾和地铁通勤家庭如何分别筛选？"
         }
       },
       "hash": "e9fa898b8ba01919",
@@ -540,63 +611,72 @@
           "attempts": 0,
           "file": "distribution/out/yk-renovated-resale-home-checks/weixin.md",
           "contentHash": "447625f413c1c0a4",
-          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
+          "title": "装修很新的二手房，买之前先查这五件事"
         },
         "zhihu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-renovated-resale-home-checks/zhihu.md",
           "contentHash": "447625f413c1c0a4",
-          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
+          "title": "装修很新的二手房，买之前先查这五件事？"
         },
         "sohu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-renovated-resale-home-checks/sohu.md",
           "contentHash": "447625f413c1c0a4",
-          "aiLabelReminder": "发布页按平台要求声明"
+          "aiLabelReminder": "发布页按平台要求声明",
+          "title": "装修很新的二手房，买之前先查这五件事"
         },
         "baijiahao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-renovated-resale-home-checks/baijiahao.md",
           "contentHash": "447625f413c1c0a4",
-          "aiLabelReminder": "发布页勾选“AI创作声明”"
+          "aiLabelReminder": "发布页勾选“AI创作声明”",
+          "title": "装修很新的二手房，买之前先查这五件事｜南翔买房卖房判断"
         },
         "weibo": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-renovated-resale-home-checks/weibo.md",
           "contentHash": "447625f413c1c0a4",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "先查装修资料、结构、水和室内环境，再计算买入后的真实支出。"
         },
         "toutiao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-renovated-resale-home-checks/toutiao.md",
           "contentHash": "447625f413c1c0a4",
-          "aiLabelReminder": "发布页勾选“引用AI”"
+          "aiLabelReminder": "发布页勾选“引用AI”",
+          "title": "装修很新的二手房，买之前先查这五件事（买房决策要点）"
         },
         "xiaohongshu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-renovated-resale-home-checks/xiaohongshu.md",
           "contentHash": "447625f413c1c0a4",
-          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”",
+          "title": "先查装修资料、结构、水和室内环境，再计算"
         },
         "douyin": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-renovated-resale-home-checks/douyin.md",
           "contentHash": "447625f413c1c0a4",
-          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+          "aiLabelReminder": "发布页勾选“内容由AI生成”",
+          "title": "先查装修资料、结构、水和室内环境，再计算买入后的真实支出。"
         },
         "netease": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-renovated-resale-home-checks/netease.md",
           "contentHash": "447625f413c1c0a4",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "装修很新的二手房，买之前先查这五件事"
         }
       },
       "hash": "447625f413c1c0a4",
@@ -612,63 +692,72 @@
           "attempts": 0,
           "file": "distribution/out/yk-home-noise-viewing-checks/weixin.md",
           "contentHash": "9985fae0b57615ab",
-          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
+          "title": "靠近地铁和主干道的房子，噪声到底该怎么看？"
         },
         "zhihu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-home-noise-viewing-checks/zhihu.md",
           "contentHash": "9985fae0b57615ab",
-          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
+          "title": "靠近地铁和主干道的房子，噪声到底该怎么看？"
         },
         "sohu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-home-noise-viewing-checks/sohu.md",
           "contentHash": "9985fae0b57615ab",
-          "aiLabelReminder": "发布页按平台要求声明"
+          "aiLabelReminder": "发布页按平台要求声明",
+          "title": "靠近地铁和主干道的房子，噪声到底该怎么看？"
         },
         "baijiahao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-home-noise-viewing-checks/baijiahao.md",
           "contentHash": "9985fae0b57615ab",
-          "aiLabelReminder": "发布页勾选“AI创作声明”"
+          "aiLabelReminder": "发布页勾选“AI创作声明”",
+          "title": "靠近地铁和主干道的房子，噪声到底该怎么看？｜南翔买房卖房判断"
         },
         "weibo": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-home-noise-viewing-checks/weibo.md",
           "contentHash": "9985fae0b57615ab",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "按家人的作息复看目标房源，开窗、关窗分别体验。"
         },
         "toutiao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-home-noise-viewing-checks/toutiao.md",
           "contentHash": "9985fae0b57615ab",
-          "aiLabelReminder": "发布页勾选“引用AI”"
+          "aiLabelReminder": "发布页勾选“引用AI”",
+          "title": "靠近地铁和主干道的房子，噪声到底该怎么看？（买房决策要点）"
         },
         "xiaohongshu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-home-noise-viewing-checks/xiaohongshu.md",
           "contentHash": "9985fae0b57615ab",
-          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”",
+          "title": "按家人的作息复看目标房源，开窗、关窗分别"
         },
         "douyin": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-home-noise-viewing-checks/douyin.md",
           "contentHash": "9985fae0b57615ab",
-          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+          "aiLabelReminder": "发布页勾选“内容由AI生成”",
+          "title": "按家人的作息复看目标房源，开窗、关窗分别体验。"
         },
         "netease": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-home-noise-viewing-checks/netease.md",
           "contentHash": "9985fae0b57615ab",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "靠近地铁和主干道的房子，噪声到底该怎么看？"
         }
       },
       "hash": "9985fae0b57615ab",
@@ -684,63 +773,72 @@
           "attempts": 0,
           "file": "distribution/out/yk-new-home-offer-real-cost/weixin.md",
           "contentHash": "ed21dd9986032572",
-          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
+          "title": "买新房送装修、送车位，怎么判断自己到底省了多少钱？"
         },
         "zhihu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-new-home-offer-real-cost/zhihu.md",
           "contentHash": "ed21dd9986032572",
-          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
+          "title": "买新房送装修、送车位，怎么判断自己到底省了多少钱？"
         },
         "sohu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-new-home-offer-real-cost/sohu.md",
           "contentHash": "ed21dd9986032572",
-          "aiLabelReminder": "发布页按平台要求声明"
+          "aiLabelReminder": "发布页按平台要求声明",
+          "title": "买新房送装修、送车位，怎么判断自己到底省了多少钱？"
         },
         "baijiahao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-new-home-offer-real-cost/baijiahao.md",
           "contentHash": "ed21dd9986032572",
-          "aiLabelReminder": "发布页勾选“AI创作声明”"
+          "aiLabelReminder": "发布页勾选“AI创作声明”",
+          "title": "买新房送装修、送车位，怎么判断自己到底省了多少钱？｜南翔买房卖房判断"
         },
         "weibo": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-new-home-offer-real-cost/weibo.md",
           "contentHash": "ed21dd9986032572",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "看具体房号的最终支出与书面交付条件，不按宣传面值累加优惠。"
         },
         "toutiao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-new-home-offer-real-cost/toutiao.md",
           "contentHash": "ed21dd9986032572",
-          "aiLabelReminder": "发布页勾选“引用AI”"
+          "aiLabelReminder": "发布页勾选“引用AI”",
+          "title": "买新房送装修、送车位，怎么判断自己到底省了多少钱？（买房决策要点）"
         },
         "xiaohongshu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-new-home-offer-real-cost/xiaohongshu.md",
           "contentHash": "ed21dd9986032572",
-          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”",
+          "title": "看具体房号的最终支出与书面交付条件，不按"
         },
         "douyin": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-new-home-offer-real-cost/douyin.md",
           "contentHash": "ed21dd9986032572",
-          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+          "aiLabelReminder": "发布页勾选“内容由AI生成”",
+          "title": "看具体房号的最终支出与书面交付条件，不按宣传面值累加优惠。"
         },
         "netease": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-new-home-offer-real-cost/netease.md",
           "contentHash": "ed21dd9986032572",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "买新房送装修、送车位，怎么判断自己到底省了多少钱？"
         }
       },
       "hash": "ed21dd9986032572",
@@ -756,63 +854,72 @@
           "attempts": 0,
           "file": "distribution/out/yk-replacement-home-payment-timeline/weixin.md",
           "contentHash": "e28c507e29bd55ef",
-          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
+          "title": "旧房还没卖，新房什么时候付款？先把这四个时间排清楚"
         },
         "zhihu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-replacement-home-payment-timeline/zhihu.md",
           "contentHash": "e28c507e29bd55ef",
-          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
+          "title": "旧房还没卖，新房什么时候付款？先把这四个时间排清楚？"
         },
         "sohu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-replacement-home-payment-timeline/sohu.md",
           "contentHash": "e28c507e29bd55ef",
-          "aiLabelReminder": "发布页按平台要求声明"
+          "aiLabelReminder": "发布页按平台要求声明",
+          "title": "旧房还没卖，新房什么时候付款？先把这四个时间排清楚"
         },
         "baijiahao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-replacement-home-payment-timeline/baijiahao.md",
           "contentHash": "e28c507e29bd55ef",
-          "aiLabelReminder": "发布页勾选“AI创作声明”"
+          "aiLabelReminder": "发布页勾选“AI创作声明”",
+          "title": "旧房还没卖，新房什么时候付款？先把这四个时间排清楚｜南翔买房卖房判断"
         },
         "weibo": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-replacement-home-payment-timeline/weibo.md",
           "contentHash": "e28c507e29bd55ef",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "先排清旧房回款、新房付款、贷款放款和两边交付日期，再决定买卖顺序。"
         },
         "toutiao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-replacement-home-payment-timeline/toutiao.md",
           "contentHash": "e28c507e29bd55ef",
-          "aiLabelReminder": "发布页勾选“引用AI”"
+          "aiLabelReminder": "发布页勾选“引用AI”",
+          "title": "旧房还没卖，新房什么时候付款？先把这四个时间排清楚（置换决策要点）"
         },
         "xiaohongshu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-replacement-home-payment-timeline/xiaohongshu.md",
           "contentHash": "e28c507e29bd55ef",
-          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”",
+          "title": "先排清旧房回款、新房付款、贷款放款和两边"
         },
         "douyin": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-replacement-home-payment-timeline/douyin.md",
           "contentHash": "e28c507e29bd55ef",
-          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+          "aiLabelReminder": "发布页勾选“内容由AI生成”",
+          "title": "先排清旧房回款、新房付款、贷款放款和两边交付日期，再决定买卖"
         },
         "netease": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-replacement-home-payment-timeline/netease.md",
           "contentHash": "e28c507e29bd55ef",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "旧房还没卖，新房什么时候付款？先把这四个时间排清楚"
         }
       },
       "hash": "e28c507e29bd55ef",
@@ -828,63 +935,72 @@
           "attempts": 0,
           "file": "distribution/out/yk-cheap-home-bargain-or-tradeoff/weixin.md",
           "contentHash": "c5ad685e8053584d",
-          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
+          "title": "房子比周边便宜，就算捡漏吗？先分清这三种低价"
         },
         "zhihu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-cheap-home-bargain-or-tradeoff/zhihu.md",
           "contentHash": "c5ad685e8053584d",
-          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
+          "title": "房子比周边便宜，就算捡漏吗？先分清这三种低价？"
         },
         "sohu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-cheap-home-bargain-or-tradeoff/sohu.md",
           "contentHash": "c5ad685e8053584d",
-          "aiLabelReminder": "发布页按平台要求声明"
+          "aiLabelReminder": "发布页按平台要求声明",
+          "title": "房子比周边便宜，就算捡漏吗？先分清这三种低价"
         },
         "baijiahao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-cheap-home-bargain-or-tradeoff/baijiahao.md",
           "contentHash": "c5ad685e8053584d",
-          "aiLabelReminder": "发布页勾选“AI创作声明”"
+          "aiLabelReminder": "发布页勾选“AI创作声明”",
+          "title": "房子比周边便宜，就算捡漏吗？先分清这三种低价｜南翔买房卖房判断"
         },
         "weibo": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-cheap-home-bargain-or-tradeoff/weibo.md",
           "contentHash": "c5ad685e8053584d",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "先找可比房，再分清临时让价、可修复问题和长期缺点，才知道便宜有没有意义。"
         },
         "toutiao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-cheap-home-bargain-or-tradeoff/toutiao.md",
           "contentHash": "c5ad685e8053584d",
-          "aiLabelReminder": "发布页勾选“引用AI”"
+          "aiLabelReminder": "发布页勾选“引用AI”",
+          "title": "房子比周边便宜，就算捡漏吗？先分清这三种低价（买房决策要点）"
         },
         "xiaohongshu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-cheap-home-bargain-or-tradeoff/xiaohongshu.md",
           "contentHash": "c5ad685e8053584d",
-          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”",
+          "title": "先找可比房，再分清临时让价、可修复问题和"
         },
         "douyin": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-cheap-home-bargain-or-tradeoff/douyin.md",
           "contentHash": "c5ad685e8053584d",
-          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+          "aiLabelReminder": "发布页勾选“内容由AI生成”",
+          "title": "先找可比房，再分清临时让价、可修复问题和长期缺点，才知道便宜"
         },
         "netease": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-cheap-home-bargain-or-tradeoff/netease.md",
           "contentHash": "c5ad685e8053584d",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "房子比周边便宜，就算捡漏吗？先分清这三种低价"
         }
       },
       "hash": "c5ad685e8053584d",
@@ -900,49 +1016,56 @@
           "attempts": 0,
           "file": "distribution/out/yk-large-home-resale-buyer-fit/weixin.md",
           "contentHash": "f9caf3c5677eb623",
-          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
+          "title": "同小区大户型反而卖得快？卖房不能只看面积大小"
         },
         "zhihu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-large-home-resale-buyer-fit/zhihu.md",
           "contentHash": "f9caf3c5677eb623",
-          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
+          "title": "同小区大户型反而卖得快？卖房不能只看面积大小？"
         },
         "sohu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-large-home-resale-buyer-fit/sohu.md",
           "contentHash": "f9caf3c5677eb623",
-          "aiLabelReminder": "发布页按平台要求声明"
+          "aiLabelReminder": "发布页按平台要求声明",
+          "title": "同小区大户型反而卖得快？卖房不能只看面积大小"
         },
         "baijiahao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-large-home-resale-buyer-fit/baijiahao.md",
           "contentHash": "f9caf3c5677eb623",
-          "aiLabelReminder": "发布页勾选“AI创作声明”"
+          "aiLabelReminder": "发布页勾选“AI创作声明”",
+          "title": "同小区大户型反而卖得快？卖房不能只看面积大小｜南翔买房卖房判断"
         },
         "weibo": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-large-home-resale-buyer-fit/weibo.md",
           "contentHash": "f9caf3c5677eb623",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "判断大户型好不好卖，要比较同类产品的供给、总价与买家需求，而不是数卖掉几套。"
         },
         "toutiao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-large-home-resale-buyer-fit/toutiao.md",
           "contentHash": "f9caf3c5677eb623",
-          "aiLabelReminder": "发布页勾选“引用AI”"
+          "aiLabelReminder": "发布页勾选“引用AI”",
+          "title": "同小区大户型反而卖得快？卖房不能只看面积大小（卖房决策要点）"
         },
         "xiaohongshu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-large-home-resale-buyer-fit/xiaohongshu.md",
           "contentHash": "f9caf3c5677eb623",
-          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”",
+          "title": "判断大户型好不好卖，要比较同类产品的供给"
         },
         "douyin": {
           "status": "skipped",
@@ -950,14 +1073,16 @@
           "file": "distribution/out/yk-large-home-resale-buyer-fit/douyin.md",
           "contentHash": "f9caf3c5677eb623",
           "aiLabelReminder": "发布页勾选“内容由AI生成”",
-          "note": "按主题不分发到该平台"
+          "note": "按主题不分发到该平台",
+          "title": "判断大户型好不好卖，要比较同类产品的供给、总价与买家需求，而"
         },
         "netease": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-large-home-resale-buyer-fit/netease.md",
           "contentHash": "f9caf3c5677eb623",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "同小区大户型反而卖得快？卖房不能只看面积大小"
         }
       },
       "hash": "f9caf3c5677eb623",
@@ -973,49 +1098,56 @@
           "attempts": 0,
           "file": "distribution/out/yk-nearby-new-project-and-resale-price/weixin.md",
           "contentHash": "cb120d19495df3a8",
-          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
+          "title": "附近新盘卖得贵，我的旧房也能涨价吗？先看买家会不会转过来"
         },
         "zhihu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-nearby-new-project-and-resale-price/zhihu.md",
           "contentHash": "cb120d19495df3a8",
-          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
+          "title": "附近新盘卖得贵，我的旧房也能涨价吗？先看买家会不会转过来？"
         },
         "sohu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-nearby-new-project-and-resale-price/sohu.md",
           "contentHash": "cb120d19495df3a8",
-          "aiLabelReminder": "发布页按平台要求声明"
+          "aiLabelReminder": "发布页按平台要求声明",
+          "title": "附近新盘卖得贵，我的旧房也能涨价吗？先看买家会不会转过来"
         },
         "baijiahao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-nearby-new-project-and-resale-price/baijiahao.md",
           "contentHash": "cb120d19495df3a8",
-          "aiLabelReminder": "发布页勾选“AI创作声明”"
+          "aiLabelReminder": "发布页勾选“AI创作声明”",
+          "title": "附近新盘卖得贵，我的旧房也能涨价吗？先看买家会不会转过来｜南翔买房卖房判断"
         },
         "weibo": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-nearby-new-project-and-resale-price/weibo.md",
           "contentHash": "cb120d19495df3a8",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "新盘报价只是比较起点；旧房能否卖得更好，要看同预算买家是否真正转向并形成成交。"
         },
         "toutiao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-nearby-new-project-and-resale-price/toutiao.md",
           "contentHash": "cb120d19495df3a8",
-          "aiLabelReminder": "发布页勾选“引用AI”"
+          "aiLabelReminder": "发布页勾选“引用AI”",
+          "title": "附近新盘卖得贵，我的旧房也能涨价吗？先看买家会不会转过来（卖房决策要点）"
         },
         "xiaohongshu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-nearby-new-project-and-resale-price/xiaohongshu.md",
           "contentHash": "cb120d19495df3a8",
-          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”",
+          "title": "新盘报价只是比较起点；旧房能否卖得更好，"
         },
         "douyin": {
           "status": "skipped",
@@ -1023,14 +1155,16 @@
           "file": "distribution/out/yk-nearby-new-project-and-resale-price/douyin.md",
           "contentHash": "cb120d19495df3a8",
           "aiLabelReminder": "发布页勾选“内容由AI生成”",
-          "note": "按主题不分发到该平台"
+          "note": "按主题不分发到该平台",
+          "title": "新盘报价只是比较起点；旧房能否卖得更好，要看同预算买家是否真"
         },
         "netease": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-nearby-new-project-and-resale-price/netease.md",
           "contentHash": "cb120d19495df3a8",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "附近新盘卖得贵，我的旧房也能涨价吗？先看买家会不会转过来"
         }
       },
       "hash": "cb120d19495df3a8",
@@ -1046,63 +1180,72 @@
           "attempts": 0,
           "file": "distribution/out/yk-moving-home-after-child-starts-school/weixin.md",
           "contentHash": "b77eb8e71b76fc82",
-          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
+          "title": "孩子已经上小学，想换房到另一个区：先问清这六件事"
         },
         "zhihu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-moving-home-after-child-starts-school/zhihu.md",
           "contentHash": "b77eb8e71b76fc82",
-          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
+          "title": "孩子已经上小学，想换房到另一个区：先问清这六件事？"
         },
         "sohu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-moving-home-after-child-starts-school/sohu.md",
           "contentHash": "b77eb8e71b76fc82",
-          "aiLabelReminder": "发布页按平台要求声明"
+          "aiLabelReminder": "发布页按平台要求声明",
+          "title": "孩子已经上小学，想换房到另一个区：先问清这六件事"
         },
         "baijiahao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-moving-home-after-child-starts-school/baijiahao.md",
           "contentHash": "b77eb8e71b76fc82",
-          "aiLabelReminder": "发布页勾选“AI创作声明”"
+          "aiLabelReminder": "发布页勾选“AI创作声明”",
+          "title": "孩子已经上小学，想换房到另一个区：先问清这六件事｜南翔买房卖房判断"
         },
         "weibo": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-moving-home-after-child-starts-school/weibo.md",
           "contentHash": "b77eb8e71b76fc82",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "先确认转学资格、年级、接收安排和办理窗口，再让购房与搬家时间配合教育安排。"
         },
         "toutiao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-moving-home-after-child-starts-school/toutiao.md",
           "contentHash": "b77eb8e71b76fc82",
-          "aiLabelReminder": "发布页勾选“引用AI”"
+          "aiLabelReminder": "发布页勾选“引用AI”",
+          "title": "孩子已经上小学，想换房到另一个区：先问清这六件事（置换决策要点）"
         },
         "xiaohongshu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-moving-home-after-child-starts-school/xiaohongshu.md",
           "contentHash": "b77eb8e71b76fc82",
-          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”",
+          "title": "先确认转学资格、年级、接收安排和办理窗口"
         },
         "douyin": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-moving-home-after-child-starts-school/douyin.md",
           "contentHash": "b77eb8e71b76fc82",
-          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+          "aiLabelReminder": "发布页勾选“内容由AI生成”",
+          "title": "先确认转学资格、年级、接收安排和办理窗口，再让购房与搬家时间"
         },
         "netease": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-moving-home-after-child-starts-school/netease.md",
           "contentHash": "b77eb8e71b76fc82",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "孩子已经上小学，想换房到另一个区：先问清这六件事"
         }
       },
       "hash": "b77eb8e71b76fc82",
@@ -1118,63 +1261,72 @@
           "attempts": 0,
           "file": "distribution/out/yk-home-clubhouse-running-cost/weixin.md",
           "contentHash": "92af776836f9cb33",
-          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
+          "title": "小区会所越豪华，房子就越值得买吗？先把使用和养护问清楚"
         },
         "zhihu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-home-clubhouse-running-cost/zhihu.md",
           "contentHash": "92af776836f9cb33",
-          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
+          "title": "小区会所越豪华，房子就越值得买吗？先把使用和养护问清楚？"
         },
         "sohu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-home-clubhouse-running-cost/sohu.md",
           "contentHash": "92af776836f9cb33",
-          "aiLabelReminder": "发布页按平台要求声明"
+          "aiLabelReminder": "发布页按平台要求声明",
+          "title": "小区会所越豪华，房子就越值得买吗？先把使用和养护问清楚"
         },
         "baijiahao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-home-clubhouse-running-cost/baijiahao.md",
           "contentHash": "92af776836f9cb33",
-          "aiLabelReminder": "发布页勾选“AI创作声明”"
+          "aiLabelReminder": "发布页勾选“AI创作声明”",
+          "title": "小区会所越豪华，房子就越值得买吗？先把使用和养护问清楚｜南翔买房卖房判断"
         },
         "weibo": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-home-clubhouse-running-cost/weibo.md",
           "contentHash": "92af776836f9cb33",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "会所的价值在于长期能用、费用清楚，而不是售楼时看起来热闹。"
         },
         "toutiao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-home-clubhouse-running-cost/toutiao.md",
           "contentHash": "92af776836f9cb33",
-          "aiLabelReminder": "发布页勾选“引用AI”"
+          "aiLabelReminder": "发布页勾选“引用AI”",
+          "title": "小区会所越豪华，房子就越值得买吗？先把使用和养护问清楚（买房决策要点）"
         },
         "xiaohongshu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-home-clubhouse-running-cost/xiaohongshu.md",
           "contentHash": "92af776836f9cb33",
-          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”",
+          "title": "会所的价值在于长期能用、费用清楚，而不是"
         },
         "douyin": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-home-clubhouse-running-cost/douyin.md",
           "contentHash": "92af776836f9cb33",
-          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+          "aiLabelReminder": "发布页勾选“内容由AI生成”",
+          "title": "会所的价值在于长期能用、费用清楚，而不是售楼时看起来热闹。"
         },
         "netease": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-home-clubhouse-running-cost/netease.md",
           "contentHash": "92af776836f9cb33",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "小区会所越豪华，房子就越值得买吗？先把使用和养护问清楚"
         }
       },
       "hash": "92af776836f9cb33",
@@ -1190,49 +1342,56 @@
           "attempts": 0,
           "file": "distribution/out/yk-many-sales-not-easy-resale/weixin.md",
           "contentHash": "3577829f39b7d5fd",
-          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
+          "title": "小区成交很多，为什么自己的房子仍难卖？还要看这三个数字"
         },
         "zhihu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-many-sales-not-easy-resale/zhihu.md",
           "contentHash": "3577829f39b7d5fd",
-          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
+          "title": "小区成交很多，为什么自己的房子仍难卖？还要看这三个数字？"
         },
         "sohu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-many-sales-not-easy-resale/sohu.md",
           "contentHash": "3577829f39b7d5fd",
-          "aiLabelReminder": "发布页按平台要求声明"
+          "aiLabelReminder": "发布页按平台要求声明",
+          "title": "小区成交很多，为什么自己的房子仍难卖？还要看这三个数字"
         },
         "baijiahao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-many-sales-not-easy-resale/baijiahao.md",
           "contentHash": "3577829f39b7d5fd",
-          "aiLabelReminder": "发布页勾选“AI创作声明”"
+          "aiLabelReminder": "发布页勾选“AI创作声明”",
+          "title": "小区成交很多，为什么自己的房子仍难卖？还要看这三个数字｜南翔买房卖房判断"
         },
         "weibo": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-many-sales-not-easy-resale/weibo.md",
           "contentHash": "3577829f39b7d5fd",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "成交套数之外，还要看同类挂牌供给、成交周期和真实出价。"
         },
         "toutiao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-many-sales-not-easy-resale/toutiao.md",
           "contentHash": "3577829f39b7d5fd",
-          "aiLabelReminder": "发布页勾选“引用AI”"
+          "aiLabelReminder": "发布页勾选“引用AI”",
+          "title": "小区成交很多，为什么自己的房子仍难卖？还要看这三个数字（卖房决策要点）"
         },
         "xiaohongshu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-many-sales-not-easy-resale/xiaohongshu.md",
           "contentHash": "3577829f39b7d5fd",
-          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”",
+          "title": "成交套数之外，还要看同类挂牌供给、成交周"
         },
         "douyin": {
           "status": "skipped",
@@ -1240,14 +1399,16 @@
           "file": "distribution/out/yk-many-sales-not-easy-resale/douyin.md",
           "contentHash": "3577829f39b7d5fd",
           "aiLabelReminder": "发布页勾选“内容由AI生成”",
-          "note": "按主题不分发到该平台"
+          "note": "按主题不分发到该平台",
+          "title": "成交套数之外，还要看同类挂牌供给、成交周期和真实出价。"
         },
         "netease": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-many-sales-not-easy-resale/netease.md",
           "contentHash": "3577829f39b7d5fd",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "小区成交很多，为什么自己的房子仍难卖？还要看这三个数字"
         }
       },
       "hash": "3577829f39b7d5fd",
@@ -1263,14 +1424,16 @@
           "attempts": 0,
           "file": "distribution/out/yk-low-density-project-specific-home/weixin.md",
           "contentHash": "23b5fe2f6e97b36a",
-          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
+          "title": "低容积率、低楼层就一定住得舒服吗？别把整个小区当成同一套房"
         },
         "zhihu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-low-density-project-specific-home/zhihu.md",
           "contentHash": "23b5fe2f6e97b36a",
-          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
+          "title": "低容积率、低楼层就一定住得舒服吗？别把整个小区当成同一套房？"
         },
         "sohu": {
           "status": "skipped",
@@ -1278,7 +1441,8 @@
           "file": "distribution/out/yk-low-density-project-specific-home/sohu.md",
           "contentHash": "23b5fe2f6e97b36a",
           "aiLabelReminder": "发布页按平台要求声明",
-          "note": "按主题不分发到该平台"
+          "note": "按主题不分发到该平台",
+          "title": "低容积率、低楼层就一定住得舒服吗？别把整个小区当成同一套房"
         },
         "baijiahao": {
           "status": "skipped",
@@ -1286,7 +1450,8 @@
           "file": "distribution/out/yk-low-density-project-specific-home/baijiahao.md",
           "contentHash": "23b5fe2f6e97b36a",
           "aiLabelReminder": "发布页勾选“AI创作声明”",
-          "note": "按主题不分发到该平台"
+          "note": "按主题不分发到该平台",
+          "title": "低容积率、低楼层就一定住得舒服吗？别把整个小区当成同一套房｜南翔买房卖房判断"
         },
         "weibo": {
           "status": "skipped",
@@ -1294,7 +1459,8 @@
           "file": "distribution/out/yk-low-density-project-specific-home/weibo.md",
           "contentHash": "23b5fe2f6e97b36a",
           "aiLabelReminder": "按平台要求声明",
-          "note": "按主题不分发到该平台"
+          "note": "按主题不分发到该平台",
+          "title": "低密标签只是起点，具体楼栋的位置、遮挡、出入和日常维护更影响生活。"
         },
         "toutiao": {
           "status": "skipped",
@@ -1302,14 +1468,16 @@
           "file": "distribution/out/yk-low-density-project-specific-home/toutiao.md",
           "contentHash": "23b5fe2f6e97b36a",
           "aiLabelReminder": "发布页勾选“引用AI”",
-          "note": "按主题不分发到该平台"
+          "note": "按主题不分发到该平台",
+          "title": "低容积率、低楼层就一定住得舒服吗？别把整个小区当成同一套房"
         },
         "xiaohongshu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-low-density-project-specific-home/xiaohongshu.md",
           "contentHash": "23b5fe2f6e97b36a",
-          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”",
+          "title": "低密标签只是起点，具体楼栋的位置、遮挡、"
         },
         "douyin": {
           "status": "skipped",
@@ -1317,7 +1485,8 @@
           "file": "distribution/out/yk-low-density-project-specific-home/douyin.md",
           "contentHash": "23b5fe2f6e97b36a",
           "aiLabelReminder": "发布页勾选“内容由AI生成”",
-          "note": "按主题不分发到该平台"
+          "note": "按主题不分发到该平台",
+          "title": "低密标签只是起点，具体楼栋的位置、遮挡、出入和日常维护更影响"
         },
         "netease": {
           "status": "skipped",
@@ -1325,7 +1494,8 @@
           "file": "distribution/out/yk-low-density-project-specific-home/netease.md",
           "contentHash": "23b5fe2f6e97b36a",
           "aiLabelReminder": "按平台要求声明",
-          "note": "按主题不分发到该平台"
+          "note": "按主题不分发到该平台",
+          "title": "低容积率、低楼层就一定住得舒服吗？别把整个小区当成同一套房"
         }
       },
       "hash": "23b5fe2f6e97b36a",
@@ -1341,63 +1511,72 @@
           "attempts": 0,
           "file": "distribution/out/yk-dark-dining-room-viewing-check/weixin.md",
           "contentHash": "7b2f246ed6d13561",
-          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
+          "title": "客厅看着很亮，餐厅和小房间却暗：看房时怎样查清楚？"
         },
         "zhihu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-dark-dining-room-viewing-check/zhihu.md",
           "contentHash": "7b2f246ed6d13561",
-          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
+          "title": "客厅看着很亮，餐厅和小房间却暗：看房时怎样查清楚？"
         },
         "sohu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-dark-dining-room-viewing-check/sohu.md",
           "contentHash": "7b2f246ed6d13561",
-          "aiLabelReminder": "发布页按平台要求声明"
+          "aiLabelReminder": "发布页按平台要求声明",
+          "title": "客厅看着很亮，餐厅和小房间却暗：看房时怎样查清楚？"
         },
         "baijiahao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-dark-dining-room-viewing-check/baijiahao.md",
           "contentHash": "7b2f246ed6d13561",
-          "aiLabelReminder": "发布页勾选“AI创作声明”"
+          "aiLabelReminder": "发布页勾选“AI创作声明”",
+          "title": "客厅看着很亮，餐厅和小房间却暗：看房时怎样查清楚？｜南翔买房卖房判断"
         },
         "weibo": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-dark-dining-room-viewing-check/weibo.md",
           "contentHash": "7b2f246ed6d13561",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "逐个空间检查采光、遮挡和使用需求，不用客厅的明亮代表整套房。"
         },
         "toutiao": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-dark-dining-room-viewing-check/toutiao.md",
           "contentHash": "7b2f246ed6d13561",
-          "aiLabelReminder": "发布页勾选“引用AI”"
+          "aiLabelReminder": "发布页勾选“引用AI”",
+          "title": "客厅看着很亮，餐厅和小房间却暗：看房时怎样查清楚？（买房决策要点）"
         },
         "xiaohongshu": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-dark-dining-room-viewing-check/xiaohongshu.md",
           "contentHash": "7b2f246ed6d13561",
-          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”",
+          "title": "逐个空间检查采光、遮挡和使用需求，不用客"
         },
         "douyin": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-dark-dining-room-viewing-check/douyin.md",
           "contentHash": "7b2f246ed6d13561",
-          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+          "aiLabelReminder": "发布页勾选“内容由AI生成”",
+          "title": "逐个空间检查采光、遮挡和使用需求，不用客厅的明亮代表整套房。"
         },
         "netease": {
           "status": "pending",
           "attempts": 0,
           "file": "distribution/out/yk-dark-dining-room-viewing-check/netease.md",
           "contentHash": "7b2f246ed6d13561",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "title": "客厅看着很亮，餐厅和小房间却暗：看房时怎样查清楚？"
         }
       },
       "hash": "7b2f246ed6d13561",

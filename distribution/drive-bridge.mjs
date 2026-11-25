@@ -76,6 +76,42 @@ if (mode === "in") {
   save(); console.log(`DRIVE_IN copied=${n}`);
 }
 
+if (mode === "plan") {
+  // Adapted articles + a distribution list for the content-operations lead. Read-only for ChatGPT: edits to 05 are not read back.
+  const rd = (p, d) => { try { return JSON.parse(fs.readFileSync(path.join(root, p), "utf8")); } catch { return d; } };
+  const q = rd("data/distribution-queue.json", { items: {} }), control = rd("data/distribution-control.json", {});
+  const six = control.draftPlatforms || ["weixin", "zhihu", "sohu", "baijiahao", "toutiao", "weibo"];
+  const cap = control.dailyDraftCap || 2;
+  const out5 = path.join(base, "05-平台适配稿");
+  fs.mkdirSync(out5, { recursive: true });
+  const NL = "\n";
+  const rows = [], perPlatform = {};
+  let copied = 0;
+  for (const e of Object.values(q.items)) {
+    for (const pid of six) {
+      const s = e.platforms[pid]; if (!s || s.status === "skipped") continue;
+      const src = path.join(root, s.file);
+      if (fs.existsSync(src)) {
+        const dest = path.join(out5, e.slug); fs.mkdirSync(dest, { recursive: true });
+        const target = path.join(dest, `${pid}.md`);
+        const body = fs.readFileSync(src, "utf8");
+        if (!fs.existsSync(target) || fs.readFileSync(target, "utf8") !== body) { fs.writeFileSync(target, body, "utf8"); copied++; }
+      }
+      let when = "";
+      if (s.status === "pending" || s.status === "needs_update") {
+        const n = perPlatform[pid] = (perPlatform[pid] || 0) + 1;
+        const d = new Date(Date.now() + Math.floor((n - 1) / cap) * 864e5); when = d.toISOString().slice(0, 10);
+      }
+      rows.push(`| ${e.title} | ${pid} | ${s.title || ""} | ${s.status} | ${when} | ${e.sourceUrl} |`);
+    }
+  }
+  const L = ["# 分发清单（自动生成）", "", `生成时间：${new Date().toISOString()}`, `范围：${six.join("、")}；每平台每天最多 ${cap} 篇草稿；总开关：${control.enabled ? "开启" : "关闭"}`, "",
+    "适配稿在同目录各文章文件夹内（<文章编号>/<平台>.md）。status：synced_draft=草稿已同步；pending=排队；预计日期是按每日上限推算的最早日期，仅供参考。", "",
+    "| 文章 | 平台 | 平台标题 | 状态 | 预计同步日期 | 官网原文 |", "|---|---|---|---|---|---|", ...rows].join(NL);
+  fs.writeFileSync(path.join(out5, "分发清单.md"), L, "utf8");
+  console.log(`DRIVE_PLAN rows=${rows.length} files_updated=${copied}`);
+}
+
 if (mode === "report") {
   const rd = (p, d) => { try { return JSON.parse(fs.readFileSync(path.join(root, p), "utf8")); } catch { return d; } };
   const q = rd("data/distribution-queue.json", { items: {} }), control = rd("data/distribution-control.json", {});
@@ -98,6 +134,12 @@ if (mode === "report") {
     "## 多平台草稿同步", ...(rows.length ? ["| 文章 | 官网链接 | 平台 | 状态 | 时间 | 说明 |", "|---|---|---|---|---|---|", ...rows] : ["- 暂无已处理的平台"]), "",
     `汇总：${JSON.stringify(tally)}`, "",
     "状态含义：synced_draft=草稿已进入平台草稿箱（未公开）；needs_login=浏览器扩展未连接或平台登录过期；failed=同步失败；pending=排队中；skipped=按主题不分发。", "",
+    "## 正式发布记录（与草稿同步分开）",
+    ...(() => {
+      const pub = Object.values(q.items).flatMap((e) => Object.entries(e.platforms).filter(([, s]) => s.publish).map(([pid, s]) => `| ${e.title} | ${pid} | ${s.publish.status} | ${s.publish.at || ""} | ${s.publish.url || ""} | ${s.publish.egress || "未验证"} | ${(s.publish.error || "").slice(0, 100)} |`));
+      return pub.length ? ["| 文章 | 平台 | 状态 | 发布时间 | 真实文章链接 | 网络出口验证 | 失败原因 |", "|---|---|---|---|---|---|---|", ...pub] : ["- 暂无正式发布记录。目前所有平台均只同步到草稿箱，没有任何内容被正式发布。"];
+    })(), "",
+    "## 网络出口验证", `- ${control.egressVerified ? `已验证：${control.egressVerified}` : "尚未确认国内平台请求的真实国内出口；确认前不进行正式发布。"}`, "",
     "## 桥接服务（最近 5 条）", ...tail(path.join(secrets, "bridge.log"), 5).map((l) => `- ${l}`), "",
     "## 自动任务日志（最近 8 条）", ...tail(path.join(root, "distribution/logs/automation.log"), 8).map((l) => `- ${l.slice(0, 300)}`), "",
     "synced_draft 不代表已发布、已收录或被 AI 引用；平台公开链接需发布后回填。"];
