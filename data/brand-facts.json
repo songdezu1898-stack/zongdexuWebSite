@@ -1,0 +1,18 @@
+{
+  "_note": "Single source of truth for brand facts. status: confirmed = owner confirmed; unverified = must not be published as fact. Do not merge person experience with company age.",
+  "updated": "2026-11-25",
+  "brand": { "value": "源坤房屋", "status": "confirmed", "alias": ["塬坤房屋（原品牌名）", "YKFW", "Yuan Kun Fang Wu"] },
+  "operatingEntity": { "value": "上海源栩房地产经纪有限公司", "status": "confirmed" },
+  "entityRegistered": { "value": "2026-08-17", "status": "confirmed", "source": "网站既有公开表述；以工商登记信息为准", "note": "这是现经营主体的注册时间，不是负责人从业时间，也不代表品牌全部历史" },
+  "person": { "name": "宋德旭", "alias": "阿旭", "role": "法定代表人、主要房产顾问", "status": "confirmed" },
+  "personExperienceYears": { "value": 10, "asOf": "2026-11", "status": "confirmed", "standardText": "房地产行业从业10年", "confirmedBy": "负责人本人，2026-11-25", "note": "个人从业经验，不得写成公司成立年限；不得写成8年或其他数字" },
+  "localServiceSince": { "value": "2025-02", "status": "confirmed", "standardText": "2025年2月起在嘉定南翔服务" },
+  "brandUsageHistory": { "value": null, "status": "unverified", "note": "品牌实际开始使用的时间未经确认，确认前不写" },
+  "website": { "value": "https://yuankunfangwu.com", "status": "confirmed" },
+  "phoneWechat": { "value": "13040676264", "status": "confirmed", "note": "电话与微信同号" },
+  "address": { "value": "上海市嘉定区陈翔公路1913号1层", "status": "confirmed" },
+  "serviceArea": { "value": "上海嘉定南翔", "status": "confirmed" },
+  "teamSize": { "value": null, "status": "unverified" },
+  "closedDeals": { "value": null, "status": "unverified", "note": "无经核实的成交数据，不写成交业绩" },
+  "qualifications": { "value": null, "status": "unverified", "note": "无已确认资质材料，不写资质、排名、评价" }
+}

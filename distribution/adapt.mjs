@@ -16,8 +16,11 @@ const queuePath = path.join(root, "data/distribution-queue.json");
 const queue = fs.existsSync(queuePath) ? JSON.parse(fs.readFileSync(queuePath, "utf8")) : { version: 1, items: {} };
 const only = process.argv[2];
 
-// Brand block: only facts already published on the site. Years of experience stay out until the owner confirms the figure.
-const brand = "源坤房屋｜宋德旭，上海嘉定南翔房产顾问。经营主体：上海源栩房地产经纪有限公司。";
+// Brand block comes from data/brand-facts.json (confirmed facts only). Personal experience and the
+// entity's registration date are kept apart: the 10 years belong to the person, not to the company.
+const facts = JSON.parse(fs.readFileSync(path.join(root, "data/brand-facts.json"), "utf8"));
+for (const k of ["personExperienceYears", "operatingEntity", "brand"]) if (facts[k].status !== "confirmed") throw new Error(`brand fact not confirmed: ${k}`);
+const brand = `${facts.brand.value}｜${facts.person.name}，上海嘉定南翔房产顾问，${facts.personExperienceYears.standardText}。经营主体：${facts.operatingEntity.value}。`;
 const contact = "咨询电话/微信：13040676264　地址：上海市嘉定区陈翔公路1913号1层";
 const disclaimer = "本文为决策方法整理，不含具体成交数据；价格、税费、贷款与政策以咨询时点的官方口径为准。";
 

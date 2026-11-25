@@ -341,6 +341,20 @@ for (const item of publishedItems) {
   if (!feedLinks.has(`${siteUrl}/answers/${item.slug}.html`)) errors.push(`feed.xml missing article: ${item.slug}`);
 }
 
+// Brand facts: personal experience must match data/brand-facts.json and must never be
+// phrased as the company's age. Scans every page plus the content data and WeChat drafts.
+{
+  const facts = JSON.parse(read("data/brand-facts.json"));
+  const years = facts.personExperienceYears.value;
+  const scan = [...pages.map((rel) => [rel, read(rel)]), ["data/live-qa.json", read("data/live-qa.json")]];
+  for (const [name, text] of scan) {
+    for (const m of text.matchAll(/从业\s*(\d+)\s*\+?\s*年/g)) {
+      if (Number(m[1]) !== years) errors.push(`brand fact mismatch: ${name} says 从业${m[1]}年, brand-facts.json says ${years}`);
+    }
+    if (/(公司|企业|品牌|源栩|源坤)[^。，<]{0,6}(成立|创立|创办)[^。，<]{0,6}(10|十|8|八)\s*(多)?年/.test(text)) errors.push(`brand fact: ${name} ties company age to years of experience`);
+  }
+}
+
 if (errors.length) {
   console.error(JSON.stringify({ errors }, null, 2));
   process.exit(1);
