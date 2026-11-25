@@ -1,9 +1,53 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-24T09:38:38.321Z",
+  "generatedAt": "2026-11-25T06:59:51.589Z",
   "source": "data/live-qa.json",
   "mode": "draft-only",
   "items": [
+    {
+      "id": "editorial-20261124-home-clubhouse-running-cost",
+      "slug": "home-clubhouse-running-cost",
+      "date": "2026-11-24",
+      "title": "小区会所越豪华，房子就越值得买吗？先把使用和养护问清楚",
+      "author": "宋德旭",
+      "digest": "会所的价值在于长期能用、费用清楚，而不是售楼时看起来热闹。",
+      "contentSourceUrl": "https://yuankunfangwu.com/answers/home-clubhouse-running-cost.html",
+      "htmlFile": "2026-11-24-home-clubhouse-running-cost.html",
+      "reviewStatus": "approved"
+    },
+    {
+      "id": "editorial-20261124-many-sales-not-easy-resale",
+      "slug": "many-sales-not-easy-resale",
+      "date": "2026-11-24",
+      "title": "小区成交很多，为什么自己的房子仍难卖？还要看这三个数字",
+      "author": "宋德旭",
+      "digest": "成交套数之外，还要看同类挂牌供给、成交周期和真实出价。",
+      "contentSourceUrl": "https://yuankunfangwu.com/answers/many-sales-not-easy-resale.html",
+      "htmlFile": "2026-11-24-many-sales-not-easy-resale.html",
+      "reviewStatus": "approved"
+    },
+    {
+      "id": "editorial-20261124-low-density-project-specific-home",
+      "slug": "low-density-project-specific-home",
+      "date": "2026-11-24",
+      "title": "低容积率、低楼层就一定住得舒服吗？别把整个小区当成同一套房",
+      "author": "宋德旭",
+      "digest": "低密标签只是起点，具体楼栋的位置、遮挡、出入和日常维护更影响生活。",
+      "contentSourceUrl": "https://yuankunfangwu.com/answers/low-density-project-specific-home.html",
+      "htmlFile": "2026-11-24-low-density-project-specific-home.html",
+      "reviewStatus": "approved"
+    },
+    {
+      "id": "editorial-20261124-dark-dining-room-viewing-check",
+      "slug": "dark-dining-room-viewing-check",
+      "date": "2026-11-24",
+      "title": "客厅看着很亮，餐厅和小房间却暗：看房时怎样查清楚？",
+      "author": "宋德旭",
+      "digest": "逐个空间检查采光、遮挡和使用需求，不用客厅的明亮代表整套房。",
+      "contentSourceUrl": "https://yuankunfangwu.com/answers/dark-dining-room-viewing-check.html",
+      "htmlFile": "2026-11-24-dark-dining-room-viewing-check.html",
+      "reviewStatus": "approved"
+    },
     {
       "id": "editorial-20261120-cheap-home-bargain-or-tradeoff",
       "slug": "cheap-home-bargain-or-tradeoff",

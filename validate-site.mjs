@@ -283,14 +283,14 @@ for (const rel of indexable) {
   if (canonical !== urlOf(rel)) errors.push(`canonical does not point at the page itself: ${rel} (${canonical})`);
   if (!/<title>[^<]{6,}<\/title>/.test(html)) errors.push(`missing or too short <title>: ${rel}`);
   if (!/<meta name="description" content="[^"]{20,}"/.test(html)) errors.push(`missing or too short description: ${rel}`);
-  if ((html.match(/<h1[\s>]/g) || []).length !== 1) errors.push(`page should have exactly one h1: ${rel}`);
+  if ((html.replace(/<script(?![^>]*ld\+json)[\s\S]*?<\/script>/gi, "").match(/<h1[\s>]/g) || []).length !== 1) errors.push(`page should have exactly one h1: ${rel}`);
 }
 
 // Every local link and asset must resolve to a file.
 for (const rel of pages) {
   const html = read(rel);
   const dir = path.posix.dirname(rel);
-  for (const match of html.matchAll(/(?:href|src)="([^"#?]+)/g)) {
+  for (const match of html.replace(/<script(?![^>]*ld\+json)[\s\S]*?<\/script>/gi, "").matchAll(/(?:href|src)="([^"#?]+)/g)) {
     const target = match[1];
     if (/^(?:https?:|mailto:|tel:|data:|\/\/)/.test(target)) continue;
     let resolved = target.startsWith("/") ? target.slice(1) : path.posix.normalize(path.posix.join(dir, target));

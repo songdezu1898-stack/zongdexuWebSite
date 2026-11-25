@@ -1,0 +1,502 @@
+[
+  {
+    "id": "S000320",
+    "community": "朗诗·绿色街区(宝翔路)",
+    "price_wan": 468,
+    "area_sqm": 91.13,
+    "layout": "2室2厅1卫",
+    "property_type": "住宅",
+    "city": "上海",
+    "district": "嘉定",
+    "status": "available",
+    "source_checked_at": "2026-11-25T13:19:39.548407+08:00",
+    "images": [
+      {
+        "path": "/homes/images/S000320/H6046606616_0.jpg"
+      },
+      {
+        "path": "/homes/images/S000320/H6046606616_1.jpg"
+      },
+      {
+        "path": "/homes/images/S000320/H6046606616_2.jpg"
+      },
+      {
+        "path": "/homes/images/S000320/H6046606616_3.jpg"
+      },
+      {
+        "path": "/homes/images/S000320/H6046606616_4.jpg"
+      },
+      {
+        "path": "/homes/images/S000320/H6046606616_5.jpg"
+      },
+      {
+        "path": "/homes/images/S000320/H6046606616_6.jpg"
+      },
+      {
+        "path": "/homes/images/S000320/H6046606616_7.jpg"
+      },
+      {
+        "path": "/homes/images/S000320/H6046606616_8.jpg"
+      },
+      {
+        "path": "/homes/images/S000320/H6046606616_9.jpg"
+      }
+    ]
+  },
+  {
+    "id": "S000318",
+    "community": "朗诗·绿色街区(宝翔路)",
+    "price_wan": 452,
+    "area_sqm": 108,
+    "layout": "2室2厅1卫",
+    "property_type": "住宅",
+    "city": "上海",
+    "district": "嘉定",
+    "status": "available",
+    "source_checked_at": "2026-11-25T13:19:39.548407+08:00",
+    "images": [
+      {
+        "path": "/homes/images/S000318/H5746606343_0.jpg"
+      },
+      {
+        "path": "/homes/images/S000318/H5746606343_1.jpg"
+      },
+      {
+        "path": "/homes/images/S000318/H5746606343_2.jpg"
+      },
+      {
+        "path": "/homes/images/S000318/H5746606343_3.jpg"
+      },
+      {
+        "path": "/homes/images/S000318/H5746606343_4.jpg"
+      },
+      {
+        "path": "/homes/images/S000318/H5746606343_5.jpg"
+      },
+      {
+        "path": "/homes/images/S000318/H5746606343_6.jpg"
+      },
+      {
+        "path": "/homes/images/S000318/H5746606343_7.jpg"
+      },
+      {
+        "path": "/homes/images/S000318/H5746606343_8.jpg"
+      }
+    ]
+  },
+  {
+    "id": "S000315",
+    "community": "朗诗·绿色街区(宝翔路)",
+    "price_wan": 1090,
+    "area_sqm": 215,
+    "layout": "4室2厅2卫",
+    "property_type": "住宅",
+    "city": "上海",
+    "district": "嘉定",
+    "status": "available",
+    "source_checked_at": "2026-11-25T13:19:39.548407+08:00",
+    "images": [
+      {
+        "path": "/homes/images/S000315/H5346605659_0.jpg"
+      },
+      {
+        "path": "/homes/images/S000315/H5346605659_1.jpg"
+      },
+      {
+        "path": "/homes/images/S000315/H5346605659_10.jpg"
+      },
+      {
+        "path": "/homes/images/S000315/H5346605659_11.jpg"
+      },
+      {
+        "path": "/homes/images/S000315/H5346605659_12.jpg"
+      },
+      {
+        "path": "/homes/images/S000315/H5346605659_13.jpg"
+      },
+      {
+        "path": "/homes/images/S000315/H5346605659_14.jpg"
+      },
+      {
+        "path": "/homes/images/S000315/H5346605659_2.jpg"
+      },
+      {
+        "path": "/homes/images/S000315/H5346605659_3.jpg"
+      },
+      {
+        "path": "/homes/images/S000315/H5346605659_4.jpg"
+      },
+      {
+        "path": "/homes/images/S000315/H5346605659_5.jpg"
+      },
+      {
+        "path": "/homes/images/S000315/H5346605659_6.jpg"
+      },
+      {
+        "path": "/homes/images/S000315/H5346605659_7.jpg"
+      },
+      {
+        "path": "/homes/images/S000315/H5346605659_8.jpg"
+      },
+      {
+        "path": "/homes/images/S000315/H5346605659_9.jpg"
+      }
+    ]
+  },
+  {
+    "id": "S000314",
+    "community": "朗诗·绿色街区(宝翔路)",
+    "price_wan": 1058,
+    "area_sqm": 214.53,
+    "layout": "4室2厅2卫",
+    "property_type": "住宅",
+    "city": "上海",
+    "district": "嘉定",
+    "status": "available",
+    "source_checked_at": "2026-11-25T13:19:39.548407+08:00",
+    "images": [
+      {
+        "path": "/homes/images/S000314/H5246605541_0.jpg"
+      },
+      {
+        "path": "/homes/images/S000314/H5246605541_1.jpg"
+      },
+      {
+        "path": "/homes/images/S000314/H5246605541_10.jpg"
+      },
+      {
+        "path": "/homes/images/S000314/H5246605541_11.jpg"
+      },
+      {
+        "path": "/homes/images/S000314/H5246605541_12.jpg"
+      },
+      {
+        "path": "/homes/images/S000314/H5246605541_13.jpg"
+      },
+      {
+        "path": "/homes/images/S000314/H5246605541_14.jpg"
+      },
+      {
+        "path": "/homes/images/S000314/H5246605541_2.jpg"
+      },
+      {
+        "path": "/homes/images/S000314/H5246605541_3.jpg"
+      },
+      {
+        "path": "/homes/images/S000314/H5246605541_4.jpg"
+      },
+      {
+        "path": "/homes/images/S000314/H5246605541_5.jpg"
+      },
+      {
+        "path": "/homes/images/S000314/H5246605541_6.jpg"
+      },
+      {
+        "path": "/homes/images/S000314/H5246605541_7.jpg"
+      },
+      {
+        "path": "/homes/images/S000314/H5246605541_8.jpg"
+      },
+      {
+        "path": "/homes/images/S000314/H5246605541_9.jpg"
+      }
+    ]
+  },
+  {
+    "id": "S000313",
+    "community": "朗诗·绿色街区(宝翔路)",
+    "price_wan": 1080,
+    "area_sqm": 215.02,
+    "layout": "4室2厅2卫",
+    "property_type": "住宅",
+    "city": "上海",
+    "district": "嘉定",
+    "status": "available",
+    "source_checked_at": "2026-11-25T13:19:39.548407+08:00",
+    "images": [
+      {
+        "path": "/homes/images/S000313/H5046605460_0.jpg"
+      },
+      {
+        "path": "/homes/images/S000313/H5046605460_1.jpg"
+      },
+      {
+        "path": "/homes/images/S000313/H5046605460_10.jpg"
+      },
+      {
+        "path": "/homes/images/S000313/H5046605460_11.jpg"
+      },
+      {
+        "path": "/homes/images/S000313/H5046605460_12.jpg"
+      },
+      {
+        "path": "/homes/images/S000313/H5046605460_13.jpg"
+      },
+      {
+        "path": "/homes/images/S000313/H5046605460_14.jpg"
+      },
+      {
+        "path": "/homes/images/S000313/H5046605460_15.jpg"
+      },
+      {
+        "path": "/homes/images/S000313/H5046605460_2.jpg"
+      },
+      {
+        "path": "/homes/images/S000313/H5046605460_3.jpg"
+      },
+      {
+        "path": "/homes/images/S000313/H5046605460_4.jpg"
+      },
+      {
+        "path": "/homes/images/S000313/H5046605460_5.jpg"
+      },
+      {
+        "path": "/homes/images/S000313/H5046605460_6.jpg"
+      },
+      {
+        "path": "/homes/images/S000313/H5046605460_7.jpg"
+      },
+      {
+        "path": "/homes/images/S000313/H5046605460_8.jpg"
+      },
+      {
+        "path": "/homes/images/S000313/H5046605460_9.jpg"
+      }
+    ]
+  },
+  {
+    "id": "S000310",
+    "community": "中童巴比尼D幢",
+    "price_wan": 140,
+    "area_sqm": 74,
+    "layout": "4室3厅2卫",
+    "property_type": "LOFT",
+    "city": "上海",
+    "district": "嘉定",
+    "status": "available",
+    "source_checked_at": "2026-11-25T13:19:39.548407+08:00",
+    "images": [
+      {
+        "path": "/homes/images/S000310/H1746562971_0.jpg"
+      },
+      {
+        "path": "/homes/images/S000310/H1746562971_1.jpg"
+      },
+      {
+        "path": "/homes/images/S000310/H1746562971_10.jpg"
+      },
+      {
+        "path": "/homes/images/S000310/H1746562971_11.jpg"
+      },
+      {
+        "path": "/homes/images/S000310/H1746562971_2.jpg"
+      },
+      {
+        "path": "/homes/images/S000310/H1746562971_3.jpg"
+      },
+      {
+        "path": "/homes/images/S000310/H1746562971_4.jpg"
+      },
+      {
+        "path": "/homes/images/S000310/H1746562971_5.jpg"
+      },
+      {
+        "path": "/homes/images/S000310/H1746562971_6.jpg"
+      },
+      {
+        "path": "/homes/images/S000310/H1746562971_7.jpg"
+      },
+      {
+        "path": "/homes/images/S000310/H1746562971_8.jpg"
+      },
+      {
+        "path": "/homes/images/S000310/H1746562971_9.jpg"
+      }
+    ]
+  },
+  {
+    "id": "S000307",
+    "community": "中童巴比尼MALL-C幢",
+    "price_wan": 120,
+    "area_sqm": 76,
+    "layout": "2室2厅1卫",
+    "property_type": "LOFT",
+    "city": "上海",
+    "district": "嘉定",
+    "status": "available",
+    "source_checked_at": "2026-11-25T13:19:39.548407+08:00",
+    "images": [
+      {
+        "path": "/homes/images/S000307/H1446561561_0.jpg"
+      },
+      {
+        "path": "/homes/images/S000307/H1446561561_1.jpg"
+      },
+      {
+        "path": "/homes/images/S000307/H1446561561_2.jpg"
+      },
+      {
+        "path": "/homes/images/S000307/H1446561561_3.jpg"
+      }
+    ]
+  },
+  {
+    "id": "S000301",
+    "community": "中童巴比尼MALL-C幢",
+    "price_wan": 122,
+    "area_sqm": 75.79,
+    "layout": "2室2厅1卫",
+    "property_type": "LOFT",
+    "city": "上海",
+    "district": "嘉定",
+    "status": "available",
+    "source_checked_at": "2026-11-25T13:19:39.548407+08:00",
+    "images": [
+      {
+        "path": "/homes/images/S000301/H0846559811_0.jpg"
+      },
+      {
+        "path": "/homes/images/S000301/H0846559811_1.jpg"
+      },
+      {
+        "path": "/homes/images/S000301/H0846559811_10.jpg"
+      },
+      {
+        "path": "/homes/images/S000301/H0846559811_11.jpg"
+      },
+      {
+        "path": "/homes/images/S000301/H0846559811_12.jpg"
+      },
+      {
+        "path": "/homes/images/S000301/H0846559811_13.jpg"
+      },
+      {
+        "path": "/homes/images/S000301/H0846559811_2.jpg"
+      },
+      {
+        "path": "/homes/images/S000301/H0846559811_3.jpg"
+      },
+      {
+        "path": "/homes/images/S000301/H0846559811_4.jpg"
+      },
+      {
+        "path": "/homes/images/S000301/H0846559811_5.jpg"
+      },
+      {
+        "path": "/homes/images/S000301/H0846559811_6.jpg"
+      },
+      {
+        "path": "/homes/images/S000301/H0846559811_7.jpg"
+      },
+      {
+        "path": "/homes/images/S000301/H0846559811_8.jpg"
+      },
+      {
+        "path": "/homes/images/S000301/H0846559811_9.jpg"
+      }
+    ]
+  },
+  {
+    "id": "S000289",
+    "community": "中童巴比尼D幢",
+    "price_wan": 280,
+    "area_sqm": 121,
+    "layout": "3室2厅3卫",
+    "property_type": "LOFT",
+    "city": "上海",
+    "district": "嘉定",
+    "status": "available",
+    "source_checked_at": "2026-11-25T13:19:39.548407+08:00",
+    "images": [
+      {
+        "path": "/homes/images/S000289/H0346552050_0.jpg"
+      },
+      {
+        "path": "/homes/images/S000289/H0346552050_1.jpg"
+      },
+      {
+        "path": "/homes/images/S000289/H0346552050_10.jpg"
+      },
+      {
+        "path": "/homes/images/S000289/H0346552050_11.jpg"
+      },
+      {
+        "path": "/homes/images/S000289/H0346552050_12.jpg"
+      },
+      {
+        "path": "/homes/images/S000289/H0346552050_13.jpg"
+      },
+      {
+        "path": "/homes/images/S000289/H0346552050_14.jpg"
+      },
+      {
+        "path": "/homes/images/S000289/H0346552050_2.jpg"
+      },
+      {
+        "path": "/homes/images/S000289/H0346552050_3.jpg"
+      },
+      {
+        "path": "/homes/images/S000289/H0346552050_4.jpg"
+      },
+      {
+        "path": "/homes/images/S000289/H0346552050_5.jpg"
+      },
+      {
+        "path": "/homes/images/S000289/H0346552050_6.jpg"
+      },
+      {
+        "path": "/homes/images/S000289/H0346552050_7.jpg"
+      },
+      {
+        "path": "/homes/images/S000289/H0346552050_8.jpg"
+      },
+      {
+        "path": "/homes/images/S000289/H0346552050_9.jpg"
+      }
+    ]
+  },
+  {
+    "id": "S000288",
+    "community": "华润·中央公园2期",
+    "price_wan": 418,
+    "area_sqm": 85.09,
+    "layout": "2室2厅1卫",
+    "property_type": "住宅",
+    "city": "上海",
+    "district": "嘉定",
+    "status": "available",
+    "source_checked_at": "2026-11-25T13:19:39.548407+08:00",
+    "images": [
+      {
+        "path": "/homes/images/S000288/H4646512787_0.jpg"
+      },
+      {
+        "path": "/homes/images/S000288/H4646512787_1.jpg"
+      },
+      {
+        "path": "/homes/images/S000288/H4646512787_2.jpg"
+      },
+      {
+        "path": "/homes/images/S000288/H4646512787_3.jpg"
+      },
+      {
+        "path": "/homes/images/S000288/H4646512787_4.jpg"
+      },
+      {
+        "path": "/homes/images/S000288/H4646512787_5.jpg"
+      },
+      {
+        "path": "/homes/images/S000288/H4646512787_6.jpg"
+      },
+      {
+        "path": "/homes/images/S000288/H4646512787_7.jpg"
+      },
+      {
+        "path": "/homes/images/S000288/H4646512787_8.jpg"
+      },
+      {
+        "path": "/homes/images/S000288/H4646512787_9.jpg"
+      }
+    ]
+  }
+]

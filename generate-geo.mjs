@@ -118,7 +118,16 @@ const entityGraph = [
 // Add only what a page is missing from the head: site icon (shown next to
 // search results), Open Graph and Twitter card tags (link previews). Tags a
 // page already has are never touched.
+// Some hand-built pages (e.g. homes/) leave <head> implicit. Close it explicitly before the
+// first body element so the tags below have a place to go; browsers parse both the same way.
+function closeHead(html) {
+  if (html.includes("</head>")) return html;
+  const first = html.search(/<(header|body|main|nav|section|article|div)\b/i);
+  return first < 0 ? html : `${html.slice(0, first)}</head>\n${html.slice(first)}`;
+}
+
 function ensureHead(html, page) {
+  html = closeHead(html);
   const absent = (pattern) => !pattern.test(html);
   const existing = (property) => (html.match(new RegExp(`<meta property="${property}" content="([^"]*)"`)) || [])[1];
   const title = existing("og:title") ?? escapeHtml(page.title);
@@ -184,6 +193,14 @@ function cardHtml(item) {
     <a class="qa-detail-link" href="${href}" aria-label="查看完整分析：${escapeHtml(item.question)}">查看完整分析 →</a>
   </article>`;
 }
+
+// Where each article category should lead next: existing service and guide pages only.
+const nextReading = {
+  买房: [["../services/nanxiang-buying.html", "南翔买房服务"], ["../guides/selection.html", "选房对比指南"], ["../guides/budget.html", "预算与租买比较"], ["../guides/loans.html", "贷款与公积金核验"]],
+  卖房: [["../services/nanxiang-selling.html", "南翔卖房服务"], ["../guides/transaction.html", "交易流程与税费"], ["../guides/timing.html", "买卖时机判断"]],
+  置换: [["../services/nanxiang-upgrade.html", "南翔改善置换服务"], ["../guides/timing.html", "买卖时机判断"], ["../guides/budget.html", "预算与租买比较"]],
+  产品: [["../communities/", "13个南翔小区指南"], ["../guides/selection.html", "选房对比指南"], ["../questions/", "常见问题索引"]]
+};
 
 function answerPage(item) {
   const url = answerUrl(item);
@@ -327,6 +344,10 @@ function answerPage(item) {
           <div><strong>宋德旭｜源坤房屋</strong><p>2025年2月起服务嘉定南翔，主要提供南翔二手住宅、改善置换和买方服务。</p><a href="../about.html">了解企业与顾问信息</a> · <a href="../index.html#contact">咨询具体问题 →</a></div>
         </footer>
       </article>
+      <aside class="answer-more" aria-label="继续阅读与咨询">
+        <p><strong>继续阅读：</strong>${(nextReading[item.category] || nextReading["买房"]).map(([href, label]) => `<a href="${href}">${label}</a>`).join(" · ")}</p>
+        <p>想结合自己的预算和房子来判断，可以电话或微信联系宋德旭：<a href="tel:13040676264">13040676264</a>（电话与微信同号）。请先准备总预算、几房、工作地点，卖房或置换另备小区与面积。</p>
+      </aside>
       <nav class="answer-next"><a href="../knowledge.html">← 返回客户买卖决策知识库</a><a href="../index.html#contact">联系宋德旭 →</a></nav>
     </main>
     <footer class="site-footer">

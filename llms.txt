@@ -60,8 +60,12 @@
 
 ## 知识库文章
 
-最近更新：2026-11-20。每篇文章先给结论，再列出做决定前需要核对的事项。
+最近更新：2026-11-24。每篇文章先给结论，再列出做决定前需要核对的事项。
 
+- [小区会所越豪华，房子就越值得买吗？先把使用和养护问清楚](https://yuankunfangwu.com/answers/home-clubhouse-running-cost.html)（买房，上海、南翔）：会所的价值在于长期能用、费用清楚，而不是售楼时看起来热闹。
+- [小区成交很多，为什么自己的房子仍难卖？还要看这三个数字](https://yuankunfangwu.com/answers/many-sales-not-easy-resale.html)（卖房，上海、南翔）：成交套数之外，还要看同类挂牌供给、成交周期和真实出价。
+- [低容积率、低楼层就一定住得舒服吗？别把整个小区当成同一套房](https://yuankunfangwu.com/answers/low-density-project-specific-home.html)（产品，上海、南翔）：低密标签只是起点，具体楼栋的位置、遮挡、出入和日常维护更影响生活。
+- [客厅看着很亮，餐厅和小房间却暗：看房时怎样查清楚？](https://yuankunfangwu.com/answers/dark-dining-room-viewing-check.html)（买房，上海、南翔）：逐个空间检查采光、遮挡和使用需求，不用客厅的明亮代表整套房。
 - [房子比周边便宜，就算捡漏吗？先分清这三种低价](https://yuankunfangwu.com/answers/cheap-home-bargain-or-tradeoff.html)（买房，上海）：先找可比房，再分清临时让价、可修复问题和长期缺点，才知道便宜有没有意义。
 - [同小区大户型反而卖得快？卖房不能只看面积大小](https://yuankunfangwu.com/answers/large-home-resale-buyer-fit.html)（卖房，上海）：判断大户型好不好卖，要比较同类产品的供给、总价与买家需求，而不是数卖掉几套。
 - [附近新盘卖得贵，我的旧房也能涨价吗？先看买家会不会转过来](https://yuankunfangwu.com/answers/nearby-new-project-and-resale-price.html)（卖房，上海）：新盘报价只是比较起点；旧房能否卖得更好，要看同预算买家是否真正转向并形成成交。

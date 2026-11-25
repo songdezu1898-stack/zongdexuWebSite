@@ -19,6 +19,16 @@ if (-not (Test-Path -LiteralPath $nodePath)) {
   throw "未找到用于生成网站页面的 Node.js：$nodePath"
 }
 
+# One publish at a time. A second window (or another AI session) must wait or remove a stale lock.
+$lockFile = Join-Path $PSScriptRoot '.publish.lock'
+if (Test-Path -LiteralPath $lockFile) {
+  $age = (Get-Date) - (Get-Item -LiteralPath $lockFile).LastWriteTime
+  if ($age.TotalMinutes -lt 30) { throw "另一个发布正在进行（锁文件 $lockFile，$([int]$age.TotalMinutes) 分钟前创建）。确认没有其他窗口在发布后再删除锁文件。" }
+  Write-Warning '发现超过 30 分钟的旧锁文件，已视为失效。'
+}
+Set-Content -LiteralPath $lockFile -Value "$PID $(Get-Date -Format s)"
+try {
+
 & $nodePath (Join-Path $siteRoot 'generate-keywords.mjs')
 if ($LASTEXITCODE -ne 0) { throw '问题索引页生成失败' }
 
@@ -28,11 +38,15 @@ if ($LASTEXITCODE -ne 0) { throw 'GEO页面生成失败' }
 & $nodePath (Join-Path $siteRoot 'generate-wechat.mjs')
 if ($LASTEXITCODE -ne 0) { throw '公众号草稿包生成失败' }
 
+& $nodePath (Join-Path $siteRoot 'integrate-homes.mjs')
+if ($LASTEXITCODE -ne 0) { throw '房源入口更新失败' }
+
 & $nodePath (Join-Path $siteRoot 'validate-site.mjs')
 if ($LASTEXITCODE -ne 0) { throw '网站校验失败' }
 
 $publicFiles = @(
   'index.html',
+  'homes',
   'about.html',
   'contact.html',
   'knowledge.html',
@@ -59,6 +73,10 @@ $publicFiles = @(
   'data/live-qa.schema.json'
 )
 
+# Safety gate: refuse to publish a checkout that is older than what is live (see deploy/preflight.mjs).
+& $nodePath (Join-Path $PSScriptRoot 'preflight.mjs')
+if ($LASTEXITCODE -ne 0) { throw '发布前检查未通过，已停止，线上未改动。' }
+
 # Use Windows' own bsdtar. When Git for Windows is first on PATH its tar treats
 # "C:..." as a remote host and fails, so pick the copy under System32.
 $tarExe = (Get-Command tar.exe -All -ErrorAction SilentlyContinue | Where-Object { $_.Source -like '*\System32\*' } | Select-Object -First 1).Source
@@ -83,4 +101,7 @@ try {
   if ($LASTEXITCODE -ne 0) { Write-Warning 'IndexNow 推送未成功，网站发布不受影响。' }
 } catch {
   Write-Warning "IndexNow 推送出错（网站发布不受影响）：$($_.Exception.Message)"
+}
+} finally {
+  Remove-Item -LiteralPath $lockFile -Force -ErrorAction SilentlyContinue
 }
