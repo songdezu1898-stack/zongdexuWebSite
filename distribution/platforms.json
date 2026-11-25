@@ -1,0 +1,12 @@
+{
+  "_note": "wechatsyncId must match `wechatsync platforms`. verified=false means not yet confirmed against a connected extension; dispatch skips unverified platforms.",
+  "weixin":      { "label": "微信公众号", "wechatsyncId": "weixin",      "style": "deep",     "verified": true,  "aiLabel": "平台设置中勾选“AI辅助创作”" },
+  "zhihu":       { "label": "知乎",       "wechatsyncId": "zhihu",       "style": "qa",       "verified": true,  "aiLabel": "发布页勾选“包含AI辅助创作”" },
+  "sohu":        { "label": "搜狐号",     "wechatsyncId": "sohu",        "style": "analysis", "verified": true,  "aiLabel": "发布页按平台要求声明" },
+  "baijiahao":   { "label": "百家号",     "wechatsyncId": "baijiahao",   "style": "analysis", "verified": true,  "aiLabel": "发布页勾选“AI创作声明”" },
+  "weibo":       { "label": "微博",       "wechatsyncId": "weibo",       "style": "short",    "verified": true,  "aiLabel": "按平台要求声明" },
+  "toutiao":     { "label": "今日头条",   "wechatsyncId": "toutiao",     "style": "analysis", "verified": false, "aiLabel": "发布页勾选“引用AI”" },
+  "xiaohongshu": { "label": "小红书",     "wechatsyncId": "xiaohongshu", "style": "note",     "verified": false, "aiLabel": "发布页勾选“笔记含AI合成内容”" },
+  "douyin":      { "label": "抖音图文",   "wechatsyncId": "douyin",      "style": "note",     "verified": false, "aiLabel": "发布页勾选“内容由AI生成”" },
+  "netease":     { "label": "网易号",     "wechatsyncId": "wangyi",      "style": "analysis", "verified": false, "aiLabel": "按平台要求声明" }
+}

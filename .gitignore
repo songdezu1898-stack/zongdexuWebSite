@@ -7,3 +7,5 @@ reports/
 *.pem
 *api-key*.txt
 .env
+distribution/out/
+distribution/logs/

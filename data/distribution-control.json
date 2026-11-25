@@ -1,0 +1,1 @@
+{ "enabled": false, "mode": "draft-only", "_note": "Master switch. enabled=false stops all dispatching. mode must stay draft-only until the owner authorises publishing per platform." }

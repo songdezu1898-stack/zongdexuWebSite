@@ -174,7 +174,18 @@ if (!hasAnalytics) { L.push("- 待接入：网站尚未安装访问统计，访�
 else L.push("- 已检测到统计代码；统计后台数据暂需手动查看（百度统计无免费公开报表接口前提下，不自动采集）。");
 L.push("- 电话/微信来电与添加好友数量：需你按周手动记录（待核实）。");
 
-h("八、本周待办");
+h("八、多平台内容分发");
+try {
+  const q = JSON.parse(fs.readFileSync(path.join(root, "data", "distribution-queue.json"), "utf8"));
+  const ctl = JSON.parse(fs.readFileSync(path.join(root, "data", "distribution-control.json"), "utf8"));
+  const tally = {};
+  for (const e of Object.values(q.items)) for (const [pid, s] of Object.entries(e.platforms)) (tally[pid] ||= {})[s.status] = (tally[pid][s.status] || 0) + 1;
+  L.push(`- 总开关：${ctl.enabled ? "已开启" : "关闭"}，模式：${ctl.mode}；队列文章 ${Object.keys(q.items).length} 篇。`);
+  for (const [pid, t] of Object.entries(tally)) L.push(`- ${pid}：${Object.entries(t).map(([k, v]) => `${k} ${v}`).join("，")}`);
+  L.push("- 同步成功仅表示草稿已进入平台草稿箱，不代表已发布、已收录或被 AI 引用。阅读量与公开链接需发布后在各平台后台核对（待核实）。");
+} catch { L.push("- 尚未建立分发队列。"); }
+
+h("九、本周待办");
 L.push(...(pending.length ? pending.map((p) => `- 待授权/待处理：${p}`) : ["- 无待授权项。"]));
 fs.mkdirSync(path.join(root, "reports"), { recursive: true });
 const file = path.join(root, "reports", `weekly-${today}.md`);

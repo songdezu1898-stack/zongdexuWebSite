@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "items": {
+    "yk-home-comfort-and-resale": {
+      "id": "yk-home-comfort-and-resale",
+      "slug": "home-comfort-and-resale",
+      "sourceUrl": "https://yuankunfangwu.com/answers/home-comfort-and-resale.html",
+      "platforms": {
+        "weixin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-comfort-and-resale/weixin.md",
+          "contentHash": "14d72372f8705546",
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+        },
+        "zhihu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-comfort-and-resale/zhihu.md",
+          "contentHash": "14d72372f8705546",
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+        },
+        "sohu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-comfort-and-resale/sohu.md",
+          "contentHash": "14d72372f8705546",
+          "aiLabelReminder": "发布页按平台要求声明"
+        },
+        "baijiahao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-comfort-and-resale/baijiahao.md",
+          "contentHash": "14d72372f8705546",
+          "aiLabelReminder": "发布页勾选“AI创作声明”"
+        },
+        "weibo": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-comfort-and-resale/weibo.md",
+          "contentHash": "14d72372f8705546",
+          "aiLabelReminder": "按平台要求声明"
+        },
+        "toutiao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-comfort-and-resale/toutiao.md",
+          "contentHash": "14d72372f8705546",
+          "aiLabelReminder": "发布页勾选“引用AI”"
+        },
+        "xiaohongshu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-comfort-and-resale/xiaohongshu.md",
+          "contentHash": "14d72372f8705546",
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+        },
+        "douyin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-comfort-and-resale/douyin.md",
+          "contentHash": "14d72372f8705546",
+          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+        },
+        "netease": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-comfort-and-resale/netease.md",
+          "contentHash": "14d72372f8705546",
+          "aiLabelReminder": "按平台要求声明"
+        }
+      },
+      "hash": "14d72372f8705546",
+      "title": "新房住得舒服，以后就好卖吗？买前、卖前分别看什么"
+    }
+  }
+}
