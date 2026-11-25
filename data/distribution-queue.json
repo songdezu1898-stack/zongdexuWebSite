@@ -66,7 +66,7 @@
           "file": "distribution/out/yk-home-comfort-and-resale/xiaohongshu.md",
           "contentHash": "14d72372f8705546",
           "aiLabelReminder": "发布页勾选“笔记含AI合成内容”",
-          "updatedAt": "2026-11-25T10:18:45.522Z",
+          "updatedAt": "2026-11-25T10:30:19.798Z",
           "note": ""
         },
         "douyin": {
@@ -75,7 +75,7 @@
           "file": "distribution/out/yk-home-comfort-and-resale/douyin.md",
           "contentHash": "14d72372f8705546",
           "aiLabelReminder": "发布页勾选“内容由AI生成”",
-          "updatedAt": "2026-11-25T10:19:23.633Z",
+          "updatedAt": "2026-11-25T10:30:55.911Z",
           "note": "需要在浏览器登录该平台，或扩展未连接"
         },
         "netease": {
@@ -85,7 +85,7 @@
           "contentHash": "14d72372f8705546",
           "aiLabelReminder": "按平台要求声明",
           "note": "需要在浏览器登录该平台，或扩展未连接",
-          "updatedAt": "2026-11-25T10:20:01.737Z"
+          "updatedAt": "2026-11-25T10:31:26.381Z"
         }
       },
       "hash": "14d72372f8705546",

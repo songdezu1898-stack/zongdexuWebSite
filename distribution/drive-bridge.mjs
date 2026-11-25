@@ -77,18 +77,31 @@ if (mode === "in") {
 }
 
 if (mode === "report") {
-  const q = JSON.parse(fs.readFileSync(path.join(root, "data/distribution-queue.json"), "utf8"));
-  const control = JSON.parse(fs.readFileSync(path.join(root, "data/distribution-control.json"), "utf8"));
+  const rd = (p, d) => { try { return JSON.parse(fs.readFileSync(path.join(root, p), "utf8")); } catch { return d; } };
+  const q = rd("data/distribution-queue.json", { items: {} }), control = rd("data/distribution-control.json", {});
+  const intake = rd("data/intake-report.json", []), qa = rd("data/live-qa.json", { items: [] });
+  const tail = (p, n) => { try { return fs.readFileSync(p, "utf8").trim().split("\n").slice(-n); } catch { return ["（无日志）"]; } };
   const day = new Date().toISOString().slice(0, 10);
-  const lines = [`# 发布状态（${new Date().toISOString()}）`, "", `总开关：${control.enabled ? "开启" : "关闭"}；模式：${control.mode}`, "",
-    "| 文章 | 官网链接 | 平台 | 状态 | 说明 |", "|---|---|---|---|---|"];
-  const tally = {};
+  const tally = {}, rows = [];
   for (const e of Object.values(q.items)) for (const [pid, s] of Object.entries(e.platforms)) {
     tally[s.status] = (tally[s.status] || 0) + 1;
-    if (!["pending", "skipped"].includes(s.status)) lines.push(`| ${e.title} | ${e.sourceUrl} | ${pid} | ${s.status} | ${(s.note || "").replace(/\|/g, "/").slice(0, 120)} |`);
+    if (!["pending", "skipped"].includes(s.status)) rows.push(`| ${e.title} | ${e.sourceUrl} | ${pid} | ${s.status} | ${s.updatedAt || ""} | ${(s.note || "").replace(/\|/g, "/").slice(0, 140)} |`);
   }
-  lines.push("", `汇总：${JSON.stringify(tally)}`, "", "说明：synced_draft 只表示草稿已进入平台草稿箱，不代表已发布或已收录；平台文章公开链接需发布后回填。");
-  fs.writeFileSync(path.join(base, D.result, "latest-status.md"), lines.join("\n"), "utf8");
-  fs.writeFileSync(path.join(base, D.result, `log-${day}.md`), lines.join("\n"), "utf8");
+  const published = qa.items.filter((i) => i.published === true && i.reviewStatus === "approved").length;
+  const candidates = qa.items.filter((i) => i.reviewStatus === "candidate").length;
+  const L = [`# 运行状态与发布结果（${new Date().toISOString()}）`, "",
+    "本文件由本地程序自动写入，供内容运营（ChatGPT）读取。", "",
+    "## 开关", `- 自动分发总开关：${control.enabled ? "开启" : "关闭"}；模式：${control.mode}`, `- 官网自动发布：${control.autoPublishSite ? "开启" : "关闭"}`, "",
+    "## 内容", `- 官网已发布问答数据：${published} 篇；候选（待审核）：${candidates} 篇`, "",
+    "## 最近接收结果（03 目录 → 本地）", ...(intake.length ? ["| 时间 | 文件 | 结果 | 原因 |", "|---|---|---|---|", ...intake.slice(-15).map((i) => `| ${i.at} | ${i.file} | ${i.result} | ${(i.reasons || []).join("；")} |`)] : ["- 暂无"]), "",
+    "说明：rejected 的文件已被退回，请按原因修改后用新的文件名重新放入 03；duplicate 表示与已有文章重复，无需处理。", "",
+    "## 多平台草稿同步", ...(rows.length ? ["| 文章 | 官网链接 | 平台 | 状态 | 时间 | 说明 |", "|---|---|---|---|---|---|", ...rows] : ["- 暂无已处理的平台"]), "",
+    `汇总：${JSON.stringify(tally)}`, "",
+    "状态含义：synced_draft=草稿已进入平台草稿箱（未公开）；needs_login=浏览器扩展未连接或平台登录过期；failed=同步失败；pending=排队中；skipped=按主题不分发。", "",
+    "## 桥接服务（最近 5 条）", ...tail(path.join(secrets, "bridge.log"), 5).map((l) => `- ${l}`), "",
+    "## 自动任务日志（最近 8 条）", ...tail(path.join(root, "distribution/logs/automation.log"), 8).map((l) => `- ${l.slice(0, 300)}`), "",
+    "synced_draft 不代表已发布、已收录或被 AI 引用；平台公开链接需发布后回填。"];
+  fs.writeFileSync(path.join(base, D.result, "latest-status.md"), L.join("\n"), "utf8");
+  fs.writeFileSync(path.join(base, D.result, `log-${day}.md`), L.join("\n"), "utf8");
   console.log(`DRIVE_REPORT written tally=${JSON.stringify(tally)}`);
 }
