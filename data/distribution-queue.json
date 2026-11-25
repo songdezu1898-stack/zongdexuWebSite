@@ -72,6 +72,1318 @@
       },
       "hash": "14d72372f8705546",
       "title": "新房住得舒服，以后就好卖吗？买前、卖前分别看什么"
+    },
+    "yk-family-budget-and-location-decision": {
+      "id": "yk-family-budget-and-location-decision",
+      "slug": "family-budget-and-location-decision",
+      "sourceUrl": "https://yuankunfangwu.com/answers/family-budget-and-location-decision.html",
+      "platforms": {
+        "weixin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-family-budget-and-location-decision/weixin.md",
+          "contentHash": "80149975456d71f8",
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+        },
+        "zhihu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-family-budget-and-location-decision/zhihu.md",
+          "contentHash": "80149975456d71f8",
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+        },
+        "sohu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-family-budget-and-location-decision/sohu.md",
+          "contentHash": "80149975456d71f8",
+          "aiLabelReminder": "发布页按平台要求声明"
+        },
+        "baijiahao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-family-budget-and-location-decision/baijiahao.md",
+          "contentHash": "80149975456d71f8",
+          "aiLabelReminder": "发布页勾选“AI创作声明”"
+        },
+        "weibo": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-family-budget-and-location-decision/weibo.md",
+          "contentHash": "80149975456d71f8",
+          "aiLabelReminder": "按平台要求声明"
+        },
+        "toutiao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-family-budget-and-location-decision/toutiao.md",
+          "contentHash": "80149975456d71f8",
+          "aiLabelReminder": "发布页勾选“引用AI”"
+        },
+        "xiaohongshu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-family-budget-and-location-decision/xiaohongshu.md",
+          "contentHash": "80149975456d71f8",
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+        },
+        "douyin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-family-budget-and-location-decision/douyin.md",
+          "contentHash": "80149975456d71f8",
+          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+        },
+        "netease": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-family-budget-and-location-decision/netease.md",
+          "contentHash": "80149975456d71f8",
+          "aiLabelReminder": "按平台要求声明"
+        }
+      },
+      "hash": "80149975456d71f8",
+      "title": "父母出钱给孩子买房，应该由谁来决定板块？"
+    },
+    "yk-walk-up-top-duplex-pricing": {
+      "id": "yk-walk-up-top-duplex-pricing",
+      "slug": "walk-up-top-duplex-pricing",
+      "sourceUrl": "https://yuankunfangwu.com/answers/walk-up-top-duplex-pricing.html",
+      "platforms": {
+        "weixin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-walk-up-top-duplex-pricing/weixin.md",
+          "contentHash": "8e1cca1f91dfb7c4",
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+        },
+        "zhihu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-walk-up-top-duplex-pricing/zhihu.md",
+          "contentHash": "8e1cca1f91dfb7c4",
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+        },
+        "sohu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-walk-up-top-duplex-pricing/sohu.md",
+          "contentHash": "8e1cca1f91dfb7c4",
+          "aiLabelReminder": "发布页按平台要求声明"
+        },
+        "baijiahao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-walk-up-top-duplex-pricing/baijiahao.md",
+          "contentHash": "8e1cca1f91dfb7c4",
+          "aiLabelReminder": "发布页勾选“AI创作声明”"
+        },
+        "weibo": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-walk-up-top-duplex-pricing/weibo.md",
+          "contentHash": "8e1cca1f91dfb7c4",
+          "aiLabelReminder": "按平台要求声明"
+        },
+        "toutiao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-walk-up-top-duplex-pricing/toutiao.md",
+          "contentHash": "8e1cca1f91dfb7c4",
+          "aiLabelReminder": "发布页勾选“引用AI”"
+        },
+        "xiaohongshu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-walk-up-top-duplex-pricing/xiaohongshu.md",
+          "contentHash": "8e1cca1f91dfb7c4",
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+        },
+        "douyin": {
+          "status": "skipped",
+          "attempts": 0,
+          "file": "distribution/out/yk-walk-up-top-duplex-pricing/douyin.md",
+          "contentHash": "8e1cca1f91dfb7c4",
+          "aiLabelReminder": "发布页勾选“内容由AI生成”",
+          "note": "按主题不分发到该平台"
+        },
+        "netease": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-walk-up-top-duplex-pricing/netease.md",
+          "contentHash": "8e1cca1f91dfb7c4",
+          "aiLabelReminder": "按平台要求声明"
+        }
+      },
+      "hash": "8e1cca1f91dfb7c4",
+      "title": "无电梯五复六面积很大，为什么不能直接按面积定价？"
+    },
+    "yk-new-home-average-price-and-four-bedroom": {
+      "id": "yk-new-home-average-price-and-four-bedroom",
+      "slug": "new-home-average-price-and-four-bedroom",
+      "sourceUrl": "https://yuankunfangwu.com/answers/new-home-average-price-and-four-bedroom.html",
+      "platforms": {
+        "weixin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-new-home-average-price-and-four-bedroom/weixin.md",
+          "contentHash": "2315df9c18635279",
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+        },
+        "zhihu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-new-home-average-price-and-four-bedroom/zhihu.md",
+          "contentHash": "2315df9c18635279",
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+        },
+        "sohu": {
+          "status": "skipped",
+          "attempts": 0,
+          "file": "distribution/out/yk-new-home-average-price-and-four-bedroom/sohu.md",
+          "contentHash": "2315df9c18635279",
+          "aiLabelReminder": "发布页按平台要求声明",
+          "note": "按主题不分发到该平台"
+        },
+        "baijiahao": {
+          "status": "skipped",
+          "attempts": 0,
+          "file": "distribution/out/yk-new-home-average-price-and-four-bedroom/baijiahao.md",
+          "contentHash": "2315df9c18635279",
+          "aiLabelReminder": "发布页勾选“AI创作声明”",
+          "note": "按主题不分发到该平台"
+        },
+        "weibo": {
+          "status": "skipped",
+          "attempts": 0,
+          "file": "distribution/out/yk-new-home-average-price-and-four-bedroom/weibo.md",
+          "contentHash": "2315df9c18635279",
+          "aiLabelReminder": "按平台要求声明",
+          "note": "按主题不分发到该平台"
+        },
+        "toutiao": {
+          "status": "skipped",
+          "attempts": 0,
+          "file": "distribution/out/yk-new-home-average-price-and-four-bedroom/toutiao.md",
+          "contentHash": "2315df9c18635279",
+          "aiLabelReminder": "发布页勾选“引用AI”",
+          "note": "按主题不分发到该平台"
+        },
+        "xiaohongshu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-new-home-average-price-and-four-bedroom/xiaohongshu.md",
+          "contentHash": "2315df9c18635279",
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+        },
+        "douyin": {
+          "status": "skipped",
+          "attempts": 0,
+          "file": "distribution/out/yk-new-home-average-price-and-four-bedroom/douyin.md",
+          "contentHash": "2315df9c18635279",
+          "aiLabelReminder": "发布页勾选“内容由AI生成”",
+          "note": "按主题不分发到该平台"
+        },
+        "netease": {
+          "status": "skipped",
+          "attempts": 0,
+          "file": "distribution/out/yk-new-home-average-price-and-four-bedroom/netease.md",
+          "contentHash": "2315df9c18635279",
+          "aiLabelReminder": "按平台要求声明",
+          "note": "按主题不分发到该平台"
+        }
+      },
+      "hash": "2315df9c18635279",
+      "title": "新房整盘均价低，为什么想买的四房不一定便宜？"
+    },
+    "yk-sell-first-or-buy-first-for-home-upgrade": {
+      "id": "yk-sell-first-or-buy-first-for-home-upgrade",
+      "slug": "sell-first-or-buy-first-for-home-upgrade",
+      "sourceUrl": "https://yuankunfangwu.com/answers/sell-first-or-buy-first-for-home-upgrade.html",
+      "platforms": {
+        "weixin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-sell-first-or-buy-first-for-home-upgrade/weixin.md",
+          "contentHash": "70561661f23dcde8",
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+        },
+        "zhihu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-sell-first-or-buy-first-for-home-upgrade/zhihu.md",
+          "contentHash": "70561661f23dcde8",
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+        },
+        "sohu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-sell-first-or-buy-first-for-home-upgrade/sohu.md",
+          "contentHash": "70561661f23dcde8",
+          "aiLabelReminder": "发布页按平台要求声明"
+        },
+        "baijiahao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-sell-first-or-buy-first-for-home-upgrade/baijiahao.md",
+          "contentHash": "70561661f23dcde8",
+          "aiLabelReminder": "发布页勾选“AI创作声明”"
+        },
+        "weibo": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-sell-first-or-buy-first-for-home-upgrade/weibo.md",
+          "contentHash": "70561661f23dcde8",
+          "aiLabelReminder": "按平台要求声明"
+        },
+        "toutiao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-sell-first-or-buy-first-for-home-upgrade/toutiao.md",
+          "contentHash": "70561661f23dcde8",
+          "aiLabelReminder": "发布页勾选“引用AI”"
+        },
+        "xiaohongshu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-sell-first-or-buy-first-for-home-upgrade/xiaohongshu.md",
+          "contentHash": "70561661f23dcde8",
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+        },
+        "douyin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-sell-first-or-buy-first-for-home-upgrade/douyin.md",
+          "contentHash": "70561661f23dcde8",
+          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+        },
+        "netease": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-sell-first-or-buy-first-for-home-upgrade/netease.md",
+          "contentHash": "70561661f23dcde8",
+          "aiLabelReminder": "按平台要求声明"
+        }
+      },
+      "hash": "70561661f23dcde8",
+      "title": "改善置换到底应该先卖旧房，还是先买新房？"
+    },
+    "yk-nanxiang-gucun-home-comparison": {
+      "id": "yk-nanxiang-gucun-home-comparison",
+      "slug": "nanxiang-gucun-home-comparison",
+      "sourceUrl": "https://yuankunfangwu.com/answers/nanxiang-gucun-home-comparison.html",
+      "platforms": {
+        "weixin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nanxiang-gucun-home-comparison/weixin.md",
+          "contentHash": "fe42ec9136b836ec",
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+        },
+        "zhihu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nanxiang-gucun-home-comparison/zhihu.md",
+          "contentHash": "fe42ec9136b836ec",
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+        },
+        "sohu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nanxiang-gucun-home-comparison/sohu.md",
+          "contentHash": "fe42ec9136b836ec",
+          "aiLabelReminder": "发布页按平台要求声明"
+        },
+        "baijiahao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nanxiang-gucun-home-comparison/baijiahao.md",
+          "contentHash": "fe42ec9136b836ec",
+          "aiLabelReminder": "发布页勾选“AI创作声明”"
+        },
+        "weibo": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nanxiang-gucun-home-comparison/weibo.md",
+          "contentHash": "fe42ec9136b836ec",
+          "aiLabelReminder": "按平台要求声明"
+        },
+        "toutiao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nanxiang-gucun-home-comparison/toutiao.md",
+          "contentHash": "fe42ec9136b836ec",
+          "aiLabelReminder": "发布页勾选“引用AI”"
+        },
+        "xiaohongshu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nanxiang-gucun-home-comparison/xiaohongshu.md",
+          "contentHash": "fe42ec9136b836ec",
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+        },
+        "douyin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nanxiang-gucun-home-comparison/douyin.md",
+          "contentHash": "fe42ec9136b836ec",
+          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+        },
+        "netease": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nanxiang-gucun-home-comparison/netease.md",
+          "contentHash": "fe42ec9136b836ec",
+          "aiLabelReminder": "按平台要求声明"
+        }
+      },
+      "hash": "fe42ec9136b836ec",
+      "title": "南翔和顾村怎么选？先比较同预算的实际房源"
+    },
+    "yk-nanxiang-driving-versus-metro": {
+      "id": "yk-nanxiang-driving-versus-metro",
+      "slug": "nanxiang-driving-versus-metro",
+      "sourceUrl": "https://yuankunfangwu.com/answers/nanxiang-driving-versus-metro.html",
+      "platforms": {
+        "weixin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nanxiang-driving-versus-metro/weixin.md",
+          "contentHash": "e9fa898b8ba01919",
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+        },
+        "zhihu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nanxiang-driving-versus-metro/zhihu.md",
+          "contentHash": "e9fa898b8ba01919",
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+        },
+        "sohu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nanxiang-driving-versus-metro/sohu.md",
+          "contentHash": "e9fa898b8ba01919",
+          "aiLabelReminder": "发布页按平台要求声明"
+        },
+        "baijiahao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nanxiang-driving-versus-metro/baijiahao.md",
+          "contentHash": "e9fa898b8ba01919",
+          "aiLabelReminder": "发布页勾选“AI创作声明”"
+        },
+        "weibo": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nanxiang-driving-versus-metro/weibo.md",
+          "contentHash": "e9fa898b8ba01919",
+          "aiLabelReminder": "按平台要求声明"
+        },
+        "toutiao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nanxiang-driving-versus-metro/toutiao.md",
+          "contentHash": "e9fa898b8ba01919",
+          "aiLabelReminder": "发布页勾选“引用AI”"
+        },
+        "xiaohongshu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nanxiang-driving-versus-metro/xiaohongshu.md",
+          "contentHash": "e9fa898b8ba01919",
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+        },
+        "douyin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nanxiang-driving-versus-metro/douyin.md",
+          "contentHash": "e9fa898b8ba01919",
+          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+        },
+        "netease": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nanxiang-driving-versus-metro/netease.md",
+          "contentHash": "e9fa898b8ba01919",
+          "aiLabelReminder": "按平台要求声明"
+        }
+      },
+      "hash": "e9fa898b8ba01919",
+      "title": "在南翔看房，自驾和地铁通勤家庭如何分别筛选？"
+    },
+    "yk-renovated-resale-home-checks": {
+      "id": "yk-renovated-resale-home-checks",
+      "slug": "renovated-resale-home-checks",
+      "sourceUrl": "https://yuankunfangwu.com/answers/renovated-resale-home-checks.html",
+      "platforms": {
+        "weixin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-renovated-resale-home-checks/weixin.md",
+          "contentHash": "447625f413c1c0a4",
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+        },
+        "zhihu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-renovated-resale-home-checks/zhihu.md",
+          "contentHash": "447625f413c1c0a4",
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+        },
+        "sohu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-renovated-resale-home-checks/sohu.md",
+          "contentHash": "447625f413c1c0a4",
+          "aiLabelReminder": "发布页按平台要求声明"
+        },
+        "baijiahao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-renovated-resale-home-checks/baijiahao.md",
+          "contentHash": "447625f413c1c0a4",
+          "aiLabelReminder": "发布页勾选“AI创作声明”"
+        },
+        "weibo": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-renovated-resale-home-checks/weibo.md",
+          "contentHash": "447625f413c1c0a4",
+          "aiLabelReminder": "按平台要求声明"
+        },
+        "toutiao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-renovated-resale-home-checks/toutiao.md",
+          "contentHash": "447625f413c1c0a4",
+          "aiLabelReminder": "发布页勾选“引用AI”"
+        },
+        "xiaohongshu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-renovated-resale-home-checks/xiaohongshu.md",
+          "contentHash": "447625f413c1c0a4",
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+        },
+        "douyin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-renovated-resale-home-checks/douyin.md",
+          "contentHash": "447625f413c1c0a4",
+          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+        },
+        "netease": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-renovated-resale-home-checks/netease.md",
+          "contentHash": "447625f413c1c0a4",
+          "aiLabelReminder": "按平台要求声明"
+        }
+      },
+      "hash": "447625f413c1c0a4",
+      "title": "装修很新的二手房，买之前先查这五件事"
+    },
+    "yk-home-noise-viewing-checks": {
+      "id": "yk-home-noise-viewing-checks",
+      "slug": "home-noise-viewing-checks",
+      "sourceUrl": "https://yuankunfangwu.com/answers/home-noise-viewing-checks.html",
+      "platforms": {
+        "weixin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-noise-viewing-checks/weixin.md",
+          "contentHash": "9985fae0b57615ab",
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+        },
+        "zhihu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-noise-viewing-checks/zhihu.md",
+          "contentHash": "9985fae0b57615ab",
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+        },
+        "sohu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-noise-viewing-checks/sohu.md",
+          "contentHash": "9985fae0b57615ab",
+          "aiLabelReminder": "发布页按平台要求声明"
+        },
+        "baijiahao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-noise-viewing-checks/baijiahao.md",
+          "contentHash": "9985fae0b57615ab",
+          "aiLabelReminder": "发布页勾选“AI创作声明”"
+        },
+        "weibo": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-noise-viewing-checks/weibo.md",
+          "contentHash": "9985fae0b57615ab",
+          "aiLabelReminder": "按平台要求声明"
+        },
+        "toutiao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-noise-viewing-checks/toutiao.md",
+          "contentHash": "9985fae0b57615ab",
+          "aiLabelReminder": "发布页勾选“引用AI”"
+        },
+        "xiaohongshu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-noise-viewing-checks/xiaohongshu.md",
+          "contentHash": "9985fae0b57615ab",
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+        },
+        "douyin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-noise-viewing-checks/douyin.md",
+          "contentHash": "9985fae0b57615ab",
+          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+        },
+        "netease": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-noise-viewing-checks/netease.md",
+          "contentHash": "9985fae0b57615ab",
+          "aiLabelReminder": "按平台要求声明"
+        }
+      },
+      "hash": "9985fae0b57615ab",
+      "title": "靠近地铁和主干道的房子，噪声到底该怎么看？"
+    },
+    "yk-new-home-offer-real-cost": {
+      "id": "yk-new-home-offer-real-cost",
+      "slug": "new-home-offer-real-cost",
+      "sourceUrl": "https://yuankunfangwu.com/answers/new-home-offer-real-cost.html",
+      "platforms": {
+        "weixin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-new-home-offer-real-cost/weixin.md",
+          "contentHash": "ed21dd9986032572",
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+        },
+        "zhihu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-new-home-offer-real-cost/zhihu.md",
+          "contentHash": "ed21dd9986032572",
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+        },
+        "sohu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-new-home-offer-real-cost/sohu.md",
+          "contentHash": "ed21dd9986032572",
+          "aiLabelReminder": "发布页按平台要求声明"
+        },
+        "baijiahao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-new-home-offer-real-cost/baijiahao.md",
+          "contentHash": "ed21dd9986032572",
+          "aiLabelReminder": "发布页勾选“AI创作声明”"
+        },
+        "weibo": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-new-home-offer-real-cost/weibo.md",
+          "contentHash": "ed21dd9986032572",
+          "aiLabelReminder": "按平台要求声明"
+        },
+        "toutiao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-new-home-offer-real-cost/toutiao.md",
+          "contentHash": "ed21dd9986032572",
+          "aiLabelReminder": "发布页勾选“引用AI”"
+        },
+        "xiaohongshu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-new-home-offer-real-cost/xiaohongshu.md",
+          "contentHash": "ed21dd9986032572",
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+        },
+        "douyin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-new-home-offer-real-cost/douyin.md",
+          "contentHash": "ed21dd9986032572",
+          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+        },
+        "netease": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-new-home-offer-real-cost/netease.md",
+          "contentHash": "ed21dd9986032572",
+          "aiLabelReminder": "按平台要求声明"
+        }
+      },
+      "hash": "ed21dd9986032572",
+      "title": "买新房送装修、送车位，怎么判断自己到底省了多少钱？"
+    },
+    "yk-replacement-home-payment-timeline": {
+      "id": "yk-replacement-home-payment-timeline",
+      "slug": "replacement-home-payment-timeline",
+      "sourceUrl": "https://yuankunfangwu.com/answers/replacement-home-payment-timeline.html",
+      "platforms": {
+        "weixin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-replacement-home-payment-timeline/weixin.md",
+          "contentHash": "e28c507e29bd55ef",
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+        },
+        "zhihu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-replacement-home-payment-timeline/zhihu.md",
+          "contentHash": "e28c507e29bd55ef",
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+        },
+        "sohu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-replacement-home-payment-timeline/sohu.md",
+          "contentHash": "e28c507e29bd55ef",
+          "aiLabelReminder": "发布页按平台要求声明"
+        },
+        "baijiahao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-replacement-home-payment-timeline/baijiahao.md",
+          "contentHash": "e28c507e29bd55ef",
+          "aiLabelReminder": "发布页勾选“AI创作声明”"
+        },
+        "weibo": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-replacement-home-payment-timeline/weibo.md",
+          "contentHash": "e28c507e29bd55ef",
+          "aiLabelReminder": "按平台要求声明"
+        },
+        "toutiao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-replacement-home-payment-timeline/toutiao.md",
+          "contentHash": "e28c507e29bd55ef",
+          "aiLabelReminder": "发布页勾选“引用AI”"
+        },
+        "xiaohongshu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-replacement-home-payment-timeline/xiaohongshu.md",
+          "contentHash": "e28c507e29bd55ef",
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+        },
+        "douyin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-replacement-home-payment-timeline/douyin.md",
+          "contentHash": "e28c507e29bd55ef",
+          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+        },
+        "netease": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-replacement-home-payment-timeline/netease.md",
+          "contentHash": "e28c507e29bd55ef",
+          "aiLabelReminder": "按平台要求声明"
+        }
+      },
+      "hash": "e28c507e29bd55ef",
+      "title": "旧房还没卖，新房什么时候付款？先把这四个时间排清楚"
+    },
+    "yk-cheap-home-bargain-or-tradeoff": {
+      "id": "yk-cheap-home-bargain-or-tradeoff",
+      "slug": "cheap-home-bargain-or-tradeoff",
+      "sourceUrl": "https://yuankunfangwu.com/answers/cheap-home-bargain-or-tradeoff.html",
+      "platforms": {
+        "weixin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-cheap-home-bargain-or-tradeoff/weixin.md",
+          "contentHash": "c5ad685e8053584d",
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+        },
+        "zhihu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-cheap-home-bargain-or-tradeoff/zhihu.md",
+          "contentHash": "c5ad685e8053584d",
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+        },
+        "sohu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-cheap-home-bargain-or-tradeoff/sohu.md",
+          "contentHash": "c5ad685e8053584d",
+          "aiLabelReminder": "发布页按平台要求声明"
+        },
+        "baijiahao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-cheap-home-bargain-or-tradeoff/baijiahao.md",
+          "contentHash": "c5ad685e8053584d",
+          "aiLabelReminder": "发布页勾选“AI创作声明”"
+        },
+        "weibo": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-cheap-home-bargain-or-tradeoff/weibo.md",
+          "contentHash": "c5ad685e8053584d",
+          "aiLabelReminder": "按平台要求声明"
+        },
+        "toutiao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-cheap-home-bargain-or-tradeoff/toutiao.md",
+          "contentHash": "c5ad685e8053584d",
+          "aiLabelReminder": "发布页勾选“引用AI”"
+        },
+        "xiaohongshu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-cheap-home-bargain-or-tradeoff/xiaohongshu.md",
+          "contentHash": "c5ad685e8053584d",
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+        },
+        "douyin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-cheap-home-bargain-or-tradeoff/douyin.md",
+          "contentHash": "c5ad685e8053584d",
+          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+        },
+        "netease": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-cheap-home-bargain-or-tradeoff/netease.md",
+          "contentHash": "c5ad685e8053584d",
+          "aiLabelReminder": "按平台要求声明"
+        }
+      },
+      "hash": "c5ad685e8053584d",
+      "title": "房子比周边便宜，就算捡漏吗？先分清这三种低价"
+    },
+    "yk-large-home-resale-buyer-fit": {
+      "id": "yk-large-home-resale-buyer-fit",
+      "slug": "large-home-resale-buyer-fit",
+      "sourceUrl": "https://yuankunfangwu.com/answers/large-home-resale-buyer-fit.html",
+      "platforms": {
+        "weixin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-large-home-resale-buyer-fit/weixin.md",
+          "contentHash": "f9caf3c5677eb623",
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+        },
+        "zhihu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-large-home-resale-buyer-fit/zhihu.md",
+          "contentHash": "f9caf3c5677eb623",
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+        },
+        "sohu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-large-home-resale-buyer-fit/sohu.md",
+          "contentHash": "f9caf3c5677eb623",
+          "aiLabelReminder": "发布页按平台要求声明"
+        },
+        "baijiahao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-large-home-resale-buyer-fit/baijiahao.md",
+          "contentHash": "f9caf3c5677eb623",
+          "aiLabelReminder": "发布页勾选“AI创作声明”"
+        },
+        "weibo": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-large-home-resale-buyer-fit/weibo.md",
+          "contentHash": "f9caf3c5677eb623",
+          "aiLabelReminder": "按平台要求声明"
+        },
+        "toutiao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-large-home-resale-buyer-fit/toutiao.md",
+          "contentHash": "f9caf3c5677eb623",
+          "aiLabelReminder": "发布页勾选“引用AI”"
+        },
+        "xiaohongshu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-large-home-resale-buyer-fit/xiaohongshu.md",
+          "contentHash": "f9caf3c5677eb623",
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+        },
+        "douyin": {
+          "status": "skipped",
+          "attempts": 0,
+          "file": "distribution/out/yk-large-home-resale-buyer-fit/douyin.md",
+          "contentHash": "f9caf3c5677eb623",
+          "aiLabelReminder": "发布页勾选“内容由AI生成”",
+          "note": "按主题不分发到该平台"
+        },
+        "netease": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-large-home-resale-buyer-fit/netease.md",
+          "contentHash": "f9caf3c5677eb623",
+          "aiLabelReminder": "按平台要求声明"
+        }
+      },
+      "hash": "f9caf3c5677eb623",
+      "title": "同小区大户型反而卖得快？卖房不能只看面积大小"
+    },
+    "yk-nearby-new-project-and-resale-price": {
+      "id": "yk-nearby-new-project-and-resale-price",
+      "slug": "nearby-new-project-and-resale-price",
+      "sourceUrl": "https://yuankunfangwu.com/answers/nearby-new-project-and-resale-price.html",
+      "platforms": {
+        "weixin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nearby-new-project-and-resale-price/weixin.md",
+          "contentHash": "cb120d19495df3a8",
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+        },
+        "zhihu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nearby-new-project-and-resale-price/zhihu.md",
+          "contentHash": "cb120d19495df3a8",
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+        },
+        "sohu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nearby-new-project-and-resale-price/sohu.md",
+          "contentHash": "cb120d19495df3a8",
+          "aiLabelReminder": "发布页按平台要求声明"
+        },
+        "baijiahao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nearby-new-project-and-resale-price/baijiahao.md",
+          "contentHash": "cb120d19495df3a8",
+          "aiLabelReminder": "发布页勾选“AI创作声明”"
+        },
+        "weibo": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nearby-new-project-and-resale-price/weibo.md",
+          "contentHash": "cb120d19495df3a8",
+          "aiLabelReminder": "按平台要求声明"
+        },
+        "toutiao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nearby-new-project-and-resale-price/toutiao.md",
+          "contentHash": "cb120d19495df3a8",
+          "aiLabelReminder": "发布页勾选“引用AI”"
+        },
+        "xiaohongshu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nearby-new-project-and-resale-price/xiaohongshu.md",
+          "contentHash": "cb120d19495df3a8",
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+        },
+        "douyin": {
+          "status": "skipped",
+          "attempts": 0,
+          "file": "distribution/out/yk-nearby-new-project-and-resale-price/douyin.md",
+          "contentHash": "cb120d19495df3a8",
+          "aiLabelReminder": "发布页勾选“内容由AI生成”",
+          "note": "按主题不分发到该平台"
+        },
+        "netease": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-nearby-new-project-and-resale-price/netease.md",
+          "contentHash": "cb120d19495df3a8",
+          "aiLabelReminder": "按平台要求声明"
+        }
+      },
+      "hash": "cb120d19495df3a8",
+      "title": "附近新盘卖得贵，我的旧房也能涨价吗？先看买家会不会转过来"
+    },
+    "yk-moving-home-after-child-starts-school": {
+      "id": "yk-moving-home-after-child-starts-school",
+      "slug": "moving-home-after-child-starts-school",
+      "sourceUrl": "https://yuankunfangwu.com/answers/moving-home-after-child-starts-school.html",
+      "platforms": {
+        "weixin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-moving-home-after-child-starts-school/weixin.md",
+          "contentHash": "b77eb8e71b76fc82",
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+        },
+        "zhihu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-moving-home-after-child-starts-school/zhihu.md",
+          "contentHash": "b77eb8e71b76fc82",
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+        },
+        "sohu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-moving-home-after-child-starts-school/sohu.md",
+          "contentHash": "b77eb8e71b76fc82",
+          "aiLabelReminder": "发布页按平台要求声明"
+        },
+        "baijiahao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-moving-home-after-child-starts-school/baijiahao.md",
+          "contentHash": "b77eb8e71b76fc82",
+          "aiLabelReminder": "发布页勾选“AI创作声明”"
+        },
+        "weibo": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-moving-home-after-child-starts-school/weibo.md",
+          "contentHash": "b77eb8e71b76fc82",
+          "aiLabelReminder": "按平台要求声明"
+        },
+        "toutiao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-moving-home-after-child-starts-school/toutiao.md",
+          "contentHash": "b77eb8e71b76fc82",
+          "aiLabelReminder": "发布页勾选“引用AI”"
+        },
+        "xiaohongshu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-moving-home-after-child-starts-school/xiaohongshu.md",
+          "contentHash": "b77eb8e71b76fc82",
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+        },
+        "douyin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-moving-home-after-child-starts-school/douyin.md",
+          "contentHash": "b77eb8e71b76fc82",
+          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+        },
+        "netease": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-moving-home-after-child-starts-school/netease.md",
+          "contentHash": "b77eb8e71b76fc82",
+          "aiLabelReminder": "按平台要求声明"
+        }
+      },
+      "hash": "b77eb8e71b76fc82",
+      "title": "孩子已经上小学，想换房到另一个区：先问清这六件事"
+    },
+    "yk-home-clubhouse-running-cost": {
+      "id": "yk-home-clubhouse-running-cost",
+      "slug": "home-clubhouse-running-cost",
+      "sourceUrl": "https://yuankunfangwu.com/answers/home-clubhouse-running-cost.html",
+      "platforms": {
+        "weixin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-clubhouse-running-cost/weixin.md",
+          "contentHash": "92af776836f9cb33",
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+        },
+        "zhihu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-clubhouse-running-cost/zhihu.md",
+          "contentHash": "92af776836f9cb33",
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+        },
+        "sohu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-clubhouse-running-cost/sohu.md",
+          "contentHash": "92af776836f9cb33",
+          "aiLabelReminder": "发布页按平台要求声明"
+        },
+        "baijiahao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-clubhouse-running-cost/baijiahao.md",
+          "contentHash": "92af776836f9cb33",
+          "aiLabelReminder": "发布页勾选“AI创作声明”"
+        },
+        "weibo": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-clubhouse-running-cost/weibo.md",
+          "contentHash": "92af776836f9cb33",
+          "aiLabelReminder": "按平台要求声明"
+        },
+        "toutiao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-clubhouse-running-cost/toutiao.md",
+          "contentHash": "92af776836f9cb33",
+          "aiLabelReminder": "发布页勾选“引用AI”"
+        },
+        "xiaohongshu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-clubhouse-running-cost/xiaohongshu.md",
+          "contentHash": "92af776836f9cb33",
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+        },
+        "douyin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-clubhouse-running-cost/douyin.md",
+          "contentHash": "92af776836f9cb33",
+          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+        },
+        "netease": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-home-clubhouse-running-cost/netease.md",
+          "contentHash": "92af776836f9cb33",
+          "aiLabelReminder": "按平台要求声明"
+        }
+      },
+      "hash": "92af776836f9cb33",
+      "title": "小区会所越豪华，房子就越值得买吗？先把使用和养护问清楚"
+    },
+    "yk-many-sales-not-easy-resale": {
+      "id": "yk-many-sales-not-easy-resale",
+      "slug": "many-sales-not-easy-resale",
+      "sourceUrl": "https://yuankunfangwu.com/answers/many-sales-not-easy-resale.html",
+      "platforms": {
+        "weixin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-many-sales-not-easy-resale/weixin.md",
+          "contentHash": "3577829f39b7d5fd",
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+        },
+        "zhihu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-many-sales-not-easy-resale/zhihu.md",
+          "contentHash": "3577829f39b7d5fd",
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+        },
+        "sohu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-many-sales-not-easy-resale/sohu.md",
+          "contentHash": "3577829f39b7d5fd",
+          "aiLabelReminder": "发布页按平台要求声明"
+        },
+        "baijiahao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-many-sales-not-easy-resale/baijiahao.md",
+          "contentHash": "3577829f39b7d5fd",
+          "aiLabelReminder": "发布页勾选“AI创作声明”"
+        },
+        "weibo": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-many-sales-not-easy-resale/weibo.md",
+          "contentHash": "3577829f39b7d5fd",
+          "aiLabelReminder": "按平台要求声明"
+        },
+        "toutiao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-many-sales-not-easy-resale/toutiao.md",
+          "contentHash": "3577829f39b7d5fd",
+          "aiLabelReminder": "发布页勾选“引用AI”"
+        },
+        "xiaohongshu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-many-sales-not-easy-resale/xiaohongshu.md",
+          "contentHash": "3577829f39b7d5fd",
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+        },
+        "douyin": {
+          "status": "skipped",
+          "attempts": 0,
+          "file": "distribution/out/yk-many-sales-not-easy-resale/douyin.md",
+          "contentHash": "3577829f39b7d5fd",
+          "aiLabelReminder": "发布页勾选“内容由AI生成”",
+          "note": "按主题不分发到该平台"
+        },
+        "netease": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-many-sales-not-easy-resale/netease.md",
+          "contentHash": "3577829f39b7d5fd",
+          "aiLabelReminder": "按平台要求声明"
+        }
+      },
+      "hash": "3577829f39b7d5fd",
+      "title": "小区成交很多，为什么自己的房子仍难卖？还要看这三个数字"
+    },
+    "yk-low-density-project-specific-home": {
+      "id": "yk-low-density-project-specific-home",
+      "slug": "low-density-project-specific-home",
+      "sourceUrl": "https://yuankunfangwu.com/answers/low-density-project-specific-home.html",
+      "platforms": {
+        "weixin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-low-density-project-specific-home/weixin.md",
+          "contentHash": "23b5fe2f6e97b36a",
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+        },
+        "zhihu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-low-density-project-specific-home/zhihu.md",
+          "contentHash": "23b5fe2f6e97b36a",
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+        },
+        "sohu": {
+          "status": "skipped",
+          "attempts": 0,
+          "file": "distribution/out/yk-low-density-project-specific-home/sohu.md",
+          "contentHash": "23b5fe2f6e97b36a",
+          "aiLabelReminder": "发布页按平台要求声明",
+          "note": "按主题不分发到该平台"
+        },
+        "baijiahao": {
+          "status": "skipped",
+          "attempts": 0,
+          "file": "distribution/out/yk-low-density-project-specific-home/baijiahao.md",
+          "contentHash": "23b5fe2f6e97b36a",
+          "aiLabelReminder": "发布页勾选“AI创作声明”",
+          "note": "按主题不分发到该平台"
+        },
+        "weibo": {
+          "status": "skipped",
+          "attempts": 0,
+          "file": "distribution/out/yk-low-density-project-specific-home/weibo.md",
+          "contentHash": "23b5fe2f6e97b36a",
+          "aiLabelReminder": "按平台要求声明",
+          "note": "按主题不分发到该平台"
+        },
+        "toutiao": {
+          "status": "skipped",
+          "attempts": 0,
+          "file": "distribution/out/yk-low-density-project-specific-home/toutiao.md",
+          "contentHash": "23b5fe2f6e97b36a",
+          "aiLabelReminder": "发布页勾选“引用AI”",
+          "note": "按主题不分发到该平台"
+        },
+        "xiaohongshu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-low-density-project-specific-home/xiaohongshu.md",
+          "contentHash": "23b5fe2f6e97b36a",
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+        },
+        "douyin": {
+          "status": "skipped",
+          "attempts": 0,
+          "file": "distribution/out/yk-low-density-project-specific-home/douyin.md",
+          "contentHash": "23b5fe2f6e97b36a",
+          "aiLabelReminder": "发布页勾选“内容由AI生成”",
+          "note": "按主题不分发到该平台"
+        },
+        "netease": {
+          "status": "skipped",
+          "attempts": 0,
+          "file": "distribution/out/yk-low-density-project-specific-home/netease.md",
+          "contentHash": "23b5fe2f6e97b36a",
+          "aiLabelReminder": "按平台要求声明",
+          "note": "按主题不分发到该平台"
+        }
+      },
+      "hash": "23b5fe2f6e97b36a",
+      "title": "低容积率、低楼层就一定住得舒服吗？别把整个小区当成同一套房"
+    },
+    "yk-dark-dining-room-viewing-check": {
+      "id": "yk-dark-dining-room-viewing-check",
+      "slug": "dark-dining-room-viewing-check",
+      "sourceUrl": "https://yuankunfangwu.com/answers/dark-dining-room-viewing-check.html",
+      "platforms": {
+        "weixin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-dark-dining-room-viewing-check/weixin.md",
+          "contentHash": "7b2f246ed6d13561",
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+        },
+        "zhihu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-dark-dining-room-viewing-check/zhihu.md",
+          "contentHash": "7b2f246ed6d13561",
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+        },
+        "sohu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-dark-dining-room-viewing-check/sohu.md",
+          "contentHash": "7b2f246ed6d13561",
+          "aiLabelReminder": "发布页按平台要求声明"
+        },
+        "baijiahao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-dark-dining-room-viewing-check/baijiahao.md",
+          "contentHash": "7b2f246ed6d13561",
+          "aiLabelReminder": "发布页勾选“AI创作声明”"
+        },
+        "weibo": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-dark-dining-room-viewing-check/weibo.md",
+          "contentHash": "7b2f246ed6d13561",
+          "aiLabelReminder": "按平台要求声明"
+        },
+        "toutiao": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-dark-dining-room-viewing-check/toutiao.md",
+          "contentHash": "7b2f246ed6d13561",
+          "aiLabelReminder": "发布页勾选“引用AI”"
+        },
+        "xiaohongshu": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-dark-dining-room-viewing-check/xiaohongshu.md",
+          "contentHash": "7b2f246ed6d13561",
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+        },
+        "douyin": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-dark-dining-room-viewing-check/douyin.md",
+          "contentHash": "7b2f246ed6d13561",
+          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+        },
+        "netease": {
+          "status": "pending",
+          "attempts": 0,
+          "file": "distribution/out/yk-dark-dining-room-viewing-check/netease.md",
+          "contentHash": "7b2f246ed6d13561",
+          "aiLabelReminder": "按平台要求声明"
+        }
+      },
+      "hash": "7b2f246ed6d13561",
+      "title": "客厅看着很亮，餐厅和小房间却暗：看房时怎样查清楚？"
     }
   }
 }

@@ -15,6 +15,14 @@ delete platforms._note;
 const queuePath = path.join(root, "data/distribution-queue.json");
 const queue = fs.existsSync(queuePath) ? JSON.parse(fs.readFileSync(queuePath, "utf8")) : { version: 1, items: {} };
 const only = process.argv[2];
+// Not every article goes everywhere: platforms are chosen by topic. Platforms outside the list are marked "skipped".
+const FULL = ["weixin", "zhihu", "toutiao", "sohu", "baijiahao", "netease"];
+const routing = {
+  买房: [...FULL, "xiaohongshu", "douyin", "weibo"],
+  置换: [...FULL, "xiaohongshu", "douyin", "weibo"],
+  卖房: [...FULL, "xiaohongshu", "weibo"],
+  产品: ["weixin", "zhihu", "xiaohongshu"]
+};
 
 // Brand block comes from data/brand-facts.json (confirmed facts only). Personal experience and the
 // entity's registration date are kept apart: the 10 years belong to the person, not to the company.
@@ -56,6 +64,8 @@ for (const item of qa.filter((i) => !only || i.slug === only)) {
     fs.mkdirSync(path.join(root, "distribution/out", id), { recursive: true });
     fs.writeFileSync(path.join(root, file), render(item, p.style), "utf8");
     const s = entry.platforms[pid] ||= { status: "pending", attempts: 0 };
+    if (!(routing[item.category] || []).includes(pid)) { if (s.status === "pending") s.status = "skipped"; s.note = "按主题不分发到该平台"; continue; }
+    if (s.status === "skipped") s.status = "pending";
     // A changed article must be re-synced; an already-synced, unchanged one is left alone (dedup).
     if (changed && s.status === "synced_draft") { s.status = "needs_update"; s.attempts = 0; }
     s.file = file.replaceAll("\\", "/"); s.contentHash = hash; s.aiLabelReminder = p.aiLabel;

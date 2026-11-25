@@ -102,6 +102,9 @@ try {
 } catch {
   Write-Warning "IndexNow 推送出错（网站发布不受影响）：$($_.Exception.Message)"
 }
+# Queue newly published, approved articles for multi-platform drafts. Queue only: syncing is a
+# separate step controlled by data/distribution-control.json (off by default). Never fails a publish.
+try { & $nodePath (Join-Path $siteRoot 'distributionadapt.mjs') } catch { Write-Warning "分发队列生成出错（不影响发布）：$($_.Exception.Message)" }
 } finally {
   Remove-Item -LiteralPath $lockFile -Force -ErrorAction SilentlyContinue
 }
