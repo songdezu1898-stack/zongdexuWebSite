@@ -1,1 +1,9 @@
 deploy/indexnow.log
+
+# Local reports and credentials must never be committed or published
+reports/
+.yuankun-seo/
+*service-account*.json
+*.pem
+*api-key*.txt
+.env

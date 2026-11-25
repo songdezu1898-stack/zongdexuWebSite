@@ -30,6 +30,12 @@ try {
   if (behind > 0) blocks.push(`本地落后远端 ${behind} 个提交。先 git pull，确认没有冲突后再发布。`);
 } catch (e) { warns.push(`无法检查 git 远端（${e.message.split("\n")[0]}）`); }
 
+// 1b. credentials must never sit in the repository
+try {
+  const hits = execSync('git grep -l -e "BEGIN PRIVATE KEY" -e "BEGIN RSA PRIVATE KEY" -e "\\"private_key\\"" -- . ":!deploy/preflight.mjs" ":!weekly-report.mjs"', { cwd: root, stdio: ["ignore", "pipe", "ignore"] }).toString().trim();
+  if (hits) blocks.push(`仓库里发现疑似密钥内容：${hits.split("\n").join("、")}。删除并更换该密钥后再发布。`);
+} catch { /* git grep exits 1 when nothing matches */ }
+
 // 2. Q&A data
 try {
   const live = JSON.parse(await get("data/live-qa.json")).items || [];
