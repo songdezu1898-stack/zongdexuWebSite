@@ -81,3 +81,10 @@ Google 说明 AI 搜索功能沿用基础 SEO 要求，无需特殊的 AI 文件
 - 日志在 deploy/indexnow.log（不进 Git）。预览用 `node indexnow.mjs --dry-run`，强制全量重推用 `--force`。
 - 每次部署后，data/indexnow-state.json 会变化，记得随下一次提交一起入库，否则换电脑部署会被当成首次推送。
 - IndexNow 只通知 Bing 等参与的搜索引擎，Google 不参与，不要因此改用 Google Indexing API（它只适用于招聘和直播页面）。
+
+## SEO 技术检查
+
+- `node seo-check.mjs` 检查站点地图内全部页面（title、description、h1、canonical、noindex、viewport、重复、死链、孤儿页、lastmod、正文量），并模拟 Googlebot、Bingbot、OAI-SearchBot 等访问，核对线上站点地图、robots.txt、IndexNow 密钥与 301 跳转。结果写入 reports/seo-日期.md，有必须修复的问题时退出码为 1。`--local` 跳过联网检查。
+- 建议频率：每次部署前后各跑一次；每周跑一次留存报告。
+- 报告不含收录数、曝光、点击、排名和 AI 引用，这些需要 Google Search Console、Bing Webmaster 的授权数据，未接入前标“待授权”。
+- 线上服务器的 data/live-qa.json 可能被别的流程更新（2026-11-24 已出现过）。部署前先跑检查，如提示“线上有、本地没有”，先把线上数据同步回本地再生成，否则会从站点地图和知识库列表里丢掉这些文章。
