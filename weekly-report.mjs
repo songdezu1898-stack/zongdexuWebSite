@@ -13,6 +13,12 @@ import { execSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 
 const root = path.dirname(fileURLToPath(import.meta.url));
+// Google is only reachable through the local proxy on this machine. Node ignores proxy
+// variables unless asked, so re-run once with NODE_USE_ENV_PROXY=1 when a proxy is configured.
+if (!process.env.NODE_USE_ENV_PROXY && (process.env.HTTPS_PROXY || process.env.https_proxy)) {
+  const r = (await import("node:child_process")).spawnSync(process.execPath, process.argv.slice(1), { stdio: "inherit", env: { ...process.env, NODE_USE_ENV_PROXY: "1" } });
+  process.exit(r.status ?? 1);
+}
 const secretsDir = process.env.YUANKUN_SECRETS || path.join(os.homedir(), ".yuankun-seo");
 const site = "https://yuankunfangwu.com";
 const gscSite = process.env.GSC_SITE || "sc-domain:yuankunfangwu.com";
@@ -81,30 +87,49 @@ else {
   try {
     const token = await googleToken(JSON.parse(saText));
     const auth = { Authorization: `Bearer ${token}`, "Content-Type": "application/json" };
-    const api = "https://searchconsole.googleapis.com/webmasters/v3/sites/" + encodeURIComponent(gscSite);
-    const q = async (dimensions, rowLimit) => {
-      const r = await fetch(`${api}/searchAnalytics/query`, { method: "POST", headers: auth, body: JSON.stringify({ startDate: day(-9), endDate: day(-3), dimensions, rowLimit }) });
-      const j = await r.json(); if (!r.ok) throw new Error(j.error?.message || r.status); return j.rows || [];
+    const call = async (url, body) => {
+      const r = await fetch(url, { method: body ? "POST" : "GET", headers: auth, body: body && JSON.stringify(body), signal: AbortSignal.timeout(30000) });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(`HTTP ${r.status} ${j.error?.message || ""}`.trim());
+      return j;
     };
-    const total = await q([], 1);
-    const t = total[0];
-    L.push(t ? `- 搜索表现：曝光 ${num(t.impressions)}，点击 ${num(t.clicks)}，平均排名 ${t.position.toFixed(1)}` : "- 搜索表现：该区间没有任何曝光记录（新站常见，不代表出错）。");
-    const rows = await q(["query"], 15);
-    if (rows.length) { L.push("", "| 搜索词 | 曝光 | 点击 | 平均排名 |", "|---|---|---|---|", ...rows.map((r) => `| ${r.keys[0]} | ${r.impressions} | ${r.clicks} | ${r.position.toFixed(1)} |`)); }
-    const sm = await fetch(`${api}/sitemaps`, { headers: auth }).then((r) => r.json());
-    for (const s of sm.sitemap || []) L.push(`- 站点地图 ${s.path}：最近下载 ${s.lastDownloaded || "未知"}，错误 ${s.errors || 0}，警告 ${s.warnings || 0}，提交 ${(s.contents || []).map((c) => `${c.type} ${c.submitted}`).join("、")}`);
-    // Real indexing state per URL (URL Inspection API; free quota 2000/day per site).
-    const status = {};
-    const list = [...now];
-    for (const u of list) {
-      const r = await fetch("https://searchconsole.googleapis.com/v1/urlInspection/index:inspect", { method: "POST", headers: auth, body: JSON.stringify({ inspectionUrl: u, siteUrl: gscSite }) });
-      const j = await r.json();
-      const v = j.inspectionResult?.indexStatusResult?.coverageState || (j.error ? `接口错误：${j.error.message}` : "未知");
-      (status[v] ||= []).push(u);
-    }
-    const indexed = Object.entries(status).filter(([k]) => /已编入索引|Indexed|Submitted and indexed/i.test(k)).reduce((n, [, v]) => n + v.length, 0);
-    L.push("", `- 实际收录（逐个网址检查）：${indexed} / ${list.length}`);
-    for (const [k, v] of Object.entries(status)) L.push(`  - ${k}：${v.length} 个${v.length <= 3 ? `（${v.join("、")}）` : ""}`);
+    const api = "https://searchconsole.googleapis.com/webmasters/v3/sites/" + encodeURIComponent(gscSite);
+    const step = async (label, fn) => { try { await fn(); } catch (e) { L.push(`- ${label}：请求失败（${e.name === "TimeoutError" ? "超时" : e.cause?.code || e.message}）`); } };
+    const range = { startDate: day(-30), endDate: day(-3) };
+    L.push(`- 授权状态：已连接，只读范围（webmasters.readonly）。统计区间 ${range.startDate} 至 ${range.endDate}。`);
+    await step("搜索表现", async () => {
+      const t = (await call(`${api}/searchAnalytics/query`, { ...range, dimensions: [] })).rows?.[0];
+      if (t) L.push(`- 搜索表现：曝光 ${num(t.impressions)}，点击 ${num(t.clicks)}，点击率 ${(t.ctr * 100).toFixed(1)}%，平均排名 ${t.position.toFixed(1)}`);
+      else L.push("- 搜索表现：授权正常，但该区间没有任何曝光记录。新站常见，可能是尚未产生搜索展示，也可能是后台数据延迟 2-3 天；不是接口错误。");
+    });
+    await step("搜索词", async () => {
+      const rows = (await call(`${api}/searchAnalytics/query`, { ...range, dimensions: ["query"], rowLimit: 15 })).rows || [];
+      if (rows.length) L.push("", "| 搜索词 | 曝光 | 点击 | 点击率 | 平均排名 |", "|---|---|---|---|---|", ...rows.map((r) => `| ${r.keys[0]} | ${r.impressions} | ${r.clicks} | ${(r.ctr * 100).toFixed(1)}% | ${r.position.toFixed(1)} |`));
+    });
+    await step("页面表现", async () => {
+      const rows = (await call(`${api}/searchAnalytics/query`, { ...range, dimensions: ["page"], rowLimit: 10 })).rows || [];
+      if (rows.length) L.push("", "| 页面 | 曝光 | 点击 | 平均排名 |", "|---|---|---|---|", ...rows.map((r) => `| ${r.keys[0]} | ${r.impressions} | ${r.clicks} | ${r.position.toFixed(1)} |`));
+    });
+    await step("站点地图", async () => {
+      for (const s of (await call(`${api}/sitemaps`)).sitemap || []) L.push(`- 站点地图 ${s.path}：最近下载 ${s.lastDownloaded || "未知"}，错误 ${s.errors || 0}，警告 ${s.warnings || 0}，提交网址 ${(s.contents || []).map((c) => c.submitted).join("、")}（此处不含收录数，收录以下方逐网址检查为准）`);
+    });
+    await step("网址索引检查", async () => {
+      const list = [...now], status = {}, failed = [];
+      let next = 0;
+      await Promise.all(Array.from({ length: 4 }, async () => {
+        while (next < list.length) {
+          const u = list[next++];
+          try {
+            const j = await call("https://searchconsole.googleapis.com/v1/urlInspection/index:inspect", { inspectionUrl: u, siteUrl: gscSite });
+            (status[j.inspectionResult?.indexStatusResult?.coverageState || "未知"] ||= []).push(u);
+          } catch { failed.push(u); }
+        }
+      }));
+      const ok = list.length - failed.length;
+      const indexed = Object.entries(status).filter(([k]) => /indexed/i.test(k) && !/not indexed|Crawled|Discovered/i.test(k)).reduce((n, [, v]) => n + v.length, 0);
+      L.push("", `- 实际收录（Google 网址检查接口，逐个网址）：已编入索引 ${indexed} / 成功检查 ${ok}（共 ${list.length} 个网址${failed.length ? `，${failed.length} 个请求失败` : ""}）`);
+      for (const [k, v] of Object.entries(status)) L.push(`  - ${k}：${v.length} 个${v.length <= 3 ? `（${v.join("、")}）` : ""}`);
+    });
   } catch (e) { L.push(`- 获取失败：${e.message}`); pending.push("Google Search Console（获取失败）"); }
 }
 
