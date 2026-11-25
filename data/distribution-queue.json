@@ -7,67 +7,85 @@
       "sourceUrl": "https://yuankunfangwu.com/answers/home-comfort-and-resale.html",
       "platforms": {
         "weixin": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "synced_draft",
+          "attempts": 1,
           "file": "distribution/out/yk-home-comfort-and-resale/weixin.md",
           "contentHash": "14d72372f8705546",
-          "aiLabelReminder": "平台设置中勾选“AI辅助创作”"
+          "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
+          "updatedAt": "2026-11-25T10:17:58.296Z",
+          "note": "✓ weixin (草稿) | https://mp.weixin.qq.com/cgi-bin/appmsg?t=media/appmsg_edit&action=edit&type=77&appmsgid=100001583&token=494208958&lang=zh_CN | 同步完成: 1 成功, 0 失败"
         },
         "zhihu": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "synced_draft",
+          "attempts": 1,
           "file": "distribution/out/yk-home-comfort-and-resale/zhihu.md",
           "contentHash": "14d72372f8705546",
-          "aiLabelReminder": "发布页勾选“包含AI辅助创作”"
+          "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
+          "updatedAt": "2026-11-25T10:00:00.682Z",
+          "note": "✓ zhihu (草稿) | https://zhuanlan.zhihu.com/p/2108983336047858426/edit | 同步完成: 1 成功, 0 失败"
         },
         "sohu": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "synced_draft",
+          "attempts": 1,
           "file": "distribution/out/yk-home-comfort-and-resale/sohu.md",
           "contentHash": "14d72372f8705546",
-          "aiLabelReminder": "发布页按平台要求声明"
+          "aiLabelReminder": "发布页按平台要求声明",
+          "updatedAt": "2026-11-25T10:00:09.029Z",
+          "note": "✓ sohu (草稿) | https://mp.sohu.com/mpfe/v4/contentManagement/news/addarticle?spm=smmp.articlelist.0.0&contentStatus=2&id=1106303167 | 同步完成: 1 成功, 0 失败"
         },
         "baijiahao": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "synced_draft",
+          "attempts": 1,
           "file": "distribution/out/yk-home-comfort-and-resale/baijiahao.md",
           "contentHash": "14d72372f8705546",
-          "aiLabelReminder": "发布页勾选“AI创作声明”"
+          "aiLabelReminder": "发布页勾选“AI创作声明”",
+          "updatedAt": "2026-11-25T10:00:11.895Z",
+          "note": "✓ baijiahao (草稿) | https://baijiahao.baidu.com/builder/rc/edit?type=news&article_id=1882823926969958477 | 同步完成: 1 成功, 0 失败"
         },
         "weibo": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "synced_draft",
+          "attempts": 1,
           "file": "distribution/out/yk-home-comfort-and-resale/weibo.md",
           "contentHash": "14d72372f8705546",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "updatedAt": "2026-11-25T10:00:13.314Z",
+          "note": "✓ weibo (草稿) | https://card.weibo.com/article/v5/editor#/draft/4002342 | 同步完成: 1 成功, 0 失败"
         },
         "toutiao": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "synced_draft",
+          "attempts": 1,
           "file": "distribution/out/yk-home-comfort-and-resale/toutiao.md",
           "contentHash": "14d72372f8705546",
-          "aiLabelReminder": "发布页勾选“引用AI”"
+          "aiLabelReminder": "发布页勾选“引用AI”",
+          "updatedAt": "2026-11-25T10:18:02.754Z",
+          "note": "✓ toutiao (草稿) | https://mp.toutiao.com/profile_v4/graphic/publish?pgc_id=7712051332114432527 | 同步完成: 1 成功, 0 失败"
         },
         "xiaohongshu": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "failed",
+          "attempts": 1,
           "file": "distribution/out/yk-home-comfort-and-resale/xiaohongshu.md",
           "contentHash": "14d72372f8705546",
-          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”"
+          "aiLabelReminder": "发布页勾选“笔记含AI合成内容”",
+          "updatedAt": "2026-11-25T10:18:45.522Z",
+          "note": ""
         },
         "douyin": {
-          "status": "pending",
+          "status": "needs_login",
           "attempts": 0,
           "file": "distribution/out/yk-home-comfort-and-resale/douyin.md",
           "contentHash": "14d72372f8705546",
-          "aiLabelReminder": "发布页勾选“内容由AI生成”"
+          "aiLabelReminder": "发布页勾选“内容由AI生成”",
+          "updatedAt": "2026-11-25T10:19:23.633Z",
+          "note": "需要在浏览器登录该平台，或扩展未连接"
         },
         "netease": {
-          "status": "pending",
+          "status": "needs_login",
           "attempts": 0,
           "file": "distribution/out/yk-home-comfort-and-resale/netease.md",
           "contentHash": "14d72372f8705546",
-          "aiLabelReminder": "按平台要求声明"
+          "aiLabelReminder": "按平台要求声明",
+          "note": "需要在浏览器登录该平台，或扩展未连接",
+          "updatedAt": "2026-11-25T10:20:01.737Z"
         }
       },
       "hash": "14d72372f8705546",

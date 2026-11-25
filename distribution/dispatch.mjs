@@ -27,7 +27,9 @@ if (control.mode !== "draft-only") { log(`STOPPED: mode=${control.mode}; only dr
 let token = ""; try { token = fs.readFileSync(path.join(os.homedir(), ".yuankun-seo/wechatsync-token.txt"), "utf8").trim(); } catch { /* handled below */ }
 if (run && !token) { log("STOPPED: no Wechatsync token in ~/.yuankun-seo"); process.exit(0); }
 const env = { ...process.env, WECHATSYNC_TOKEN: token };
-const cli = (args, timeout) => spawnSync("wechatsync", args, { env, encoding: "utf8", timeout, shell: process.platform === "win32" });
+// Call the CLI's JS entry with Node directly: going through cmd.exe mangles long Chinese arguments.
+const cliJs = path.join(process.env.APPDATA || "", "npm", "node_modules", "@wechatsync", "cli", "dist", "index.js");
+const cli = (args, timeout) => spawnSync(process.execPath, [cliJs, ...args], { env: { ...env, NODE_USE_ENV_PROXY: "1" }, encoding: "utf8", timeout });
 
 let done = 0;
 for (const entry of Object.values(queue.items)) {
@@ -36,7 +38,7 @@ for (const entry of Object.values(queue.items)) {
     if (onlyPlatform && pid !== onlyPlatform) continue;
     const p = platforms[pid];
     if (!p?.verified) { s.note = "平台适配器尚未在已连接的扩展中验证，跳过"; continue; }
-    if (!["pending", "needs_update", "failed"].includes(s.status) || s.attempts >= MAX_ATTEMPTS) continue;
+    if (!["pending", "needs_update", "failed", "needs_login"].includes(s.status) || s.attempts >= MAX_ATTEMPTS) continue;
     if (done >= PER_RUN_LIMIT) { log("run limit reached; remaining items wait for the next run"); break; }
     if (!run) { log(`would sync ${entry.id} -> ${pid} (${s.status}, attempt ${s.attempts + 1})`); continue; }
     done++;
@@ -49,9 +51,14 @@ for (const entry of Object.values(queue.items)) {
     s.attempts++;
     const r = cli(["sync", s.file, "-p", p.wechatsyncId, "-t", entry.title], 12 * 60000);
     const text = `${r.stdout || ""}${r.stderr || ""}`.replace(/\x1b\[[0-9;]*m/g, "");
-    const ok = r.status === 0 && !/失败|error|✗/i.test(text);
-    s.status = ok ? "synced_draft" : "failed"; s.updatedAt = new Date().toISOString();
-    s.note = text.trim().split("\n").slice(-3).join(" | ").slice(0, 300);
+    // The CLI exits 0 even when a platform fails, so read its own summary line.
+    const okCount = Number((text.match(/同步完成:\s*(\d+)\s*成功/) || [])[1] || 0);
+    const ok = r.status === 0 && okCount > 0 && !/✗/.test(text);
+    const loginProblem = /登录态|重新登录|未登录/.test(text);
+    s.status = ok ? "synced_draft" : loginProblem ? "needs_login" : "failed"; s.updatedAt = new Date().toISOString();
+    if (loginProblem) s.attempts = Math.max(0, s.attempts - 1);
+    // Keep only the result lines (✓/✗, the draft link, the summary) rather than progress noise.
+    s.note = text.split("\n").filter((l) => /[✓✗]|同步完成|https?:\/\//.test(l)).map((l) => l.trim()).join(" | ").slice(0, 300);
     log(`${entry.id} -> ${pid}: ${s.status}${ok ? "" : ` (${s.note})`}`);
     fs.writeFileSync(queuePath, `${JSON.stringify(queue, null, 2)}\n`); // persist after every platform
   }
