@@ -13,7 +13,7 @@
           "contentHash": "14d72372f8705546",
           "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
           "updatedAt": "2026-11-25T10:17:58.296Z",
-          "note": "✓ weixin (草稿) | https://mp.weixin.qq.com/cgi-bin/appmsg?t=media/appmsg_edit&action=edit&type=77&appmsgid=100001583&token=494208958&lang=zh_CN | 同步完成: 1 成功, 0 失败",
+          "note": "✓ weixin (草稿) | https://mp.weixin.qq.com/cgi-bin/appmsg?t=media/appmsg_edit&action=edit&type=77&appmsgid=100001583&token=REDACTED&lang=zh_CN | 同步完成: 1 成功, 0 失败",
           "title": "新房住得舒服，以后就好卖吗？买前、卖前分别看什么"
         },
         "zhihu": {
@@ -106,60 +106,70 @@
       "sourceUrl": "https://yuankunfangwu.com/answers/family-budget-and-location-decision.html",
       "platforms": {
         "weixin": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "failed",
+          "attempts": 3,
           "file": "distribution/out/yk-family-budget-and-location-decision/weixin.md",
           "contentHash": "80149975456d71f8",
           "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
-          "updatedAt": "2026-11-25T11:30:25.425Z",
+          "updatedAt": "2026-11-25T13:19:22.329Z",
           "note": "",
-          "title": "父母出钱给孩子买房，应该由谁来决定板块？"
+          "title": "父母出钱给孩子买房，应该由谁来决定板块？",
+          "egress": "Edge 直连平台IP（本地网络）"
         },
         "zhihu": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "failed",
+          "attempts": 3,
           "file": "distribution/out/yk-family-budget-and-location-decision/zhihu.md",
           "contentHash": "80149975456d71f8",
           "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
-          "updatedAt": "2026-11-25T11:36:25.760Z",
+          "updatedAt": "2026-11-25T13:19:24.190Z",
           "note": "",
-          "title": "父母出钱给孩子买房，应该由谁来决定板块？"
+          "title": "父母出钱给孩子买房，应该由谁来决定板块？",
+          "egress": "Edge 直连平台IP（本地网络）"
         },
         "sohu": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "failed",
+          "attempts": 3,
           "file": "distribution/out/yk-family-budget-and-location-decision/sohu.md",
           "contentHash": "80149975456d71f8",
           "aiLabelReminder": "发布页按平台要求声明",
-          "updatedAt": "2026-11-25T11:42:26.119Z",
+          "updatedAt": "2026-11-25T13:19:25.914Z",
           "note": "",
-          "title": "父母出钱给孩子买房，应该由谁来决定板块？"
+          "title": "父母出钱给孩子买房，应该由谁来决定板块？",
+          "egress": "Edge 直连平台IP（本地网络）"
         },
         "baijiahao": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "failed",
+          "attempts": 3,
           "file": "distribution/out/yk-family-budget-and-location-decision/baijiahao.md",
           "contentHash": "80149975456d71f8",
           "aiLabelReminder": "发布页勾选“AI创作声明”",
-          "updatedAt": "2026-11-25T11:48:26.783Z",
+          "updatedAt": "2026-11-25T13:19:27.956Z",
           "note": "",
-          "title": "父母出钱给孩子买房，应该由谁来决定板块？｜南翔买房卖房判断"
+          "title": "父母出钱给孩子买房，应该由谁来决定板块？｜南翔买房卖房判断",
+          "egress": "Edge 直连平台IP（本地网络）"
         },
         "weibo": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "failed",
+          "attempts": 3,
           "file": "distribution/out/yk-family-budget-and-location-decision/weibo.md",
           "contentHash": "80149975456d71f8",
           "aiLabelReminder": "按平台要求声明",
-          "title": "先解决出资者与居住者的需求冲突，再选板块。"
+          "title": "先解决出资者与居住者的需求冲突，再选板块。",
+          "updatedAt": "2026-11-25T13:19:29.483Z",
+          "note": "",
+          "egress": "未抓到该平台的直连（Edge 连接 5 条，其中经代理 1 条）"
         },
         "toutiao": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "failed",
+          "attempts": 3,
           "file": "distribution/out/yk-family-budget-and-location-decision/toutiao.md",
           "contentHash": "80149975456d71f8",
           "aiLabelReminder": "发布页勾选“引用AI”",
-          "title": "父母出钱给孩子买房，应该由谁来决定板块？（买房决策要点）"
+          "title": "父母出钱给孩子买房，应该由谁来决定板块？（买房决策要点）",
+          "updatedAt": "2026-11-25T13:19:31.498Z",
+          "note": "",
+          "egress": "Edge 直连平台IP（本地网络）"
         },
         "xiaohongshu": {
           "status": "pending",
@@ -195,52 +205,70 @@
       "sourceUrl": "https://yuankunfangwu.com/answers/walk-up-top-duplex-pricing.html",
       "platforms": {
         "weixin": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "failed",
+          "attempts": 3,
           "file": "distribution/out/yk-walk-up-top-duplex-pricing/weixin.md",
           "contentHash": "8e1cca1f91dfb7c4",
           "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
-          "title": "无电梯五复六面积很大，为什么不能直接按面积定价？"
+          "title": "无电梯五复六面积很大，为什么不能直接按面积定价？",
+          "updatedAt": "2026-11-25T14:49:24.908Z",
+          "note": "",
+          "egress": "Edge 直连平台IP（本地网络）"
         },
         "zhihu": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "failed",
+          "attempts": 3,
           "file": "distribution/out/yk-walk-up-top-duplex-pricing/zhihu.md",
           "contentHash": "8e1cca1f91dfb7c4",
           "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
-          "title": "无电梯五复六面积很大，为什么不能直接按面积定价？"
+          "title": "无电梯五复六面积很大，为什么不能直接按面积定价？",
+          "updatedAt": "2026-11-25T14:49:26.580Z",
+          "note": "",
+          "egress": "Edge 直连平台IP（本地网络）"
         },
         "sohu": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "failed",
+          "attempts": 3,
           "file": "distribution/out/yk-walk-up-top-duplex-pricing/sohu.md",
           "contentHash": "8e1cca1f91dfb7c4",
           "aiLabelReminder": "发布页按平台要求声明",
-          "title": "无电梯五复六面积很大，为什么不能直接按面积定价？"
+          "title": "无电梯五复六面积很大，为什么不能直接按面积定价？",
+          "updatedAt": "2026-11-25T14:49:30.310Z",
+          "note": "",
+          "egress": "Edge 直连平台IP（本地网络）"
         },
         "baijiahao": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "failed",
+          "attempts": 3,
           "file": "distribution/out/yk-walk-up-top-duplex-pricing/baijiahao.md",
           "contentHash": "8e1cca1f91dfb7c4",
           "aiLabelReminder": "发布页勾选“AI创作声明”",
-          "title": "无电梯五复六面积很大，为什么不能直接按面积定价？｜南翔买房卖房判断"
+          "title": "无电梯五复六面积很大，为什么不能直接按面积定价？｜南翔买房卖房判断",
+          "updatedAt": "2026-11-25T14:49:32.766Z",
+          "note": "",
+          "egress": "Edge 直连平台IP（本地网络）"
         },
         "weibo": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "failed",
+          "attempts": 3,
           "file": "distribution/out/yk-walk-up-top-duplex-pricing/weibo.md",
           "contentHash": "8e1cca1f91dfb7c4",
           "aiLabelReminder": "按平台要求声明",
-          "title": "特殊房源先找目标客群，再用总价带定价。"
+          "title": "特殊房源先找目标客群，再用总价带定价。",
+          "updatedAt": "2026-11-25T14:49:34.321Z",
+          "note": "",
+          "egress": "未抓到该平台的直连（Edge 连接 5 条，其中经代理 1 条）"
         },
         "toutiao": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "failed",
+          "attempts": 3,
           "file": "distribution/out/yk-walk-up-top-duplex-pricing/toutiao.md",
           "contentHash": "8e1cca1f91dfb7c4",
           "aiLabelReminder": "发布页勾选“引用AI”",
-          "title": "无电梯五复六面积很大，为什么不能直接按面积定价？（卖房决策要点）"
+          "title": "无电梯五复六面积很大，为什么不能直接按面积定价？（卖房决策要点）",
+          "updatedAt": "2026-11-25T14:49:36.283Z",
+          "note": "",
+          "egress": "Edge 直连平台IP（本地网络）"
         },
         "xiaohongshu": {
           "status": "pending",
@@ -277,20 +305,26 @@
       "sourceUrl": "https://yuankunfangwu.com/answers/new-home-average-price-and-four-bedroom.html",
       "platforms": {
         "weixin": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "failed",
+          "attempts": 3,
           "file": "distribution/out/yk-new-home-average-price-and-four-bedroom/weixin.md",
           "contentHash": "2315df9c18635279",
           "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
-          "title": "新房整盘均价低，为什么想买的四房不一定便宜？"
+          "title": "新房整盘均价低，为什么想买的四房不一定便宜？",
+          "updatedAt": "2026-11-25T16:19:30.708Z",
+          "note": "",
+          "egress": "Edge 直连平台IP（本地网络）"
         },
         "zhihu": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "failed",
+          "attempts": 3,
           "file": "distribution/out/yk-new-home-average-price-and-four-bedroom/zhihu.md",
           "contentHash": "2315df9c18635279",
           "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
-          "title": "新房整盘均价低，为什么想买的四房不一定便宜？"
+          "title": "新房整盘均价低，为什么想买的四房不一定便宜？",
+          "updatedAt": "2026-11-25T16:19:32.519Z",
+          "note": "",
+          "egress": "Edge 直连平台IP（本地网络）"
         },
         "sohu": {
           "status": "skipped",
@@ -364,52 +398,70 @@
       "sourceUrl": "https://yuankunfangwu.com/answers/sell-first-or-buy-first-for-home-upgrade.html",
       "platforms": {
         "weixin": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "failed",
+          "attempts": 3,
           "file": "distribution/out/yk-sell-first-or-buy-first-for-home-upgrade/weixin.md",
           "contentHash": "70561661f23dcde8",
           "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
-          "title": "改善置换到底应该先卖旧房，还是先买新房？"
+          "title": "改善置换到底应该先卖旧房，还是先买新房？",
+          "updatedAt": "2026-11-25T16:19:37.302Z",
+          "note": "",
+          "egress": "Edge 直连平台IP（本地网络）"
         },
         "zhihu": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "failed",
+          "attempts": 3,
           "file": "distribution/out/yk-sell-first-or-buy-first-for-home-upgrade/zhihu.md",
           "contentHash": "70561661f23dcde8",
           "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
-          "title": "改善置换到底应该先卖旧房，还是先买新房？"
+          "title": "改善置换到底应该先卖旧房，还是先买新房？",
+          "updatedAt": "2026-11-25T16:19:38.981Z",
+          "note": "",
+          "egress": "Edge 直连平台IP（本地网络）"
         },
         "sohu": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "failed",
+          "attempts": 3,
           "file": "distribution/out/yk-sell-first-or-buy-first-for-home-upgrade/sohu.md",
           "contentHash": "70561661f23dcde8",
           "aiLabelReminder": "发布页按平台要求声明",
-          "title": "改善置换到底应该先卖旧房，还是先买新房？"
+          "title": "改善置换到底应该先卖旧房，还是先买新房？",
+          "updatedAt": "2026-11-25T16:19:40.756Z",
+          "note": "",
+          "egress": "Edge 直连平台IP（本地网络）"
         },
         "baijiahao": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "failed",
+          "attempts": 3,
           "file": "distribution/out/yk-sell-first-or-buy-first-for-home-upgrade/baijiahao.md",
           "contentHash": "70561661f23dcde8",
           "aiLabelReminder": "发布页勾选“AI创作声明”",
-          "title": "改善置换到底应该先卖旧房，还是先买新房？｜南翔买房卖房判断"
+          "title": "改善置换到底应该先卖旧房，还是先买新房？｜南翔买房卖房判断",
+          "updatedAt": "2026-11-25T16:19:42.754Z",
+          "note": "",
+          "egress": "Edge 直连平台IP（本地网络）"
         },
         "weibo": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "needs_login",
+          "attempts": 1,
           "file": "distribution/out/yk-sell-first-or-buy-first-for-home-upgrade/weibo.md",
           "contentHash": "70561661f23dcde8",
           "aiLabelReminder": "按平台要求声明",
-          "title": "先排现金流和时间节点，不用一句话套所有家庭。"
+          "title": "先排现金流和时间节点，不用一句话套所有家庭。",
+          "updatedAt": "2026-11-26T07:49:48.434Z",
+          "note": "需要在浏览器登录该平台，或扩展未连接",
+          "egress": "未抓到该平台的直连（Edge 连接 1 条，其中经代理 1 条）"
         },
         "toutiao": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "needs_login",
+          "attempts": 1,
           "file": "distribution/out/yk-sell-first-or-buy-first-for-home-upgrade/toutiao.md",
           "contentHash": "70561661f23dcde8",
           "aiLabelReminder": "发布页勾选“引用AI”",
-          "title": "改善置换到底应该先卖旧房，还是先买新房？（置换决策要点）"
+          "title": "改善置换到底应该先卖旧房，还是先买新房？（置换决策要点）",
+          "updatedAt": "2026-11-26T07:50:18.908Z",
+          "note": "需要在浏览器登录该平台，或扩展未连接",
+          "egress": "Edge 直连平台IP（本地网络）"
         },
         "xiaohongshu": {
           "status": "pending",
@@ -445,36 +497,48 @@
       "sourceUrl": "https://yuankunfangwu.com/answers/nanxiang-gucun-home-comparison.html",
       "platforms": {
         "weixin": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "needs_login",
+          "attempts": 1,
           "file": "distribution/out/yk-nanxiang-gucun-home-comparison/weixin.md",
           "contentHash": "fe42ec9136b836ec",
           "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
-          "title": "南翔和顾村怎么选？先比较同预算的实际房源"
+          "title": "南翔和顾村怎么选？先比较同预算的实际房源",
+          "updatedAt": "2026-11-26T07:50:49.382Z",
+          "note": "需要在浏览器登录该平台，或扩展未连接",
+          "egress": "Edge 直连平台IP（本地网络）"
         },
         "zhihu": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "needs_login",
+          "attempts": 1,
           "file": "distribution/out/yk-nanxiang-gucun-home-comparison/zhihu.md",
           "contentHash": "fe42ec9136b836ec",
           "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
-          "title": "南翔和顾村怎么选？先比较同预算的实际房源？"
+          "title": "南翔和顾村怎么选？先比较同预算的实际房源？",
+          "updatedAt": "2026-11-26T07:51:19.826Z",
+          "note": "需要在浏览器登录该平台，或扩展未连接",
+          "egress": "Edge 直连平台IP（本地网络）"
         },
         "sohu": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "needs_login",
+          "attempts": 2,
           "file": "distribution/out/yk-nanxiang-gucun-home-comparison/sohu.md",
           "contentHash": "fe42ec9136b836ec",
           "aiLabelReminder": "发布页按平台要求声明",
-          "title": "南翔和顾村怎么选？先比较同预算的实际房源"
+          "title": "南翔和顾村怎么选？先比较同预算的实际房源",
+          "updatedAt": "2026-11-26T07:51:50.376Z",
+          "note": "需要在浏览器登录该平台，或扩展未连接",
+          "egress": "未抓到该平台的直连（Edge 连接 30 条，其中经代理 0 条）"
         },
         "baijiahao": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "needs_login",
+          "attempts": 2,
           "file": "distribution/out/yk-nanxiang-gucun-home-comparison/baijiahao.md",
           "contentHash": "fe42ec9136b836ec",
           "aiLabelReminder": "发布页勾选“AI创作声明”",
-          "title": "南翔和顾村怎么选？先比较同预算的实际房源｜南翔买房卖房判断"
+          "title": "南翔和顾村怎么选？先比较同预算的实际房源｜南翔买房卖房判断",
+          "updatedAt": "2026-11-26T07:52:20.863Z",
+          "note": "需要在浏览器登录该平台，或扩展未连接",
+          "egress": "Edge 直连平台IP（本地网络）"
         },
         "weibo": {
           "status": "pending",
@@ -769,12 +833,15 @@
       "sourceUrl": "https://yuankunfangwu.com/answers/new-home-offer-real-cost.html",
       "platforms": {
         "weixin": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "synced_draft",
+          "attempts": 1,
           "file": "distribution/out/yk-new-home-offer-real-cost/weixin.md",
           "contentHash": "ed21dd9986032572",
           "aiLabelReminder": "平台设置中勾选“AI辅助创作”",
-          "title": "买新房送装修、送车位，怎么判断自己到底省了多少钱？"
+          "title": "买新房送装修、送车位，怎么判断自己到底省了多少钱？",
+          "updatedAt": "2026-11-26T09:31:21.538Z",
+          "note": "✓ weixin (草稿) | https://mp.weixin.qq.com/cgi-bin/appmsg?t=media/appmsg_edit&action=edit&type=77&appmsgid=100001584&token=REDACTED&lang=zh_CN | 同步完成: 1 成功, 0 失败",
+          "egress": "未抓到该平台的直连（Edge 连接 35 条，其中经代理 35 条）"
         },
         "zhihu": {
           "status": "pending",

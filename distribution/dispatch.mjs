@@ -44,11 +44,22 @@ if (run) {
   process.on("exit", release); process.on("SIGINT", () => process.exit(1)); process.on("SIGTERM", () => process.exit(1));
 }
 const syncTimeoutMs = (control.syncTimeoutMin || 6) * 60000;
+// Platform editor links can carry the logged-in session token (e.g. mp.weixin.qq.com ...&token=123). Never store it.
+const redact = (t) => String(t).replace(/([?&])(token|access_token|ticket|sessionid|sid)=[^&\s|]*/gi, "$1$2=REDACTED");
 const stalled = new Set(); // platforms that hung during this run are skipped for the rest of it
 const env = { ...process.env, WECHATSYNC_TOKEN: token };
 // Call the CLI's JS entry with Node directly: going through cmd.exe mangles long Chinese arguments.
 const cliJs = path.join(process.env.APPDATA || "", "npm", "node_modules", "@wechatsync", "cli", "dist", "index.js");
 const cli = (args, timeout) => spawnSync(process.execPath, [cliJs, ...args], { env: { ...env, NODE_USE_ENV_PROXY: "1" }, encoding: "utf8", timeout });
+
+// A disconnected bridge is not a platform login failure. Leave the queue intact.
+if (run) {
+  const probe = cli(["--timeout", "5000", "platforms"], 15000);
+  if (probe.error || probe.signal || probe.status !== 0) {
+    log("STOPPED: browser bridge unavailable; queue unchanged. Open the Wechatsync extension and check its bridge connection.");
+    process.exit(1);
+  }
+}
 
 // Evidence for the network exit: right after a sync, look at Edge's live TCP connections.
 // A connection whose remote address is the platform's own IP means Edge reached it directly (local network);
@@ -102,7 +113,7 @@ for (const entry of Object.values(queue.items)) {
     s.status = ok ? "synced_draft" : loginProblem ? "needs_login" : "failed"; s.updatedAt = new Date().toISOString();
     if (loginProblem) s.attempts = Math.max(0, s.attempts - 1);
     // Keep only the result lines (✓/✗, the draft link, the summary) rather than progress noise.
-    s.note = text.split("\n").filter((l) => /[✓✗]|同步完成|https?:\/\//.test(l)).map((l) => l.trim()).join(" | ").slice(0, 300);
+    s.note = redact(text.split("\n").filter((l) => /[✓✗]|同步完成|https?:\/\//.test(l)).map((l) => l.trim()).join(" | ")).slice(0, 300);
     s.egress = await egressSample(pid);
     log(`${entry.id} -> ${pid}: ${s.status}${ok ? "" : ` (${s.note})`} | egress: ${s.egress}`);
     fs.writeFileSync(queuePath, `${JSON.stringify(queue, null, 2)}\n`); // persist after every platform
