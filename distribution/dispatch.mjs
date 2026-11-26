@@ -54,9 +54,17 @@ const cli = (args, timeout) => spawnSync(process.execPath, [cliJs, ...args], { e
 
 // A disconnected bridge is not a platform login failure. Leave the queue intact.
 if (run) {
-  const probe = cli(["--timeout", "5000", "platforms"], 15000);
-  if (probe.error || probe.signal || probe.status !== 0) {
-    log("STOPPED: browser bridge unavailable; queue unchanged. Open the Wechatsync extension and check its bridge connection.");
+  // A sleeping extension needs a moment to wake and reconnect, so probe up to 3 times, 20s each,
+  // and require real platform data (not just a zero exit code) before touching anything.
+  let alive = false;
+  for (let i = 1; i <= 3 && !alive; i++) {
+    const probe = cli(["--timeout", "20000", "platforms"], 40000);
+    const out = `${probe.stdout || ""}${probe.stderr || ""}`;
+    alive = !probe.error && !probe.signal && /支持的平台/.test(out) && !/Invalid or missing token|未连接|超时/.test(out);
+    if (!alive && i < 3) log(`bridge probe ${i}/3 failed; retrying`);
+  }
+  if (!alive) {
+    log("STOPPED: browser bridge unavailable; queue unchanged. Open Edge and the Wechatsync extension, then check its bridge connection.");
     process.exit(1);
   }
 }
