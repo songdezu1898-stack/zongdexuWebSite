@@ -1,5 +1,5 @@
 {
-  "enabled": true,
+  "enabled": false,
   "mode": "draft-only",
   "autoPublishSite": false,
   "_note": "enabled: Wechatsync draft dispatch master switch. autoPublishSite: deploy the website automatically after approved content arrives (off by default). mode must stay draft-only until the owner authorises publishing per platform.",
@@ -13,5 +13,11 @@
   ],
   "dailyDraftCap": 2,
   "perRunLimit": 6,
-  "syncTimeoutMin": 6
+  "syncTimeoutMin": 6,
+  "pausedPlatforms": [
+    "xiaohongshu",
+    "douyin",
+    "netease"
+  ],
+  "taskInterface": true
 }

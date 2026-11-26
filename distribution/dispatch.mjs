@@ -22,7 +22,8 @@ const logDir = path.join(root, "distribution/logs"); fs.mkdirSync(logDir, { recu
 const log = (m) => { const l = `${new Date().toISOString()} ${m}`; console.log(`DISPATCH ${m}`); if (run) fs.appendFileSync(path.join(logDir, "dispatch.log"), l + "\n"); };
 // Platforms the owner allows for automatic draft sync (data/distribution-control.json -> draftPlatforms),
 // and a per-platform daily cap so back-filling history never floods a draft box.
-const allowed = new Set(control.draftPlatforms || Object.keys(platforms));
+const paused = new Set(control.pausedPlatforms || []);
+const allowed = new Set((control.draftPlatforms || Object.keys(platforms)).filter((p) => !paused.has(p)));
 const dailyCap = control.dailyDraftCap || 2;
 const MAX_ATTEMPTS = 3, PER_RUN_LIMIT = control.perRunLimit || 5;
 const todayStr = new Date().toISOString().slice(0, 10);
@@ -56,15 +57,26 @@ const cli = (args, timeout) => spawnSync(process.execPath, [cliJs, ...args], { e
 if (run) {
   // A sleeping extension needs a moment to wake and reconnect, so probe up to 3 times, 20s each,
   // and require real platform data (not just a zero exit code) before touching anything.
+  const { spawn } = await import("node:child_process");
+  const EXT_PAGE = "chrome-extension://hchobocdmclopcbnibdnoafilagadion/src/popup/index.html";
+  // Probe with the bridge up. When the extension's service worker is asleep, opening one of the extension's
+  // own pages in Edge wakes it; on wake it re-reads its settings and reconnects to the bridge (about 10s measured).
+  // This is ordinary browser behaviour, not a bypass of anything. Max 3 attempts, then stop with the queue untouched.
+  const probeOnce = (wake) => new Promise((resolve) => {
+    const child = spawn(process.execPath, [cliJs, "--timeout", "40000", "platforms"], { env: { ...env, NODE_USE_ENV_PROXY: "1" } });
+    let out = "";
+    child.stdout.on("data", (d) => (out += d)); child.stderr.on("data", (d) => (out += d));
+    const killer = setTimeout(() => child.kill(), 60000);
+    if (wake) setTimeout(() => { try { spawn("msedge.exe", ["--profile-directory=Default", EXT_PAGE], { detached: true, stdio: "ignore", shell: true }).unref(); } catch { /* Edge missing */ } }, 3000);
+    child.on("close", () => { clearTimeout(killer); resolve(/支持的平台/.test(out) && !/Invalid or missing token|未连接|超时|需要安装/.test(out)); });
+  });
   let alive = false;
   for (let i = 1; i <= 3 && !alive; i++) {
-    const probe = cli(["--timeout", "20000", "platforms"], 40000);
-    const out = `${probe.stdout || ""}${probe.stderr || ""}`;
-    alive = !probe.error && !probe.signal && /支持的平台/.test(out) && !/Invalid or missing token|未连接|超时/.test(out);
-    if (!alive && i < 3) log(`bridge probe ${i}/3 failed; retrying`);
+    alive = await probeOnce(i > 1);
+    if (!alive && i < 3) log(`bridge probe ${i}/3 failed; waking the extension and retrying`);
   }
   if (!alive) {
-    log("STOPPED: browser bridge unavailable; queue unchanged. Open Edge and the Wechatsync extension, then check its bridge connection.");
+    log("STOPPED: browser bridge unavailable after 3 probes (including extension wake); queue unchanged. Check that Edge is signed in and the Wechatsync extension is enabled.");
     process.exit(1);
   }
 }
@@ -84,8 +96,13 @@ async function egressSample(pid) {
   } catch (e) { return `抽样失败：${e.message}`; }
 }
 
+// Cover image supplied by ChatGPT: distribution/images/<slug>/cover.(jpg|png). Only used when present.
+const coverFor = (slug) => ["jpg", "jpeg", "png"].map((x) => path.join(root, "distribution/images", slug, `cover.${x}`)).find((f) => fs.existsSync(f)) || null;
 let done = 0;
-for (const entry of Object.values(queue.items)) {
+// ChatGPT can set a priority (lower first) and a not-before date per article via the task interface.
+const ordered = Object.values(queue.items).sort((a, b) => (a.priority ?? 100) - (b.priority ?? 100));
+for (const entry of ordered) {
+  if (entry.notBefore && entry.notBefore > new Date().toISOString().slice(0, 10)) continue;
   if (onlySlug && entry.slug !== onlySlug) continue;
   for (const [pid, s] of Object.entries(entry.platforms)) {
     if (onlyPlatform && pid !== onlyPlatform) continue;
@@ -104,7 +121,7 @@ for (const entry of Object.values(queue.items)) {
       log(`${entry.id} -> ${pid}: needs_login`); continue;
     }
     s.attempts++;
-    const r = cli(["sync", s.file, "-p", p.wechatsyncId, "-t", s.title || entry.title], syncTimeoutMs);
+    const r = cli(["sync", s.file, "-p", p.wechatsyncId, "-t", s.title || entry.title, ...(coverFor(entry.slug) ? ["--cover", coverFor(entry.slug)] : [])], syncTimeoutMs);
     if (r.error || r.signal) {
       // The CLI never answered. Do not retry blindly: park this platform so it cannot hang every run.
       // One timeout counts as one failed attempt (max 3 across runs) and stops this platform for the rest of this run.

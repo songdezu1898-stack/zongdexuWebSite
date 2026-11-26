@@ -73,7 +73,21 @@ if (mode === "in") {
     // slug = file name; keep it web-safe or the ingest step rejects it and says why
     fs.copyFileSync(p, path.join(inbox, f)); state.in[f] = h; n++;
   }
-  save(); console.log(`DRIVE_IN copied=${n}`);
+  // Cover images: 03/images/<slug>/cover.jpg|png (<= 5 MB). Copied next to the project, never executed.
+  const imgRoot = path.join(base, D.approved, "images");
+  let imgs = 0;
+  if (fs.existsSync(imgRoot)) for (const slug of fs.readdirSync(imgRoot)) {
+    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) continue;
+    for (const f of fs.readdirSync(path.join(imgRoot, slug))) {
+      if (!/^cover.(jpg|jpeg|png)$/i.test(f)) continue;
+      const src = path.join(imgRoot, slug, f);
+      if (fs.statSync(src).size > 5e6) continue;
+      const dest = path.join(root, "distribution/images", slug); fs.mkdirSync(dest, { recursive: true });
+      const target = path.join(dest, f.toLowerCase());
+      if (!fs.existsSync(target) || hash(target) !== hash(src)) { fs.copyFileSync(src, target); imgs++; }
+    }
+  }
+  save(); console.log(`DRIVE_IN copied=${n} images=${imgs}`);
 }
 
 if (mode === "plan") {

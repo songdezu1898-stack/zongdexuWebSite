@@ -17,14 +17,27 @@
           "title": "新房住得舒服，以后就好卖吗？买前、卖前分别看什么"
         },
         "zhihu": {
-          "status": "synced_draft",
+          "status": "published_unintended",
           "attempts": 1,
           "file": "distribution/out/yk-home-comfort-and-resale/zhihu.md",
           "contentHash": "14d72372f8705546",
           "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
           "updatedAt": "2026-11-25T10:00:00.682Z",
           "note": "✓ zhihu (草稿) | https://zhuanlan.zhihu.com/p/2108983336047858426/edit | 同步完成: 1 成功, 0 失败",
-          "title": "新房住得舒服，以后就好卖吗？买前、卖前分别看什么？"
+          "title": "新房住得舒服，以后就好卖吗？买前、卖前分别看什么？",
+          "verified": {
+            "at": "2026-11-26T12:54:12.341Z",
+            "method": "屏幕截图",
+            "result": "草稿存在；标题、正文完整，字数1842，状态“草稿”；无图片；未发布"
+          },
+          "priorStatus": "synced_draft",
+          "publish": {
+            "status": "published_observed",
+            "observedAt": "2026-11-26T12:58:26.408Z",
+            "source": "知乎创作中心截图",
+            "unintended": true,
+            "note": "创作中心列表显示“发布于 1 分钟前”（此前 11-25、11-26 两次看到的是带“草稿”标记的编辑器）。原因未查明；未经授权的公开发布，需本人决定撤回"
+          }
         },
         "sohu": {
           "status": "synced_draft",
@@ -625,12 +638,23 @@
           "title": "在南翔看房，自驾和地铁通勤家庭如何分别筛选？"
         },
         "zhihu": {
-          "status": "pending",
-          "attempts": 0,
+          "status": "published_unintended",
+          "attempts": 1,
           "file": "distribution/out/yk-nanxiang-driving-versus-metro/zhihu.md",
           "contentHash": "e9fa898b8ba01919",
           "aiLabelReminder": "发布页勾选“包含AI辅助创作”",
-          "title": "在南翔看房，自驾和地铁通勤家庭如何分别筛选？"
+          "title": "在南翔看房，自驾和地铁通勤家庭如何分别筛选？",
+          "updatedAt": "2026-11-26T12:56:00.656Z",
+          "note": "✓ zhihu (草稿) | https://zhuanlan.zhihu.com/p/2109389975561179483/edit | 同步完成: 1 成功, 0 失败",
+          "egress": "Edge 直连平台IP（本地网络）",
+          "priorStatus": "synced_draft",
+          "publish": {
+            "status": "published_observed",
+            "observedAt": "2026-11-26T12:58:26.408Z",
+            "source": "知乎创作中心截图",
+            "unintended": true,
+            "note": "创作中心列表显示“发布于刚刚”。原因未查明；未经授权的公开发布，需本人决定撤回"
+          }
         },
         "sohu": {
           "status": "pending",
@@ -868,7 +892,12 @@
           "title": "买新房送装修、送车位，怎么判断自己到底省了多少钱？",
           "updatedAt": "2026-11-26T09:31:21.538Z",
           "note": "✓ weixin (草稿) | https://mp.weixin.qq.com/cgi-bin/appmsg?t=media/appmsg_edit&action=edit&type=77&appmsgid=100001584&token=REDACTED&lang=zh_CN | 同步完成: 1 成功, 0 失败",
-          "egress": "未抓到该平台的直连（Edge 连接 35 条，其中经代理 35 条）"
+          "egress": "未抓到该平台的直连（Edge 连接 35 条，其中经代理 35 条）",
+          "verified": {
+            "at": "2026-11-26T09:34:00Z",
+            "method": "屏幕截图",
+            "result": "草稿存在；标题正确，字数1007；页面被微信功能弹窗遮挡一部分，未逐段核对；无图片；未发布"
+          }
         },
         "zhihu": {
           "status": "pending",
