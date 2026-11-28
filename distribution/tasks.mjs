@@ -25,7 +25,7 @@ const statePath = path.join(secrets, "tasks-state.json");
 const state = fs.existsSync(statePath) ? JSON.parse(fs.readFileSync(statePath, "utf8")) : { seen: {}, perHour: [] };
 const PLATFORMS = Object.keys(rd("distribution/platforms.json")).filter((k) => !k.startsWith("_"));
 const SIX = ["weixin", "zhihu", "sohu", "baijiahao", "toutiao", "weibo"];
-const ACTIONS = new Set(["query_status", "query_item", "sync_draft", "retry_item", "pause_platform", "resume_platform", "set_schedule", "update_article", "pause_all", "resume_all"]);
+const ACTIONS = new Set(["query_status", "query_queue", "query_item", "sync_draft", "retry_item", "pause_platform", "resume_platform", "set_schedule", "update_article", "pause_all", "resume_all"]);
 const MAX_PER_HOUR = 30;
 const PII = /1[3-9]\d{9}|\d{17}[\dXx]|\d+\s*号\s*\d+\s*室|\d+\s*幢\s*\d+\s*室/;
 const UNVERIFIED = [[/成交(了)?\s*\d+\s*(套|笔|单)|累计成交|销冠|排名第一|行业第一/, "含未经核实的成交/排名表述"], [/(保证|包).{0,6}(上涨|升值|成交|学区|入学|落户)|稳赚|只涨不跌/, "含承诺性表述"], [/(客户|业主|买家|房东)[^。，]{0,6}(好评|五星|表示感谢)/, "含未经核实的客户评价"]];
@@ -43,6 +43,18 @@ function run(t) {
   const plats = () => { const p = t.platforms || []; need(Array.isArray(p) && p.length && p.every((x) => PLATFORMS.includes(x)), `平台必须是 ${PLATFORMS.join("/")} 之一`); return p; };
   switch (t.action) {
     case "query_status": return { summary: summary() };
+    case "query_queue": {
+      const p = t.params || {}, limit = Math.min(Number(p.limit) || 50, 100);
+      if (p.status !== undefined) need(typeof p.status === "string" && /^[a-z_]{3,24}$/.test(p.status), "status 格式不正确");
+      if (p.platform !== undefined) need(PLATFORMS.includes(p.platform), `platform 必须是 ${PLATFORMS.join("/")} 之一`);
+      const rows = [];
+      for (const e of Object.values(queue.items)) for (const [pl, s] of Object.entries(e.platforms)) {
+        if (p.status && s.status !== p.status) continue;
+        if (p.platform && pl !== p.platform) continue;
+        rows.push({ slug: e.slug, title: e.title, platform: pl, status: s.status, attempts: s.attempts, reason: (s.note || "").replace(/https?:\/\/\S+/g, "[链接已隐藏]").slice(0, 120) });
+      }
+      return { total: rows.length, shown: Math.min(rows.length, limit), rows: rows.slice(0, limit) };
+    }
     case "query_item": {
       const e = item();
       return { title: e.title, url: e.sourceUrl, priority: e.priority ?? null, notBefore: e.notBefore ?? null,
@@ -102,6 +114,18 @@ function run(t) {
   }
 }
 
+// Runs on its own 5-minute Windows task, independent of the article-distribution switch. Two protections:
+// a lock so two runs never overlap, and a pause while a distribution run is editing the queue.
+const logFile = path.join(root, "distribution/logs/tasks.log");
+fs.mkdirSync(path.dirname(logFile), { recursive: true });
+const tlog = (m) => { try { fs.appendFileSync(logFile, `${new Date().toISOString()} ${m}\n`); } catch { /* logging must not fail the run */ } };
+const fresh = (f, min) => { try { return Date.now() - fs.statSync(f).mtimeMs < min * 60000; } catch { return false; } };
+const lockFile = path.join(root, "distribution/logs/tasks.lock");
+if (fresh(path.join(root, "distribution/logs/dispatch.lock"), 45)) { tlog("skipped: a distribution run is active"); console.log("TASKS_SKIPPED dispatch running"); process.exit(0); }
+if (fresh(lockFile, 10)) { tlog("skipped: previous task run still active"); console.log("TASKS_SKIPPED locked"); process.exit(0); }
+fs.writeFileSync(lockFile, String(process.pid));
+process.on("exit", () => { try { fs.unlinkSync(lockFile); } catch { /* gone */ } });
+
 const files = fs.readdirSync(inDir).filter((f) => f.endsWith(".json"));
 let handled = 0;
 state.perHour = state.perHour.filter((ts) => Date.now() - ts < 3600e3);
@@ -125,7 +149,7 @@ for (const f of files) {
   }
   fs.writeFileSync(path.join(rcptDir, `${String(receipt.id).replace(/[^A-Za-z0-9_-]/g, "_")}.json`), JSON.stringify(receipt, null, 2), "utf8");
   fs.renameSync(path.join(inDir, f), path.join(doneDir, `${Date.now()}-${f}`));
-  console.log(`TASK ${receipt.status} ${receipt.id} ${receipt.action || ""} ${receipt.reason || ""}`); handled++;
+  tlog(`${receipt.status} ${receipt.id} ${receipt.action || ""} ${receipt.reason || ""}`); console.log(`TASK ${receipt.status} ${receipt.id} ${receipt.action || ""} ${receipt.reason || ""}`); handled++;
 }
 fs.writeFileSync(statePath, JSON.stringify(state));
 console.log(`TASKS_OK handled=${handled}`);

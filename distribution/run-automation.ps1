@@ -12,7 +12,6 @@ function Step($name, $script, $arguments) {
   Add-Content -LiteralPath $log -Value ("{0} [{1}] {2}" -f (Get-Date -Format s), $name, ($out.Trim() -replace "`r?`n", ' | '))
 }
 $env:NODE_USE_ENV_PROXY = '1'
-Step 'tasks'     'distribution\tasks.mjs' @()
 Step 'drive-in'  'distribution\drive-bridge.mjs' @('in')
 Step 'ingest'    'distribution\ingest-inbox.mjs' @()
 # Website deploy is outward-facing, so it has its own switch (data/distribution-control.json -> autoPublishSite, off by default).
