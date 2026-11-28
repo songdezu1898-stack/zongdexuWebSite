@@ -20,6 +20,6 @@ try {
   $code = $LASTEXITCODE
   $tail = ($out.Trim() -split "`r?`n" | Select-Object -Last 6) -join ' | '
   Log ("publish exit {0}: {1}" -f $code, $tail)
-  if ($code -eq 0 -and $out -match 'PREFLIGHT_OK') { Set-Content -LiteralPath $stamp -Value $h; Log 'deploy recorded' }
+  if ($code -eq 0 -and $out -match 'PREFLIGHT_OK') { Set-Content -LiteralPath $stamp -Value $h; Copy-Item -LiteralPath $dataFile -Destination (Join-Path $siteRoot 'deploy\last-deployed-live-qa.json') -Force; Log 'deploy recorded' }
   else { Log 'deploy NOT recorded (will retry next run)' }
 } catch { Log ("error: " + $_.Exception.Message) }

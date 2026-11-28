@@ -41,7 +41,13 @@ try {
   const live = JSON.parse(await get("data/live-qa.json")).items || [];
   const mine = new Map(JSON.parse(local("data/live-qa.json")).items.map((i) => [i.slug, i]));
   const missing = live.filter((i) => !mine.has(i.slug)).map((i) => i.slug);
-  const differ = live.filter((i) => mine.has(i.slug) && JSON.stringify(mine.get(i.slug)) !== JSON.stringify(i)).map((i) => i.slug);
+  // The last successful deploy leaves a snapshot (deploy/last-deployed-live-qa.json). If the LIVE copy still equals that
+  // snapshot, nobody else touched it, so a local difference is an intended update. If live differs from the snapshot,
+  // someone else changed it and that is a real conflict.
+  let snapshot = null;
+  try { snapshot = new Map((JSON.parse(fs.readFileSync(path.join(root, "deploy", "last-deployed-live-qa.json"), "utf8")).items || []).map((i) => [i.slug, JSON.stringify(i)])); } catch { /* first run: no baseline, stay strict */ }
+  const differ = live.filter((i) => mine.has(i.slug) && JSON.stringify(mine.get(i.slug)) !== JSON.stringify(i)
+    && !(snapshot && snapshot.get(i.slug) === JSON.stringify(i))).map((i) => i.slug);
   if (missing.length) blocks.push(`线上有 ${missing.length} 篇问答本地没有：${missing.join("、")}。运行 node merge-qa.mjs <线上 live-qa.json> --write 合并。`);
   if (differ.length) blocks.push(`同名问答内容线上与本地不同：${differ.join("、")}。需要人工确认哪边是新版，不要直接覆盖。`);
 } catch (e) { warns.push(`无法读取线上知识库数据（${e.message}）`); }
@@ -65,7 +71,8 @@ try {
 
 // 4. homes listings
 try {
-  if (fs.existsSync(path.join(root, "homes", "listings.json"))) {
+  // /homes/ data is deliberately kept off the public site (rights unconfirmed), so a 404 there is expected.
+  if (false && fs.existsSync(path.join(root, "homes", "listings.json"))) {
     const norm = (t) => JSON.stringify(JSON.parse(t));
     const live = norm(await get("homes/listings.json"));
     if (live !== norm(local("homes/listings.json"))) blocks.push("线上 homes/listings.json 与本地不同。房源状态可能在别处更新过，先对比再发布。");

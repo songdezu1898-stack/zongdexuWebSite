@@ -1,7 +1,7 @@
 {
   "enabled": false,
   "mode": "draft-only",
-  "autoPublishSite": false,
+  "autoPublishSite": true,
   "_note": "enabled: Wechatsync draft dispatch master switch. autoPublishSite: deploy the website automatically after approved content arrives (off by default). mode must stay draft-only until the owner authorises publishing per platform.",
   "draftPlatforms": [
     "weixin",
