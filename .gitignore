@@ -10,3 +10,4 @@ reports/
 distribution/out/
 distribution/logs/
 deploy/pull/out/
+!deploy/pull/release-public.pem
