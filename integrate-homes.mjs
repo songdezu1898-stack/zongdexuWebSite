@@ -1,14 +1,15 @@
+// /homes/ is hidden (noindex placeholder, no images, no sitemap entry) until image and data usage rights are confirmed
+// (decision 2026-11-28). This script now REMOVES the old entry points instead of adding them. The original script is
+// kept in C:/Users/ykfw/backups/20261128-1/ and the original homes data stays in the local homes/ folder.
 import fs from 'node:fs';import path from 'node:path';import{fileURLToPath}from'node:url';
 const root=process.argv[2]||path.dirname(fileURLToPath(import.meta.url));
-const link='<a href="/homes/">在售房源</a>';
-const banner=`<section id="available-homes" style="padding:48px 24px;background:#edf4f0"><div style="max-width:1160px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap"><div><p style="color:#267359;font-size:14px;letter-spacing:2px">实景看房 · 南翔房源</p><h2 style="font-size:30px;line-height:1.4;margin:12px 0">先看房源，再聊适合你的选择。</h2><p style="font-size:16px;line-height:1.8;color:#52695f">查看实拍照片、户型、面积与挂牌价格，预约现场看房。</p><a href="/homes/" style="display:inline-block;padding:14px 24px;border-radius:7px;background:#176956;color:white;text-decoration:none;font-size:16px">查看在售房源</a></div><a href="/homes/" aria-label="查看在售房源实拍"><img src="/homes/images/S000320/H6046606616_0.jpg" alt="朗诗绿色街区房源实拍" loading="lazy" style="display:block;width:min(380px,80vw);height:220px;object-fit:cover;border-radius:12px"></a></div></section>`;
-function walk(dir){for(const d of fs.readdirSync(dir,{withFileTypes:true})){if(d.name.startsWith('.')||['homes','assets','data','deploy','final-site-ready','zongdexuWebSite','node_modules'].includes(d.name))continue;const p=path.join(dir,d.name);if(d.isDirectory())walk(p);else if(d.name.endsWith('.html')){let s=fs.readFileSync(p,'utf8');s=s.replace(/<nav\b[^>]*>[\s\S]*?<\/nav>/,(nav)=>nav.includes('/homes/')?nav:nav.replace('</nav>',link+'</nav>'));if(p===path.join(root,'index.html')&&!s.includes('id="available-homes"'))s=s.replace(/<section class="ar-services"/,banner+'<section class="ar-services"');fs.writeFileSync(p,s)}}}
+const skip=new Set(['homes','assets','data','deploy','final-site-ready','zongdexuWebSite','node_modules','recovery','reports','distribution','wechat-drafts']);
+let changed=0;
+function walk(dir){for(const d of fs.readdirSync(dir,{withFileTypes:true})){if(d.name.startsWith('.')||skip.has(d.name))continue;const p=path.join(dir,d.name);if(d.isDirectory())walk(p);else if(d.name.endsWith('.html')){let s=fs.readFileSync(p,'utf8');const o=s;
+  s=s.replace(/<a href="\/homes\/">在售房源<\/a>/g,'');
+  s=s.replace(/<section id="available-homes"[\s\S]*?<\/section>/,'').replace(/<section class="homes-entry-\d+"[\s\S]*?<\/section>/,'');
+  s=s.replace(/<link rel="stylesheet" href="\/homes\/entry\.css[^"]*">/,'');
+  if(s!==o){fs.writeFileSync(p,s);changed++}}}}
 walk(root);
-const homePath=path.join(root,'index.html');let home=fs.readFileSync(homePath,'utf8'),rules=[];
-const safeBanner=banner.replace(/style="([^"]*)"/g,(_,css)=>{const cls='homes-entry-'+rules.length;rules.push('.'+cls+'{'+css+'}');return 'class="'+cls+'"'});
-home=home.replace(/<section id="available-homes"[\s\S]*?<\/section>/,safeBanner);
-if(!home.includes('/homes/entry.css'))home=home.replace('</head>','<link rel="stylesheet" href="/homes/entry.css?v=20261125-2"></head>');
-fs.mkdirSync(path.join(root,'homes'),{recursive:true});fs.writeFileSync(path.join(root,'homes/entry.css'),rules.join('\n'));fs.writeFileSync(homePath,home);
-// /homes/ is noindex until image and data usage rights are confirmed (2026-11-28): keep it OUT of the sitemap.
-const sitemap=path.join(root,'sitemap.xml');if(fs.existsSync(sitemap)){let s=fs.readFileSync(sitemap,'utf8');s=s.replace(/<url><loc>https:\/\/yuankunfangwu\.com\/homes\/<\/loc>[\s\S]*?<\/url>/,'').replace(/\s*<url>\s*<loc>https:\/\/yuankunfangwu\.com\/homes\/<\/loc>[\s\S]*?<\/url>/,'');fs.writeFileSync(sitemap,s)}
-console.log('房源导航、首页入口及站点地图已更新');
+const sm=path.join(root,'sitemap.xml');if(fs.existsSync(sm)){let s=fs.readFileSync(sm,'utf8');const o=s;s=s.replace(/\s*<url>\s*<loc>https:\/\/yuankunfangwu\.com\/homes\/<\/loc>[\s\S]*?<\/url>/,'').replace(/<url><loc>https:\/\/yuankunfangwu\.com\/homes\/<\/loc>[\s\S]*?<\/url>/,'');if(s!==o){fs.writeFileSync(sm,s);changed++}}
+console.log(`房源入口已隐藏，更新文件数 ${changed}`);

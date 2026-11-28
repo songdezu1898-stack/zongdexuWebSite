@@ -220,7 +220,8 @@ const entityIds = [
   "https://yuankunfangwu.com/#website"
 ];
 const entityReference = {};
-for (const page of pages.filter((name) => name !== "404.html")) {
+// noindex pages (the /homes/ placeholder) carry no structured data on purpose.
+for (const page of pages.filter((name) => name !== "404.html" && !/<meta name="robots" content="[^"]*noindex/i.test(read(name)))) {
   const html = read(page);
   const nodes = jsonLdNodes(html);
   for (const id of entityIds) {

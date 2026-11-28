@@ -46,7 +46,8 @@ if ($LASTEXITCODE -ne 0) { throw '网站校验失败' }
 
 $publicFiles = @(
   'index.html',
-  'homes',
+  # /homes/: only the noindex placeholder page and the small entry stylesheet ship. Images, listings.json and styles.css stay local until usage rights are confirmed.
+  'homes/index.html',
   'about.html',
   'contact.html',
   'knowledge.html',
@@ -104,7 +105,7 @@ try {
 }
 # Queue newly published, approved articles for multi-platform drafts. Queue only: syncing is a
 # separate step controlled by data/distribution-control.json (off by default). Never fails a publish.
-try { & $nodePath (Join-Path $siteRoot 'distributionadapt.mjs') } catch { Write-Warning "分发队列生成出错（不影响发布）：$($_.Exception.Message)" }
+try { & $nodePath (Join-Path $siteRoot 'distribution\adapt.mjs') } catch { Write-Warning "分发队列生成出错（不影响发布）：$($_.Exception.Message)" }
 } finally {
   Remove-Item -LiteralPath $lockFile -Force -ErrorAction SilentlyContinue
 }
