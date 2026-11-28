@@ -159,5 +159,12 @@ if (mode === "report") {
     "synced_draft 不代表已发布、已收录或被 AI 引用；平台公开链接需发布后回填。"];
   fs.writeFileSync(path.join(base, D.result, "latest-status.md"), L.join("\n"), "utf8");
   fs.writeFileSync(path.join(base, D.result, `log-${day}.md`), L.join("\n"), "utf8");
+  // Heartbeat: a tiny file rewritten on every run. If ChatGPT sees a recent "at" here, the cloud copy is fresh and the
+  // local task runner is alive; if it is old, the computer is off, asleep, or Google Drive desktop is not syncing.
+  fs.writeFileSync(path.join(base, D.result, "心跳.json"), JSON.stringify({
+    at: new Date().toISOString(), note: "本地任务每 5 分钟刷新一次；超过 15 分钟没有更新，说明电脑关机/休眠或 Google Drive 桌面版未同步",
+    controlSwitch: control.enabled, mode: control.mode, autoPublishSite: !!control.autoPublishSite, tally,
+    lastTaskReceipt: (() => { try { const d = path.join(base, D.result, "任务回执"); return fs.readdirSync(d).map((f) => ({ f, t: fs.statSync(path.join(d, f)).mtimeMs })).sort((a, b) => b.t - a.t)[0]?.f || null; } catch { return null; } })()
+  }, null, 1), "utf8");
   console.log(`DRIVE_REPORT written tally=${JSON.stringify(tally)}`);
 }
