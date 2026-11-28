@@ -166,5 +166,14 @@ if (mode === "report") {
     controlSwitch: control.enabled, mode: control.mode, autoPublishSite: !!control.autoPublishSite, tally,
     lastTaskReceipt: (() => { try { const d = path.join(base, D.result, "任务回执"); return fs.readdirSync(d).map((f) => ({ f, t: fs.statSync(path.join(d, f)).mtimeMs })).sort((a, b) => b.t - a.t)[0]?.f || null; } catch { return null; } })()
   }, null, 1), "utf8");
+  // Markdown twins for connectors that cannot read JSON well: heartbeat and a rolling list of recent receipts.
+  const hb = JSON.parse(fs.readFileSync(path.join(base, D.result, "心跳.json"), "utf8"));
+  fs.writeFileSync(path.join(base, D.result, "心跳.md"), ["# 心跳（本地任务每 5 分钟刷新）", "", `- 最近刷新(UTC)：**${hb.at}**`, "- 判断：这个时间距现在不超过 15 分钟，说明电脑开机、任务在跑、Google Drive 已同步；超过 15 分钟说明电脑关机/休眠或 Drive 桌面版未同步。", `- 草稿分发总开关：${hb.controlSwitch ? "开" : "关"}（模式 ${hb.mode}）；官网自动部署：${hb.autoPublishSite ? "开" : "关"}`, `- 队列统计：${JSON.stringify(hb.tally)}`, `- 最近一份任务回执：${hb.lastTaskReceipt || "无"}`].join("\n"), "utf8");
+  try {
+    const rd = path.join(base, D.result, "任务回执");
+    const recent = fs.readdirSync(rd).filter((f) => f.endsWith(".json")).map((f) => ({ f, t: fs.statSync(path.join(rd, f)).mtimeMs })).sort((a, b) => b.t - a.t).slice(0, 20);
+    const rows = recent.map(({ f }) => { try { const r = JSON.parse(fs.readFileSync(path.join(rd, f), "utf8")); return `| ${r.at} | ${r.id} | ${r.action || ""} | ${r.status} | ${(r.reason || "").slice(0, 80)} |`; } catch { return `| | ${f} | | 无法读取 | |`; } });
+    fs.writeFileSync(path.join(rd, "最近回执.md"), ["# 最近 20 条任务回执（自动生成）", "", "| 时间(UTC) | 任务编号 | 操作 | 结果 | 原因 |", "|---|---|---|---|---|", ...rows].join("\n"), "utf8");
+  } catch { /* no receipts yet */ }
   console.log(`DRIVE_REPORT written tally=${JSON.stringify(tally)}`);
 }

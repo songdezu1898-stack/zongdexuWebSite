@@ -9,5 +9,6 @@ const safeBanner=banner.replace(/style="([^"]*)"/g,(_,css)=>{const cls='homes-en
 home=home.replace(/<section id="available-homes"[\s\S]*?<\/section>/,safeBanner);
 if(!home.includes('/homes/entry.css'))home=home.replace('</head>','<link rel="stylesheet" href="/homes/entry.css?v=20261125-2"></head>');
 fs.mkdirSync(path.join(root,'homes'),{recursive:true});fs.writeFileSync(path.join(root,'homes/entry.css'),rules.join('\n'));fs.writeFileSync(homePath,home);
-const sitemap=path.join(root,'sitemap.xml');if(fs.existsSync(sitemap)){let s=fs.readFileSync(sitemap,'utf8');if(!s.includes('https://yuankunfangwu.com/homes/'))s=s.replace('</urlset>','<url><loc>https://yuankunfangwu.com/homes/</loc><lastmod>2026-11-25</lastmod></url></urlset>');fs.writeFileSync(sitemap,s)}
+// /homes/ is noindex until image and data usage rights are confirmed (2026-11-28): keep it OUT of the sitemap.
+const sitemap=path.join(root,'sitemap.xml');if(fs.existsSync(sitemap)){let s=fs.readFileSync(sitemap,'utf8');s=s.replace(/<url><loc>https:\/\/yuankunfangwu\.com\/homes\/<\/loc>[\s\S]*?<\/url>/,'').replace(/\s*<url>\s*<loc>https:\/\/yuankunfangwu\.com\/homes\/<\/loc>[\s\S]*?<\/url>/,'');fs.writeFileSync(sitemap,s)}
 console.log('房源导航、首页入口及站点地图已更新');

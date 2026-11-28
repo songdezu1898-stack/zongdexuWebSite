@@ -59,7 +59,8 @@ for (const page of pages) {
   if (page !== "404.html" && !/og:image/.test(html)) {
     errors.push(`missing social image metadata: ${page}`);
   }
-  if (page !== "404.html" && !/<meta name="robots" content="index,follow/.test(html)) {
+  // /homes/ is intentionally noindex until its data/image rights are confirmed.
+  if (page !== "404.html" && page !== "homes/index.html" && !/<meta name="robots" content="index,follow/.test(html)) {
     errors.push(`missing index/follow robots meta: ${page}`);
   }
   if (!/rel="icon"/.test(html)) errors.push(`missing site icon: ${page}`);
@@ -324,7 +325,13 @@ for (const rel of pages) {
 
 // sitemap.xml must list exactly the indexable pages, and nothing that is missing.
 const sitemapLocs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-for (const rel of indexable) if (!sitemapLocs.includes(urlOf(rel))) errors.push(`page missing from sitemap: ${rel}`);
+// A page that declares noindex must NOT be listed; every other page must be.
+for (const rel of indexable) {
+  const noindexed = /<meta name="robots" content="[^"]*noindex/i.test(read(rel));
+  const listed = sitemapLocs.includes(urlOf(rel));
+  if (noindexed && listed) errors.push(`noindex page is listed in the sitemap: ${rel}`);
+  if (!noindexed && !listed) errors.push(`page missing from sitemap: ${rel}`);
+}
 for (const loc of sitemapLocs) if (!indexable.some((rel) => urlOf(rel) === loc)) errors.push(`sitemap lists a URL with no page: ${loc}`);
 for (const match of sitemap.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(match[1])) errors.push(`invalid sitemap lastmod: ${match[1]}`);

@@ -147,7 +147,10 @@ for (const f of files) {
     receipt = { id: t?.id || f, action: t?.action || null, status: "rejected", at: new Date().toISOString(), reason: e.message };
     if (t?.id) state.seen[t.id] = receipt.at;
   }
-  fs.writeFileSync(path.join(rcptDir, `${String(receipt.id).replace(/[^A-Za-z0-9_-]/g, "_")}.json`), JSON.stringify(receipt, null, 2), "utf8");
+  const safeId = String(receipt.id).replace(/[^A-Za-z0-9_-]/g, "_");
+  fs.writeFileSync(path.join(rcptDir, `${safeId}.json`), JSON.stringify(receipt, null, 2), "utf8");
+  // Markdown twin: some Drive connectors read .md/.txt far better than .json.
+  fs.writeFileSync(path.join(rcptDir, `${safeId}.md`), [`# 任务回执 ${receipt.id}`, "", `- 操作：${receipt.action || "（无）"}`, `- 结果：**${receipt.status}**`, `- 时间(UTC)：${receipt.at}`, receipt.reason ? `- 原因：${receipt.reason}` : "", "", receipt.result ? "## 结果数据\n\n```json\n" + JSON.stringify(receipt.result, null, 2) + "\n```" : ""].filter((x) => x !== "").join("\n"), "utf8");
   fs.renameSync(path.join(inDir, f), path.join(doneDir, `${Date.now()}-${f}`));
   tlog(`${receipt.status} ${receipt.id} ${receipt.action || ""} ${receipt.reason || ""}`); console.log(`TASK ${receipt.status} ${receipt.id} ${receipt.action || ""} ${receipt.reason || ""}`); handled++;
 }
