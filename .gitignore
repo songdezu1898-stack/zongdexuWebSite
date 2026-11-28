@@ -9,3 +9,4 @@ reports/
 .env
 distribution/out/
 distribution/logs/
+deploy/pull/out/
