@@ -19,5 +19,6 @@
     "douyin",
     "netease"
   ],
-  "taskInterface": true
+  "taskInterface": true,
+  "pullDeploy": false
 }
