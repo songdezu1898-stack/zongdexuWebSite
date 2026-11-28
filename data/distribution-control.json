@@ -20,5 +20,5 @@
     "netease"
   ],
   "taskInterface": true,
-  "pullDeploy": false
+  "pullDeploy": true
 }
