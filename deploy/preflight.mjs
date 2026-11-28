@@ -50,7 +50,16 @@ try {
 try {
   const urls = (s) => new Set([...s.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]));
   const live = urls(await get("sitemap.xml")), mine = urls(local("sitemap.xml"));
-  const missing = [...live].filter((u) => !mine.has(u));
+  // A live URL that is missing locally is only a problem if the local page does not exist or is not deliberately noindexed.
+  const site_ = "https://yuankunfangwu.com";
+  const deliberatelyHidden = (u) => {
+    try {
+      const rel = decodeURIComponent(u.slice(site_.length + 1));
+      const f = path.join(root, !rel || rel.endsWith("/") ? `${rel}index.html` : rel);
+      return fs.existsSync(f) && /<meta name="robots" content="[^"]*noindex/i.test(fs.readFileSync(f, "utf8"));
+    } catch { return false; }
+  };
+  const missing = [...live].filter((u) => !mine.has(u) && !deliberatelyHidden(u));
   if (missing.length) blocks.push(`线上站点地图有 ${missing.length} 个页面本地没有：${missing.join("、")}。本地可能不是最新，先同步线上内容。`);
 } catch (e) { warns.push(`无法读取线上站点地图（${e.message}）`); }
 
